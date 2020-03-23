@@ -29,3 +29,4 @@ TODO
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
 .. _CrateDB: https://crate.io/products/cratedb/
 .. _GitHub: https://github.com/crate/cloud-reference/
+.. _Tutorials: https://crate.io/docs/cloud/tutorials/en/latest/
