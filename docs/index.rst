@@ -22,7 +22,10 @@ of Things* (IIoT) at scale.
 
 .. rubric:: Table of contents
 
-TODO
+    azure-plans
+    concepts
+    user-roles
+    system-user
 
 
 .. _Crate.io: https://crate.io/
