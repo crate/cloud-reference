@@ -14,8 +14,8 @@ exact required hardware combinations themselves.
 At the same time, the plans also offer flexibility, since your use case may
 change. Not only is it possible to switch plans, but within a given plan you
 can scale the required capacity for a cluster up or down. In order to make it
-transparent and yet easy to use, this scaling is measured in terms of database
-throughput units (DTUs).
+transparent and yet easy to use, this scaling is measured in terms of Database
+Transaction Units (DTUs).
 
 This reference gives a brief description of each plan and subsequently explains
 the meaning and usage of DTUs for scaling and pricing within each plan. In this
