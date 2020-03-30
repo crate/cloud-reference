@@ -45,12 +45,12 @@ plans: **Development**, **General Purpose Basic** and **General Purpose Pro**.
 .. NOTE::
     Note that the Development plan is not covered by 24/7 support.
 
-* The **General Purpose Basic** plan suits all but very large use cases.
+* The **General Purpose Basic** plan suits all but the largest use cases.
   It offers the intermediate range of storage, memory, and computation
   capacity. This plan also can currently be scaled between three scale units,
   each adding (or subtracting) one DTU.
-* Finally, the **General Purpose Pro** plan is intended for users with very
-  large capacity needs. This plan offers very significant storage, memory, and
+* Finally, the **General Purpose Pro** plan is intended for users with the
+  largest capacity needs. This plan offers significant storage, memory, and
   computation capacity, offering up to four times the ingestion and query
   capacity of the General Purpose Basic plan and up to an order of magnitude
   greater storage. The General Purpose Pro plan can also currently be scaled
@@ -62,7 +62,7 @@ plans: **Development**, **General Purpose Basic** and **General Purpose Pro**.
 Explaining DTUs for scaling and billing
 =======================================
 
-So what are DTUs and how do they work? As mentioned above, to make finding the
+What are DTUs and how do they work? As mentioned above, to make finding the
 right combination of hardware capacity more tractable and accessible, CrateDB
 Cloud's offer on Azure uses DTUs. These DTUs have essentially two purposes:
 they allow the user to choose the right combination of plan and scale to find
@@ -83,9 +83,9 @@ plan has a starting scale (scale unit 1), which can be scaled up to scale unit
 2 or 3. Because the hardware capacity in each plan is different, a scale unit
 in the **Development** plan is of a different size (in terms of storage,
 memory, and computation) than a scale unit in the **General Purpose Pro** plan.
-But scaling within each plan - so between the minimum capacity for that plan
-and the maximum capacity for that plan - is made easy by the division into
-scale units, each of which corresponds to one DTU.
+But scaling within each plan (i.e., between the minimum capacity for that plan
+and the maximum capacity for that plan) is made easy by the division into scale
+units, each of which corresponds to one DTU.
 
 An overview showing the range in terms of capacity of each plan, within which
 the scaling of that plan operates, can be found on the `Azure offer page`_.

@@ -11,8 +11,8 @@ structure of CrateDB Cloud easier to understand. The concepts discussed here
 are the three primary components of the Cloud structure: organizations,
 projects, and services.
 
-This is not a full glossary. We intend to provide a more complete glossary in
-the future.
+This is not a full glossary. We intend to provide a expand this glossary in the
+future.
 
 .. rubric:: Table of contents
 
@@ -31,7 +31,7 @@ organization level there is always at least one organization administrator, who
 can in turn add organization members. Such organization admins and members have
 access to the projects run by the organization. (For more on user roles in
 CrateDB Cloud and how to set them, see our :ref:`reference for user roles
-<user-roles>`_.)
+<user-roles>`.)
 
 Each organization has a name, a unique ID, and optionally an associated email
 address. For information on how to create an organization, please refer to
@@ -56,7 +56,7 @@ A given *organization* can have any number of *projects*. Just as organizations
 have administrators and members, so projects have their own administrators and
 members. The two groups can but need not overlap. (Again, for more on user
 roles in CrateDB Cloud and how to set them, see our :ref:`reference for user
-roles <user-roles>`_.)
+roles <user-roles>`.)
 
 Each project has a name, an associated region, and a unique ID. For information
 on how to create a project, please refer to our `guide to creating a new

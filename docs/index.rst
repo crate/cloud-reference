@@ -22,6 +22,10 @@ of Things* (IIoT) at scale.
 
 .. rubric:: Table of contents
 
+.. toctree::
+    :maxdepth: 3
+    :titlesonly:
+
     azure-plans
     concepts
     user-roles
