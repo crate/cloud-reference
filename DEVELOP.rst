@@ -2,10 +2,12 @@
 Developer Guide
 ===============
 
+
 Documentation
 =============
 
 The documentation is written using `Sphinx`_ and `ReStructuredText`_.
+
 
 Working on the documentation
 ----------------------------
@@ -41,6 +43,7 @@ For help, run:
 
 You must install `fswatch`_ to use the ``dev`` target.
 
+
 Continuous integration and deployment
 -------------------------------------
 
@@ -73,7 +76,7 @@ release version), please contact the `@crate/docs`_ team.
     :scale: 100%
     :target: https://travis-ci.org/crate/cloud-reference
 
-.. |rtd| image:: https://readthedocs.org/projects/cloud-reference/badge/?version=latest
+.. |rtd| image:: https://readthedocs.org/projects/crate-cloud-reference/badge/?version=latest
     :alt: Read The Docs status
     :scale: 100%
-    :target: https://cloud-reference.readthedocs.io/en/latest/?badge=latest
+    :target: https://crate-cloud-reference.readthedocs.io/en/latest/?badge=latest
