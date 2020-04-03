@@ -45,12 +45,12 @@ plans: **Development**, **General Purpose Basic** and **General Purpose Pro**.
 .. NOTE::
     Note that the Development plan is not covered by 24/7 support.
 
-* The **General Purpose Basic** plan suits all but the largest use cases.
+* The **General Purpose Basic** plan suits all but very large use cases.
   It offers the intermediate range of storage, memory, and computation
   capacity. This plan also can currently be scaled between three scale units,
   each adding (or subtracting) one DTU.
-* Finally, the **General Purpose Pro** plan is intended for users with the
-  largest capacity needs. This plan offers significant storage, memory, and
+* Finally, the **General Purpose Pro** plan is intended for users with very
+  large capacity needs. This plan offers very significant storage, memory, and
   computation capacity, offering up to four times the ingestion and query
   capacity of the General Purpose Basic plan and up to an order of magnitude
   greater storage. The General Purpose Pro plan can also currently be scaled
