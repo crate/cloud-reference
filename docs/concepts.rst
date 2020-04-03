@@ -11,8 +11,8 @@ structure of CrateDB Cloud easier to understand. The concepts discussed here
 are the three primary components of the Cloud structure: organizations,
 projects, and services.
 
-This is not a full glossary. We intend to provide a expand this glossary in the
-future.
+This is not a full glossary. We intend to provide a more comprehensive glossary
+in the near future.
 
 .. rubric:: Table of contents
 
