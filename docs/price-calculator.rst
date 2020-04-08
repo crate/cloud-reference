@@ -42,6 +42,7 @@ inputs for these specifications:
 * The expected number **read queries** per second. This represents a
   multiplication of the number of data points to be queried, their update
   frequency (per second), and the number of representations of each data point.
+  
 * The estimated average payload size, in kilobytes (kb).
 
 * The desired **data retention** policy, in days. This is the number of days a
