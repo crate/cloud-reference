@@ -34,8 +34,8 @@ They only have access to projects they are part of.
 Project roles
 =============
 
-A project admin can add users to and remove users from a project. They can also
-perform every available operation inside that project.
+A *project admin* can add users to and remove users from a project. They can
+also perform every available operation inside that project.
 
 .. NOTE::
 
@@ -43,4 +43,4 @@ perform every available operation inside that project.
     perform all available operations within that project, but not within the
     organization.
 
-A project member has read-only access to the project.
+A *project member* has read-only access to the project.
