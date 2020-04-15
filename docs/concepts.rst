@@ -88,6 +88,6 @@ for example - the Azure Event Hubs consumer service, which can ingest event
 data from Event Hubs into CrateDB.
 
 
-.. _guide to creating a new organization: https://crate.io/docs/cloud/console/en/latest/create-org.html
-.. _guide to creating a new project: https://crate.io/docs/cloud/console/en/latest/create-project.html
-.. _tutorial for deploying a CrateDB cluster via Azure Marketplace: https://crate.io/docs/cloud/getting-started/en/latest/getting-started/azure-to-cluster/index.html
+.. _guide to creating a new organization: https://crate.io/docs/cloud/howtos/en/latest/create-org.html
+.. _guide to creating a new project: https://crate.io/docs/cloud/howtos/en/latest/create-project.html
+.. _tutorial for deploying a CrateDB cluster via Azure Marketplace: https://crate.io/docs/cloud/tutorials/en/latest/getting-started/azure-to-cluster/index.html
