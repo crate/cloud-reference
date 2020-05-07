@@ -28,9 +28,9 @@ of Things* (IIoT) at scale.
 
     azure-plans
     price-calculator
-    concepts
     user-roles
     system-user
+    glossary
 
 
 .. _Crate.io: https://crate.io/
