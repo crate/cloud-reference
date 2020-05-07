@@ -88,7 +88,7 @@ and the maximum capacity for that plan) is made easy by the division into scale
 units, each of which corresponds to one DTU.
 
 An overview showing the range in terms of capacity of each plan, within which
-the scaling of that plan operates, can be found on the `Azure offer page`_.
+the scaling of that plan operates, can be found on the |Azure offer page|.
 Here one also finds the price per DTU per hour.
 
 To summarize, the DTU approach to scaling means that although the offered plans
@@ -158,6 +158,8 @@ For clarity and to prevent confusion, we add here a few notes of caution:
   updated accordingly. Plan terms and prices are subject to change.
 
 
-.. _Azure offer page: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=PlansAndPrice
 .. _pricing calculator: https://crate.io/products/cratedb-cloud/#cloud-calculator
 .. _price calculator on the CrateDB Cloud website: https://crate.io/products/cratedb-cloud/#cloud-calculator
+.. |Azure offer page| raw:: html
+
+    <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=PlansAndPrice" target="_blank">Azure offer page</a>

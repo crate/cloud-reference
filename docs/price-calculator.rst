@@ -1,7 +1,7 @@
 .. _price-calculator:
 
 ================
-Price Calculator
+Price calculator
 ================
 
 The `price calculator`_ for CrateDB Cloud is a tool allowing you to estimate
