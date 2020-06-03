@@ -26,6 +26,7 @@ of Things* (IIoT) at scale.
     :maxdepth: 3
     :titlesonly:
 
+    overview
     azure-plans
     price-calculator
     concepts
