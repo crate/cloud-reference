@@ -4,12 +4,12 @@
 Glossary
 ========
 
-This Reference article is a glossary. It is meant to provide a general overview
+This reference article is a glossary. It is meant to provide a general overview
 of terms common to CrateDB Cloud. Because it forms a counterpart to the
 Glossary for CrateDB, we mainly cover terms here that are specific or primary
 to CrateDB Cloud; terms particular to the whole CrateDB architecture will
-appear in the CrateDB Glossary instead. We hope this glossary will help you
-understand the basic meaning of concepts in the CrateDB Console, Documentation,
+appear in the CrateDB glossary instead. We hope this glossary will help you
+understand the basic meaning of concepts in the CrateDB Console, documentation,
 the Croud CLI, and other CrateDB Cloud-related sources. It is not meant to be a
 general guide to IT or IIoT terminology.
 
@@ -44,7 +44,7 @@ Azure AD
 Azure AD (Active Directory) is Microsoft's authentication and sign-in service
 for accessing Microsoft hosted services. CrateDB Cloud uses AzureAD as one of
 the means of sign-up and authentication for its service. For documentation on
-Azure AD, refer to the |Microsoft Documentation|.
+Azure AD, refer to the |Microsoft documentation|.
 
 
 .. _glossary-cluster:
@@ -103,14 +103,14 @@ blog`_. Operations on consumers are registered in the :ref:`Audit Log
 Croud
 -----
 
-Croud is the name of the CrateDB Cloud Command Line Interface (CLI). You can
+Croud is the name of the CrateDB Cloud Command-Line Interface (CLI). You can
 use Croud to interact with the :ref:`organization<glossary-org>`,
 :ref:`projects<glossary-project>` and :ref:`products<glossary-product>` you
 have access to. Croud is intended for customers who prefer a CLI to the use of
 a hosted web interface such as the CrateDB Cloud :ref:`Console
 <glossary-console>`. Note however that the Console is the default way to
 interact with CrateDB Cloud, and currently clusters can only be deployed within
-the Console. The Documentation for Croud can be found under the `Croud CLI
+the Console. The documentation for Croud can be found under the `Croud CLI
 header`_ in the Docs sidebar.
 
 
@@ -128,7 +128,7 @@ plan and see how it matches their use case. This makes using the CrateDB Cloud
 :ref:`offer<glossary-offer>` and scaling to need easy and accessible.
 
 For a more detailed description of the Azure plans and associated DTUs, refer
-to our :ref:`Documentation<azure-plans>`.
+to our :ref:`documentation<azure-plans>`.
 
 
 .. _glossary-endpoint:
@@ -271,16 +271,16 @@ Azure Marketplace|.
 Scale unit
 ----------
 
-The CrateDB Cloud :ref:`subscription plans<glossary-subscription-plan>` all
+The CrateDB Cloud :ref:`subscription plans<glossary-subscription-plan>` each
 come with a number of different scale units. Each scale unit represents an
 (additional) unit multiplying the specific combination of hardware capacity
 that applies to that plan.
 
 The relationship between scale units and :ref:`DTUs<glossary-DTU>` is subtle.
 Each scale unit added on top of the first scale unit also represents one
-*additional* DTU. However, not all plans *start* at 1 DTU. For more detailed
+*additional* DTU. However, not all plans *start* at one DTU. For more detailed
 information about subscription plans, scale units, and DTUs, take a look at our
-Documentation on :ref:`DTUs and Azure plans<azure-plans-dtus>`.
+documentation on :ref:`DTUs and Azure plans<azure-plans-dtus>`.
 
 
 .. _glossary-subscription:
@@ -312,9 +312,9 @@ plans. These plans are combinations of hardware specifications that are geared
 towards particular customer use cases: lower capacity vs. higher capacity, more
 storage vs. more processing power, and so forth. They can also be further
 adjusted for different :ref:`scale units<glossary-scale-unit>` per plan.
-Currently there are three subscription plans available via the |Microsoft Azure
+Currently there are two subscription plans available via the |Microsoft Azure
 Marketplace|, with more to come in the near future. For more information on
-choosing the right Azure plan, refer to our Documentation `on the subject`_.
+choosing the right Azure plan, refer to our documentation `on the subject`_.
 
 
 .. _glossary-system-user:
@@ -330,7 +330,7 @@ In CrateDB Cloud, there are two distinct system :ref:`users<glossary-user>`:
 
 * The other is the "system" user in the CrateDB backend. For more information
   on this second user, refer to our `explanation`_ in the CrateDB Cloud
-  Reference.
+  reference.
 
 
 .. _glossary-user:
@@ -340,7 +340,7 @@ User
 
 A user in CrateDB Cloud is any individual account authorized to interact with
 some part of an :ref:`organization<glossary-org>`'s assets. Each user has a
-defined role within the organization (see our Reference on `user roles`_) and
+defined role within the organization (see our reference on `user roles`_) and
 is associated with a specific email address.
 
 .. NOTE::
@@ -361,6 +361,6 @@ is associated with a specific email address.
 .. |Microsoft Azure Marketplace| raw:: html
 
     <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=PlansAndPrice" target="_blank">Microsoft Azure Marketplace</a>
-.. |Microsoft Documentation| raw:: html
+.. |Microsoft documentation| raw:: html
 
     <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis" target="_blank">Microsoft Documentation</a>

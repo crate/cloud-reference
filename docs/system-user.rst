@@ -4,7 +4,7 @@
 System user
 ===========
 
-This is the Reference article for the CrateDB *system* user for CrateDB Cloud
+This is the reference article for the CrateDB *system* user for CrateDB Cloud
 customers.
 
 The system user is a database user called '*system*'. In CrateDB Cloud, the
