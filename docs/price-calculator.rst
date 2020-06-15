@@ -57,13 +57,12 @@ inputs for these specifications:
 
     Short descriptions of each of these inputs are also found as tooltips on
     each next to the pricing calculator itself. For more information on the
-    meaning of technical terms used here, please see our Glossary.
+    meaning of technical terms used here, please see our `glossary`_.
 
 Based on your selected values for each of the inputs, the pricing calculator
-automatically selects for you the most fitting plan configuration (currently
-only within General Purpose) and gives an estimate for the price of the plan
-per hour and per month. As always, only actual usage will be billed on an
-hourly rate basis.
+automatically selects for you the most fitting plan configuration and gives an
+estimate for the price of the plan per hour and per month. As always, only
+actual usage will be billed on the basis of an hourly rate.
 
 
 .. _price-calculator-provider:
@@ -113,10 +112,11 @@ hours) × 24 (hours to days) × 14 (data retention) × 3 (replicas: original plu
 two copies) = 3628800000, divided by 1000000 = 3628.8 GB of storage
 requirements. Based on the read query value and the storage requirements, the
 pricing calculator will recommend a plan and a scale level for that plan. In
-our example case, that would be General Purpose Pro at scale unit 1 on Azure.
+our example case, that would be General Purpose at scale unit 1 on Azure.
 
 More information about plans and scale levels can be found in :ref:`our
 reference on Azure plans <azure-plans>`.
 
 
+.. _glossary: https://crate.io/docs/cloud/reference/en/latest/glossary.html
 .. _price calculator: https://crate.io/products/cratedb-cloud/#cloud-calculator

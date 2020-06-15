@@ -7,10 +7,10 @@ Console overview
 The *CrateDB Cloud Console* is a hosted web administration interface for
 interacting with `CrateDB Cloud`_. This overview gives you all the basic
 information for using the CrateDB Cloud Console. Refer to individual items in
-the current section of the Documentation for more information on how to perform
+the current section of the documentation for more information on how to perform
 specific operations. To understand more of the Console terminology used here,
-refer to the Documentation page on `concepts`_. You can also refer to our
-`Glossary`_ for more information on specific terminology.
+refer to the documentation page on `concepts`_. You can also refer to our
+`glossary`_ for more information on specific terminology.
 
 .. rubric:: Table of contents
 
@@ -94,7 +94,7 @@ If you are an organization admin, you can edit these by clicking the pen icon
 or delete users by using the bin icon. To add new users to the organization, in
 this tab, click the *Add user* button in the top right.
 
-To learn more about user roles and their meaning, see our Documentation on
+To learn more about user roles and their meaning, see our documentation on
 `user roles`_.
 
 
@@ -138,7 +138,7 @@ the main Projects page.
     The menu bar on the left hand side of the Console is divided in two by a
     line. By design, all menu items below the bar refer to the currently
     selected project, which is visible at the top left. The next sections of
-    this Documentation are therefore project specific and here referred to as
+    this documentation are therefore project specific and here referred to as
     "Project Overview", "Project Settings" etc. For elegance of design,
     however, the menu bar simply says "Overview", "Settings", and so forth.
     These each refer to the project you selected on the Projects page.
@@ -185,7 +185,7 @@ It gives you the following information:
   icon gives relevant information on ports and access methods. By clicking on
   the URL you will be redirected to the `CrateDB Admin UI`_ for the cluster at
   that URL. For more information on the protocols used to connect to the
-  respective ports, refer to the CrateDB Documentation on `HTTP`_ and the
+  respective ports, refer to the CrateDB documentation on `HTTP`_ and the
   `PostgreSQL wire protocol`_ as well as the documentation of your client.
 
 .. NOTE::
@@ -205,7 +205,7 @@ It gives you the following information:
 * **Created**: The timestamp of the deployment of the cluster.
 
 * **Tier**: This shows what tier of the pricing plan the cluster is running on.
-  For more information on our pricing plans, see the Documentation on `Azure
+  For more information on our pricing plans, see the documentation on `Azure
   plans`_.
 
 * **RAM/Heap Size**: The currently allocated memory for the cluster.
@@ -225,7 +225,7 @@ It gives you the following information:
   process.
 
 For more information on some of the terminology used here, refer to the
-`CrateDB architecture Documentation`_.
+`CrateDB architecture documentation`_.
 
 
 .. _overview-cluster-metrics:
@@ -334,10 +334,10 @@ Cloud Console.
 .. _bregenz.a1.cratedb.cloud: https://bregenz.a1.cratedb.cloud/
 .. _concepts: https://crate.io/docs/cloud/reference/en/latest/concepts.html
 .. _CrateDB Admin UI: https://crate.io/docs/clients/admin-ui/
-.. _CrateDB architecture Documentation: https://crate.io/docs/crate/howtos/en/latest/architecture/shared-nothing.html
+.. _CrateDB architecture documentation: https://crate.io/docs/crate/howtos/en/latest/architecture/shared-nothing.html
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
 .. _eastus2.azure.cratedb.cloud: https://eastus2.azure.cratedb.cloud/
-.. _Glossary: https://crate.io/docs/cloud/reference/en/latest/glossary.html
+.. _glossary: https://crate.io/docs/cloud/reference/en/latest/glossary.html
 .. _HTTP: https://crate.io/docs/crate/reference/en/latest/interfaces/http.html
 .. _PostgreSQL wire protocol: https://crate.io/docs/crate/reference/en/latest/interfaces/postgres.html
 .. _tutorial: https://crate.io/docs/cloud/tutorials/en/latest/getting-started/index.html
