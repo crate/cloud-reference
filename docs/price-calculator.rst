@@ -42,7 +42,7 @@ inputs for these specifications:
 * The expected number **read queries** per second. This represents a
   multiplication of the number of data points to be queried, their update
   frequency (per second), and the number of representations of each data point.
-  
+
 * The estimated average payload size, in kilobytes (kb).
 
 * The desired **data retention** policy, in days. This is the number of days a
@@ -71,8 +71,7 @@ The Cloud provider
 ==================
 
 The Cloud provider specifies the provider of the Cloud subscription. Currently
-we only support Azure subscriptions. We intend to expand this to Amazon Web
-Services (AWS) in the future.
+we support Microsoft Azure and AWS as cloud providers.
 
 
 .. _price-calculator-example:
@@ -112,10 +111,10 @@ hours) × 24 (hours to days) × 14 (data retention) × 3 (replicas: original plu
 two copies) = 3628800000, divided by 1000000 = 3628.8 GB of storage
 requirements. Based on the read query value and the storage requirements, the
 pricing calculator will recommend a plan and a scale level for that plan. In
-our example case, that would be General Purpose at scale unit 1 on Azure.
+our example case, that would be General Purpose at scale unit 1.
 
 More information about plans and scale levels can be found in :ref:`our
-reference on Azure plans <azure-plans>`.
+reference on subscription plans <subscription-plans>`.
 
 
 .. _glossary: https://crate.io/docs/cloud/reference/en/latest/glossary.html

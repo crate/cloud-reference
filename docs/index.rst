@@ -27,7 +27,7 @@ of Things* (IIoT) at scale.
     :titlesonly:
 
     overview
-    azure-plans
+    subscription-plans
     price-calculator
     user-roles
     system-user

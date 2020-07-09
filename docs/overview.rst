@@ -29,23 +29,24 @@ You must access the Cloud Console by |region|.
 
 Available regions:
 
-+-------------------+-----------------------------------+
-| Region            | URL                               |
-+===================+===================================+
-| Azure East-US2    | `eastus2.azure.cratedb.cloud`_    |
-+-------------------+-----------------------------------+
-| Azure West-Europe | `westeurope.azure.cratedb.cloud`_ |
-+-------------------+-----------------------------------+
-| Bregenz           | `bregenz.a1.cratedb.cloud`_       |
-+-------------------+-----------------------------------+
++-------------------+-------------------------------------+
+| Region            | URL                                 |
++===================+=====================================+
+| AWS West Europe   | `eks1.eu-west-1.aws.cratedb.cloud`_ |
++-------------------+-------------------------------------+
+| Azure East-US2    | `eastus2.azure.cratedb.cloud`_      |
++-------------------+-------------------------------------+
+| Azure West-Europe | `westeurope.azure.cratedb.cloud`_   |
++-------------------+-------------------------------------+
+| Bregenz           | `bregenz.a1.cratedb.cloud`_         |
++-------------------+-------------------------------------+
 
 Azure East-US2 and Azure West-Europe are managed by |Microsoft Azure|. The
-Bregenz region is managed by Crate.io and is located in Austria.
+Bregenz region is managed by Crate.io and is located in Austria. The AWS region
+is managed by AWS and is located in Ireland.
 
-Azure East-US2 is a good default region if you don't know which one to pick.
-
-From the Cloud Console homepage, you can sign in using your Cloud Console
-username and password or using Microsoft Azure *Active Directory* (AD).
+From the Cloud Console homepage, you can `sign in`_ using your Cloud Console
+username and password (Cognito) or using Microsoft Azure *Active Directory*.
 
 If you don't have a Cloud Console account yet, select the sign-in option you
 wish to use. From there, you will be given the option to sign up.
@@ -329,17 +330,19 @@ Use the Logout button to log out of your current account and leave the CrateDB
 Cloud Console.
 
 
-.. _an organization  admin: https://crate.io/docs/cloud/reference/en/latest/user-roles.html#organization-roles
-.. _Azure   plans: https://crate.io/docs/cloud/reference/en/latest/azure-plans.html
+.. _an organization admin: https://crate.io/docs/cloud/reference/en/latest/user-roles.html#organization-roles
+.. _Azure plans: https://crate.io/docs/cloud/reference/en/latest/azure-plans.html
 .. _bregenz.a1.cratedb.cloud: https://bregenz.a1.cratedb.cloud/
 .. _concepts: https://crate.io/docs/cloud/reference/en/latest/concepts.html
 .. _CrateDB Admin UI: https://crate.io/docs/clients/admin-ui/
 .. _CrateDB architecture documentation: https://crate.io/docs/crate/howtos/en/latest/architecture/shared-nothing.html
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
 .. _eastus2.azure.cratedb.cloud: https://eastus2.azure.cratedb.cloud/
+.. _eks1.eu-west-1.aws.cratedb.cloud: https://eks1.eu-west-1.aws.cratedb.cloud
 .. _glossary: https://crate.io/docs/cloud/reference/en/latest/glossary.html
 .. _HTTP: https://crate.io/docs/crate/reference/en/latest/interfaces/http.html
 .. _PostgreSQL wire protocol: https://crate.io/docs/crate/reference/en/latest/interfaces/postgres.html
+.. _sign in: https://crate.io/docs/cloud/tutorials/en/latest/sign-up.html
 .. _tutorial: https://crate.io/docs/cloud/tutorials/en/latest/getting-started/index.html
 .. _user roles: https://crate.io/docs/cloud/reference/en/latest/user-roles.html
 .. _westeurope.azure.cratedb.cloud: https://westeurope.azure.cratedb.cloud/
