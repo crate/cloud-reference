@@ -65,7 +65,7 @@ ingests and queries per second. Only actual cluster usage is billed.
 A cluster has a name, a unique ID, as well as a storage and processing
 capacity and a number of nodes. Note that clusters are also versioned. For
 information on how to deploy a cluster, please see our `tutorial for deploying
-a CrateDB cluster via Azure Marketplace`_.
+a CrateDB Cloud cluster from scratch`_.
 
 
 .. _glossary-console:
@@ -81,7 +81,7 @@ interacting with the service, we assume use of the Console by default. Only the
 Console allows deployment of a :ref:`cluster<glossary-cluster>`.
 
 For information on how to use specific elements of the Console, refer to our
-`Howtos`_.
+`Console overview`_.
 
 
 .. _glossary-consumer:
@@ -127,8 +127,8 @@ configuration themselves, but can simply identify the price per DTU for a given
 plan and see how it matches their use case. This makes using the CrateDB Cloud
 :ref:`offer<glossary-offer>` and scaling to need easy and accessible.
 
-For a more detailed description of the Azure plans and associated DTUs, refer
-to our :ref:`documentation<azure-plans>`.
+For a more detailed description of the subscription plans and associated DTUs,
+refer to our :ref:`documentation<subscription-plans>`.
 
 
 .. _glossary-endpoint:
@@ -178,8 +178,8 @@ Offer
 
 An offer or subscription offer is a Software-as-a-Service (:ref:`SaaS
 <glossary-saas>`) product prepared for consumer purchase on a subscription
-basis. CrateDB Cloud has an offer on the |Microsoft Azure Marketplace| and is
-preparing an offer on AWS.
+basis. CrateDB Cloud has an offer on the |Microsoft Azure Marketplace| and on
+the `AWS Marketplace`_.
 
 .. _glossary-org:
 
@@ -250,7 +250,7 @@ Region
 
 A region in the sense used for CrateDB Cloud is a set of data centers (servers)
 grouped together on a geographic basis so as to not exceed a certain latency.
-CrateDB Cloud currently has three regions by default, but also offers the
+CrateDB Cloud currently has four regions by default, but also offers the
 option to define custom regions.
 
 
@@ -263,7 +263,7 @@ SaaS stands for "Software-as-a-Service". It refers to a model where software is
 provided to customers on a :ref:`subscription<glossary-subscription>` basis,
 rather than a one-off payment, and is centrally hosted. CrateDB Cloud can be
 used as a service through its SaaS :ref:`offer<glossary-offer>` on |Microsoft
-Azure Marketplace|.
+Azure Marketplace| and the `AWS Marketplace`_.
 
 
 .. _glossary-scale-unit:
@@ -280,7 +280,7 @@ The relationship between scale units and :ref:`DTUs<glossary-DTU>` is subtle.
 Each scale unit added on top of the first scale unit also represents one
 *additional* DTU. However, not all plans *start* at one DTU. For more detailed
 information about subscription plans, scale units, and DTUs, take a look at our
-documentation on :ref:`DTUs and Azure plans<azure-plans-dtus>`.
+documentation on :ref:`DTUs and subscription plans<subscription-plans-dtus>`.
 
 
 .. _glossary-subscription:
@@ -289,17 +289,17 @@ Subscription
 ------------
 
 A subscription is - for the purposes of CrateDB Cloud - a container in which
-the CrateDB Cloud service is created and managed, supported by our cloud
-provider, Microsoft Azure. In other words, once a customer signs up for the
-CrateDB Cloud :ref:`offer<glossary-offer>` and a particular CrateDB Cloud
-:ref:`subscription plan<glossary-subscription-plan>`, they will have a
-subscription to CrateDB Cloud with Azure.
+the CrateDB Cloud service is created and managed, supported by one of our cloud
+providers. In other words, once a customer signs up for a CrateDB Cloud
+:ref:`offer<glossary-offer>` and a particular CrateDB Cloud :ref:`subscription
+plan<glossary-subscription-plan>` via one of our cloud providers, they will
+have a subscription to CrateDB Cloud through that particular cloud provider.
 
 The billing for that particular instance of the CrateDB Cloud service is
-managed per subscription. A given customer (say, a company) can have multiple
-subscriptions. This can be practical in case a customer wants to separate
-different instances of using the CrateDB Cloud service into different billing
-accounts.
+managed per subscription. On Microsoft Azure, a given customer can have
+multiple subscriptions. This can be practical in case that customer wants to
+separate different instances of using the CrateDB Cloud service into different
+billing accounts.
 
 
 .. _glossary-subscription-plan:
@@ -312,9 +312,9 @@ plans. These plans are combinations of hardware specifications that are geared
 towards particular customer use cases: lower capacity vs. higher capacity, more
 storage vs. more processing power, and so forth. They can also be further
 adjusted for different :ref:`scale units<glossary-scale-unit>` per plan.
-Currently there are two subscription plans available via the |Microsoft Azure
-Marketplace|, with more to come in the near future. For more information on
-choosing the right Azure plan, refer to our documentation `on the subject`_.
+Currently there are two subscription plans available on our cloud offers, with
+more to come in the near future. For more information on choosing the right
+subscription plan, refer to our documentation `on the subject`_.
 
 
 .. _glossary-system-user:
@@ -348,15 +348,16 @@ is associated with a specific email address.
     organization.
 
 
-.. _Croud CLI  header: https://crate.io/docs/cloud/cli/en/latest/index.html
+.. _AWS Marketplace: https://aws.amazon.com/marketplace/pp/B089M4B1ND
+.. _Console overview: https://crate.io/docs/cloud/reference/en/latest/overview.html
+.. _Croud CLI header: https://crate.io/docs/cloud/cli/en/latest/index.html
 .. _Croud documentation: https://crate.io/docs/cloud/cli/en/latest/configuration.html#manage-configuration-via-cli
 .. _explanation: https://crate.io/docs/cloud/reference/en/latest/system-user.html
 .. _guide to creating a new organization: https://crate.io/docs/cloud/howtos/en/latest/create-org.html
 .. _guide to creating a new project: https://crate.io/docs/cloud/howtos/en/latest/create-project.html
-.. _Howtos: https://crate.io/docs/cloud/howtos/en/latest/
-.. _on the subject: https://crate.io/docs/cloud/reference/en/latest/azure-plans.html
+.. _on the subject: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _this article on our blog: https://crate.io/a/connecting-azure-iot-hub-and-cratedb-cloud-for-the-ingestion-of-sensor-data/
-.. _tutorial for deploying a CrateDB cluster via Azure Marketplace: https://crate.io/docs/cloud/tutorials/en/latest/getting-started/azure-to-cluster/index.html
+.. _tutorial for deploying a CrateDB Cloud cluster from scratch: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
 .. _user roles: https://crate.io/docs/cloud/reference/en/latest/user-roles.html
 .. |Microsoft Azure Marketplace| raw:: html
 
