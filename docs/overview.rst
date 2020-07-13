@@ -25,9 +25,9 @@ Basics
 
 .. image:: _assets/img/start.png
 
-You must access the Cloud Console by |region|.
+You must access the CrateDB Cloud Console by region.
 
-Available regions:
+Here is a list of all currently available regions for CrateDB Cloud:
 
 +-------------------+-------------------------------------+
 | Region            | URL                                 |
@@ -43,7 +43,8 @@ Available regions:
 
 Azure East-US2 and Azure West-Europe are managed by |Microsoft Azure|. The
 Bregenz region is managed by Crate.io and is located in Austria. The AWS region
-is managed by AWS and is located in Ireland.
+is managed by AWS and is located in Ireland. Note that the AWS region does not
+serve the CrateDB Cloud Console directly.
 
 From the Cloud Console homepage, you can `sign in`_ using your Cloud Console
 username and password (Cognito) or using Microsoft Azure *Active Directory*.
@@ -349,6 +350,3 @@ Cloud Console.
 .. |Microsoft Azure| raw:: html
 
     <a href="https://azure.microsoft.com/" target="_blank">Microsoft Azure</a>
-.. |region| raw:: html
-
-    <a href="https://azure.microsoft.com/en-us/global-infrastructure/regions/" target="_blank">region</a>
