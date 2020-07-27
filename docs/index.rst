@@ -30,7 +30,6 @@ of Things* (IIoT) at scale.
     subscription-plans
     price-calculator
     user-roles
-    system-user
     glossary
 
 
