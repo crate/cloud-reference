@@ -312,7 +312,7 @@ plans. These plans are combinations of hardware specifications that are geared
 towards particular customer use cases: lower capacity vs. higher capacity, more
 storage vs. more processing power, and so forth. They can also be further
 adjusted for different :ref:`scale units<glossary-scale-unit>` per plan.
-Currently there are two subscription plans available on our cloud offers, with
+Currently there are four subscription plans available on our cloud offers, with
 more to come in the near future. For more information on choosing the right
 subscription plan, refer to our documentation `on the subject`_.
 

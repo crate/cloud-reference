@@ -5,11 +5,11 @@ Subscription plans
 ==================
 
 When signing up for the CrateDB Cloud offer on the marketplace of our cloud
-providers, you have a choice of two different plans. Each plan is preconfigured
-for different use cases, depending on what your product needs are. By
-presenting plans in terms of ready-made configurations of database storage,
-memory, and computation capacity, the customer is spared the complexity of
-finding the exact required hardware combinations themselves.
+providers, you have a choice of four different plans. Each plan is
+preconfigured for different use cases, depending on what your product needs
+are. By presenting plans in terms of ready-made configurations of database
+storage, memory, and computation capacity, the customer is spared the
+complexity of finding the exact required hardware combinations themselves.
 
 At the same time, the plans also offer flexibility, since your use case may
 change. Not only is it possible to switch plans, but within a given plan you
@@ -34,8 +34,9 @@ The CrateDB Cloud subscription plans
 ====================================
 
 Currently, CrateDB Cloud's offers on `Azure Marketplace`_ and
-`AWS Marketplace`_ come with two different subscription plans: **Development**
-and **General Purpose**.
+`AWS Marketplace`_ come with four different subscription plans:
+**Development**, **General Purpose**, **IO Optimized** and **Storage
+optimized**.
 
 * The **Development** plan is aimed at users who want to try out what CrateDB
   Cloud has to offer. It offers modest but robust storage, memory, and
@@ -51,6 +52,15 @@ and **General Purpose**.
   significant storage, memory, and computation capacity. The General Purpose
   plan can also currently be scaled between three scale units, each adding (or
   subtracting) one DTU.
+
+* The **IO Optimized** plan is, as the name suggests, optimized for write and
+  query speed. It offers double the capacity for inserts and queries per second
+  of the **General Purpose** plan, but does not increase storage capacity.
+
+* The **Storage Optimized** plan is, by contrast, suited for use cases that are
+  primarily about (warm) storage and have less emphasis on querying. It offers
+  half the insert and query capacity of the **General Purpose** plan, but four
+  times the storage capacity.
 
 
 .. _subscription-plans-dtus:
@@ -74,19 +84,19 @@ actually used.
 
 Let's break this down further to clarify what each of these statements mean.
 
-As seen above, CrateDB Cloud's cloud offer is divided into two plans. Each plan
-has a starting scale (scale unit 1), which can be scaled up to scale unit 2 or
-3. Because the hardware capacity in each plan is different, a scale unit in the
-**Development** plan is of a different size (in terms of storage, memory, and
-computation) than a scale unit in the **General Purpose** plan. But scaling
-within each plan (i.e., scaling between the minimum capacity for that plan and
-the maximum capacity for that plan) is made easy by the division into scale
-units, each of which corresponds to one DTU.
+As seen above, CrateDB Cloud's cloud offer is divided into four plans. Each
+plan has a starting scale (scale unit 1), which can be scaled up to scale unit
+2 or 3. Because the hardware capacity in each plan is different, a scale unit
+in the **Development** plan, for example, is of a different size (in terms of
+storage, memory, and computation) than a scale unit in the **General Purpose**
+plan. But scaling within each plan (i.e., scaling between the minimum capacity
+for that plan and the maximum capacity for that plan) is made easy by the
+division into scale units, each of which corresponds to one DTU.
 
 An overview showing the range in terms of capacity of each plan, within which
 the scaling of that plan operates, can be found on the |Azure offer page| and
-the `AWS offer page`_ respectively. Here one also finds the price per DTU per
-hour.
+the `AWS offer page`_ respectively. Here you can also find the price per DTU
+per hour.
 
 To summarize, the DTU approach to scaling means that although the offered plans
 differ considerably in capacity both between each other and per scale unit
