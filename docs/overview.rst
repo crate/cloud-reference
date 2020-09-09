@@ -8,9 +8,8 @@ The *CrateDB Cloud Console* is a hosted web administration interface for
 interacting with `CrateDB Cloud`_. This overview gives you all the basic
 information for using the CrateDB Cloud Console. Refer to individual items in
 the current section of the documentation for more information on how to perform
-specific operations. To understand more of the Console terminology used here,
-refer to the documentation page on `concepts`_. You can also refer to our
-`glossary`_ for more information on specific terminology.
+specific operations. You can also refer to our `glossary`_ for more information
+on CrateDB Cloud-related terminology.
 
 .. rubric:: Table of contents
 
@@ -36,7 +35,7 @@ Here is a list of all currently available regions for CrateDB Cloud:
 +-------------------+-------------------------------------+
 | Azure East-US2    | `eastus2.azure.cratedb.cloud`_      |
 +-------------------+-------------------------------------+
-| Azure West-Europe | `westeurope.azure.cratedb.cloud`_   |
+| Azure West Europe | `westeurope.azure.cratedb.cloud`_   |
 +-------------------+-------------------------------------+
 | Bregenz           | `bregenz.a1.cratedb.cloud`_         |
 +-------------------+-------------------------------------+
@@ -46,11 +45,12 @@ Bregenz region is managed by Crate.io and is located in Austria. The AWS region
 is managed by AWS and is located in Ireland. Note that the AWS region does not
 serve the CrateDB Cloud Console directly.
 
-From the Cloud Console homepage, you can `sign in`_ using your Cloud Console
+From the Cloud Console homepage, you can sign in using your Cloud Console
 username and password (Cognito) or using Microsoft Azure *Active Directory*.
 
-If you don't have a Cloud Console account yet, select the sign-in option you
-wish to use. From there, you will be given the option to sign up.
+If you don't have a Cloud Console account yet, follow the steps in the `signup
+tutorial`_. Select the sign-in method you wish to use. From there, you will be
+given the option to sign up.
 
 Once signed in, you will be presented with your :ref:`organization overview
 <overview-org-overview>` on the Organization page.
@@ -206,9 +206,9 @@ It gives you the following information:
 
 * **Created**: The timestamp of the deployment of the cluster.
 
-* **Tier**: This shows what tier of the pricing plan the cluster is running on.
-  For more information on our pricing plans, see the documentation on `Azure
-  plans`_.
+* **Tier**: This shows what tier of the subscription plan the cluster is
+  running on. For more information on our plans, see the documentation on
+  `subscription plans`_.
 
 * **RAM/Heap Size**: The currently allocated memory for the cluster.
 
@@ -226,8 +226,8 @@ It gives you the following information:
   cluster. This is set in the configuration during the cluster deployment
   process.
 
-For more information on some of the terminology used here, refer to the
-`CrateDB architecture documentation`_.
+For more information on the CrateDB concepts used here, refer to the `CrateDB
+architecture documentation`_.
 
 
 .. _overview-cluster-metrics:
@@ -332,7 +332,6 @@ Cloud Console.
 
 
 .. _an organization admin: https://crate.io/docs/cloud/reference/en/latest/user-roles.html#organization-roles
-.. _Azure plans: https://crate.io/docs/cloud/reference/en/latest/azure-plans.html
 .. _bregenz.a1.cratedb.cloud: https://bregenz.a1.cratedb.cloud/
 .. _concepts: https://crate.io/docs/cloud/reference/en/latest/concepts.html
 .. _CrateDB Admin UI: https://crate.io/docs/clients/admin-ui/
@@ -343,7 +342,8 @@ Cloud Console.
 .. _glossary: https://crate.io/docs/cloud/reference/en/latest/glossary.html
 .. _HTTP: https://crate.io/docs/crate/reference/en/latest/interfaces/http.html
 .. _PostgreSQL wire protocol: https://crate.io/docs/crate/reference/en/latest/interfaces/postgres.html
-.. _sign in: https://crate.io/docs/cloud/tutorials/en/latest/sign-up.html
+.. _signup tutorial: https://crate.io/docs/cloud/tutorials/en/latest/sign-up.html
+.. _subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _tutorial: https://crate.io/docs/cloud/tutorials/en/latest/getting-started/index.html
 .. _user roles: https://crate.io/docs/cloud/reference/en/latest/user-roles.html
 .. _westeurope.azure.cratedb.cloud: https://westeurope.azure.cratedb.cloud/

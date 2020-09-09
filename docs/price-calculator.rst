@@ -7,17 +7,17 @@ Price calculator
 The `price calculator`_ for CrateDB Cloud is a tool allowing you to estimate
 the price of a suitable Cloud subscription plan for your particular use case.
 The output of the price calculator depends on three things: the subscription
-service (Cloud provider), the subscription plan base configuration, and finally
-the specific data requirements for your Cloud service.
+service (Cloud provider), the subscription plan base configuration (i.e., the
+price and range of data values covered that are inherent in the plan itself),
+and finally the specific data requirements for your Cloud service (covered
+under :ref:`plan specs configuration <price-calculator-config>` below).
 
 .. NOTE::
 
-    Currently, the only available base configuration for fully supported
-    subscription plans is the General Purpose configuration. Additionally, we
-    offer a Development plan for trial and testing purposes, but it does not
-    offer full 24/7 Crate.io support. We intend to offer more specialized
-    configurations for I/O-heavy and data storage oriented use cases,
-    respectively, in the future.
+    Currently, we offer three subscription plans, each with their own base
+    configuration: General Purpose, IO Optimized, and Storage Optimized.
+    Additionally, we offer a Development plan for trial and testing purposes,
+    but it does not offer full 24/7 Crate.io support.
 
 .. rubric:: Table of contents
 
@@ -60,9 +60,10 @@ inputs for these specifications:
     meaning of technical terms used here, please see our `glossary`_.
 
 Based on your selected values for each of the inputs, the pricing calculator
-automatically selects for you the most fitting plan configuration and gives an
-estimate for the price of the plan per hour and per month. As always, only
-actual usage will be billed on the basis of an hourly rate.
+automatically selects for you the most fitting plan, the best configuration
+within the plan, and gives an estimate for the price of the plan per hour and
+per month. As always, only actual usage will be billed, on the basis of an
+hourly rate.
 
 
 .. _price-calculator-provider:
