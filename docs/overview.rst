@@ -28,17 +28,17 @@ You must access the CrateDB Cloud Console by region.
 
 Here is a list of all currently available regions for CrateDB Cloud:
 
-+-------------------+-------------------------------------+
-| Region            | URL                                 |
-+===================+=====================================+
-| AWS West Europe   | `eks1.eu-west-1.aws.cratedb.cloud`_ |
-+-------------------+-------------------------------------+
-| Azure East-US2    | `eastus2.azure.cratedb.cloud`_      |
-+-------------------+-------------------------------------+
-| Azure West Europe | `westeurope.azure.cratedb.cloud`_   |
-+-------------------+-------------------------------------+
-| Bregenz           | `bregenz.a1.cratedb.cloud`_         |
-+-------------------+-------------------------------------+
++-------------------+----------------------------------------+
+| Region            | URL                                    |
++===================+========================================+
+| AWS West Europe   | `eks1.eu-west-1.aws.cratedb.cloud`_    |
++-------------------+----------------------------------------+
+| Azure East-US2    | `aks1.eastus2.azure.cratedb.cloud`_    |
++-------------------+----------------------------------------+
+| Azure West Europe | `aks1.westeurope.azure.cratedb.cloud`_ |
++-------------------+----------------------------------------+
+| Bregenz           | `bregenz.a1.cratedb.cloud`_            |
++-------------------+----------------------------------------+
 
 Azure East-US2 and Azure West-Europe are managed by |Microsoft Azure|. The
 Bregenz region is managed by Crate.io and is located in Austria. The AWS region
@@ -68,10 +68,24 @@ your organization overview will look something like this:
 
 .. image:: _assets/img/organization-overview.png
 
-The Organization screen consists of three tabs: *Settings*, *Users*, and the
-*Audit Log*. By default, it shows the Settings tab, which displays the
-organization name and ID and the email notification settings. You can access
-the other tabs by clicking their respective names at the top.
+The Organization screen consists of four tabs: *Subscriptions*, *Settings*,
+*Users*, and the *Audit Log*. By default it shows the Subscriptions tab, which
+displays two things. On the left, it shows the possible cloud providers and a
+link for creating a subscription with either. On the right, you see your
+current subscription (if any) with details: the status of the subscription, the
+subscription ID, the subscription cloud provider, the subscription type, and
+finally, any clusters deployed within the subscription with their respective
+subscription plans. You can access the other tabs by clicking their respective
+names at the top.
+
+
+Organization Settings
+---------------------
+
+The Settings tab shows you naming information (name, ID) and notification
+settings for your organization.
+
+.. image:: _assets/img/organization-settings.png
 
 By clicking the *Edit* button next to the organization, you can rename it. Here
 you can also set the email address for notifications and indicate whether you
@@ -123,10 +137,10 @@ of deployment.
 
 .. image:: _assets/img/projects.png
 
-The projects are selected by region, so to see projects deployed
-in other regions than the default, use the dropdown menu at the top left. You
-can also create a new project for the organization in the selected region by
-clicking the *Create project* button in the top right.
+The projects are selected by region. By default, the region dropdown menu is
+set to 'All'. To see projects deployed in specific regions, select that region
+from the menu. You can also create a new project for the organization in the
+selected region by clicking the *Create project* button in the top right.
 
 The cog icon next to each project takes you to the Project Settings page, in
 the menu simply called Settings, as :ref:`described further below
@@ -141,9 +155,10 @@ the main Projects page.
     line. By design, all menu items below the bar refer to the currently
     selected project, which is visible at the top left. The next sections of
     this documentation are therefore project specific and here referred to as
-    "Project Overview", "Project Settings" etc. For elegance of design,
-    however, the menu bar simply says "Overview", "Settings", and so forth.
-    These each refer to the project you selected on the Projects page.
+    "Project Overview", "Project Settings", etc. For elegance of design,
+    however, the menu bar simply says "Overview", "Settings", and so forth,
+    omitting the 'Project' referent. Nonetheless, these each still refer to the
+    project you selected on the Projects page.
 
 
 .. _overview-projects-overview:
@@ -151,15 +166,25 @@ the main Projects page.
 Project Overview
 ----------------
 
-The Project Overview page, below the divider line, shows you the services
-deployed in the currently selected project. The overview panel shows the name,
-type, and SaaS subscription for billing purposes associated with each service.
+The Project Overview page provides information about the selected project.
+Underneath the project name and icon there is a column on the left hand,
+showing the total number of users in the project as well as the share of
+members and admins of that total.
 
 .. image:: _assets/img/project-overview.png
 
-Clicking on a cluster service takes you to the Cluster Overview page, which
-bears the name the organization or project admin chose for the cluster. For
-more details on that page, see below.
+On the right, you see an overview of all clusters deployed within the project.
+This shows their status, the subscription plan and tier, the date and timestamp
+of their creation, the version of CrateDB they are running, and finally the
+subscription name associated with the cluster deployment. Clicking on this
+subscription name takes you to the :ref:`Subscriptions tab of the Organization
+page<overview-org-overview>`.
+
+Finally, you can also deploy a cluster from within the Project Overview, by
+clicking the *Deploy cluster* link at the top right. This also takes you back
+to the :ref:`Subscriptions tab of the Organization page
+<overview-org-overview>`, from where clusters can be deployed within a given
+subscription or a new subscription chosen.
 
 
 .. _overview-cluster-overview:
@@ -168,27 +193,25 @@ Cluster Overview
 ----------------
 
 The Cluster Overview page gives a broad range of relevant data for the cluster
-selected.
+selected. It also displays metrics for the cluster.
 
 .. image:: _assets/img/cluster-overview.png
 
-It gives you the following information:
+Info
+~~~~
 
-* **Cluster name**: The cluster name.
-
-.. NOTE::
-
-    The cluster name, once set, cannot be changed. It makes up part of the
-    unique cluster URL and is therefore permanent until the cluster is deleted.
+The column on the left hand side, under the cluster logo and name, displays
+information about the cluster. This includes:
 
 * **Cluster ID**: The unique ID of the cluster.
 
-* **Cluster URL**: The URL through which the cluster can be reached. The info
-  icon gives relevant information on ports and access methods. By clicking on
-  the URL you will be redirected to the `CrateDB Admin UI`_ for the cluster at
-  that URL. For more information on the protocols used to connect to the
-  respective ports, refer to the CrateDB documentation on `HTTP`_ and the
-  `PostgreSQL wire protocol`_ as well as the documentation of your client.
+* **Status**: The status of the cluster. This can be 'available', 'not
+  available', or 'setting up cluster'.
+
+* **Access cluster**: The *open cluster administration* button connects you to
+  the `CrateDB Admin UI`_ for the cluster at its unique URL. Alternatively,
+  you can follow the link *how to connect* to the cluster to find various
+  helpful code snippets for connecting to the cluster via a terminal or client.
 
 .. NOTE::
 
@@ -198,36 +221,43 @@ It gives you the following information:
     stateful connections (e.g., JDBC) must be configured to send keep-alive
     heartbeat queries.
 
-* **Cluster channel**: This indicates what build of CrateDB the cluster is
-  running. The options are stable, testing, or nightly.
+* **Cluster demo data**: Follow this link to quickly set up demo data for your
+  cluster. This will demonstrate in an easy way how it can be used in practice.
 
 * **Version**: This indicates the version number of CrateDB the cluster is
   running.
 
-* **Created**: The timestamp of the deployment of the cluster.
+* **Date Created**: The day of the original deployment of the cluster.
 
-* **Tier**: This shows what tier of the subscription plan the cluster is
+* **DB Username**: This shows once more the username associated with the
+  cluster. You chose this username while setting up the cluster originally.
+
+* **Plan**: This shows what tier of which subscription plan the cluster is
   running on. For more information on our plans, see the documentation on
   `subscription plans`_.
 
-* **RAM/Heap Size**: The currently allocated memory for the cluster.
-
-* **Number of cores**: The number of (or fractional share of) CPU cores
-  dedicated to the cluster.
-
-* **Number of nodes**: The number of nodes the cluster consists of.
-
-* **Storage**: The HD storage capacity allocated to the cluster, for example
-  for backups.
-
-* **Region**: The region the cluster is deployed in.
-
-* **DB Username**: Your username used for login purposes to connect to the
-  cluster. This is set in the configuration during the cluster deployment
-  process.
+* **Subscription**: The name of the subscription itself, with a link to the
+  :ref:`Subscriptions tab of the Organization page<overview-org-overview>`.
 
 For more information on the CrateDB concepts used here, refer to the `CrateDB
-architecture documentation`_.
+architecture documentation`_ or the :ref:`glossary<glossary>`.
+
+Metrics
+~~~~~~~
+
+On the rest of the page you will find various cluster metrics. In the center
+you will see an overview of general usage in the past week, including storage,
+memory, and CPU usage. A bar at the top indicates the 85% mark: if your CPU or
+storage usage is above this percentage of the cluster capacity, you should
+consider upgrading by `scaling the cluster`_.
+
+On the right you will see more immediate metrics, collected from the last hour
+of cluster operations. This includes average queries, average query response
+time, and disk, memory, and CPU usage for the last hour.
+
+The queries and query response time of the cluster can be seen in more detail
+on the Cluster Metrics page, for which see below. This page can also be
+accessed by clicking the *View metrics* link at the top right.
 
 
 .. _overview-cluster-metrics:
@@ -337,16 +367,17 @@ Cloud Console.
 .. _CrateDB Admin UI: https://crate.io/docs/clients/admin-ui/
 .. _CrateDB architecture documentation: https://crate.io/docs/crate/howtos/en/latest/architecture/shared-nothing.html
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
-.. _eastus2.azure.cratedb.cloud: https://eastus2.azure.cratedb.cloud/
+.. _aks1.eastus2.azure.cratedb.cloud: https://eastus2.azure.cratedb.cloud/
 .. _eks1.eu-west-1.aws.cratedb.cloud: https://eks1.eu-west-1.aws.cratedb.cloud
 .. _glossary: https://crate.io/docs/cloud/reference/en/latest/glossary.html
 .. _HTTP: https://crate.io/docs/crate/reference/en/latest/interfaces/http.html
 .. _PostgreSQL wire protocol: https://crate.io/docs/crate/reference/en/latest/interfaces/postgres.html
+.. _scaling the cluster: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
 .. _signup tutorial: https://crate.io/docs/cloud/tutorials/en/latest/sign-up.html
 .. _subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _tutorial: https://crate.io/docs/cloud/tutorials/en/latest/getting-started/index.html
 .. _user roles: https://crate.io/docs/cloud/reference/en/latest/user-roles.html
-.. _westeurope.azure.cratedb.cloud: https://westeurope.azure.cratedb.cloud/
+.. _aks1.westeurope.azure.cratedb.cloud: https://westeurope.azure.cratedb.cloud/
 .. |Microsoft Azure| raw:: html
 
     <a href="https://azure.microsoft.com/" target="_blank">Microsoft Azure</a>
