@@ -81,7 +81,7 @@ interacting with the service, we assume use of the Console by default. Only the
 Console allows deployment of a :ref:`cluster<glossary-cluster>`.
 
 For information on how to use specific elements of the Console, refer to our
-`Console overview`_.
+:ref:`Console overview <overview>`.
 
 
 .. _glossary-consumer:
@@ -330,8 +330,8 @@ In CrateDB Cloud, there are two distinct system :ref:`users<glossary-user>`:
   <glossary-scale-unit>` operations.
 
 * The other is the "system" user in the CrateDB backend. For more information
-  on this second user, refer to our `explanation`_ in the CrateDB Cloud
-  reference.
+  on this second user, refer to our :ref:`explanation <system-user>` in the
+  CrateDB Cloud reference.
 
 
 .. _glossary-user:
@@ -341,8 +341,8 @@ User
 
 A user in CrateDB Cloud is any individual account authorized to interact with
 some part of an :ref:`organization<glossary-org>`'s assets. Each user has a
-defined role within the organization (see our reference on `user roles`_) and
-is associated with a specific email address.
+defined role within the organization (see our reference on :ref:`user roles
+<user-roles>`) and is associated with a specific email address.
 
 .. NOTE::
     Note that currently each CrateDB Cloud user corresponds to only one
@@ -350,16 +350,13 @@ is associated with a specific email address.
 
 
 .. _AWS Marketplace: https://aws.amazon.com/marketplace/pp/B089M4B1ND
-.. _Console overview: https://crate.io/docs/cloud/reference/en/latest/overview.html
 .. _Croud CLI header: https://crate.io/docs/cloud/cli/en/latest/index.html
 .. _Croud documentation: https://crate.io/docs/cloud/cli/en/latest/configuration.html#manage-configuration-via-cli
-.. _explanation: https://crate.io/docs/cloud/reference/en/latest/system-user.html
 .. _guide to creating a new organization: https://crate.io/docs/cloud/howtos/en/latest/create-org.html
 .. _guide to creating a new project: https://crate.io/docs/cloud/howtos/en/latest/create-project.html
 .. _subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _this article on our blog: https://crate.io/a/connecting-azure-iot-hub-and-cratedb-cloud-for-the-ingestion-of-sensor-data/
 .. _tutorial for deploying a CrateDB Cloud cluster from scratch: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
-.. _user roles: https://crate.io/docs/cloud/reference/en/latest/user-roles.html
 .. |Microsoft Azure Marketplace| raw:: html
 
     <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=PlansAndPrice" target="_blank">Microsoft Azure Marketplace</a>
