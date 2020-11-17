@@ -35,8 +35,8 @@ The CrateDB Cloud subscription plans
 
 Currently, CrateDB Cloud's offers on `Azure Marketplace`_ and
 `AWS Marketplace`_ come with four different subscription plans:
-**Development**, **General Purpose**, **IO Optimized** and **Storage
-optimized**.
+**Development**, **General Purpose**, **IO Optimized**, and **Storage
+Optimized**. Besides these, we also offer the CrateDB Cloud **Contract**.
 
 * The **Development** plan is aimed at users who want to try out what CrateDB
   Cloud has to offer. It offers modest but robust storage, memory, and
@@ -61,6 +61,47 @@ optimized**.
   primarily about (warm) storage and have less emphasis on querying. It offers
   half the insert and query capacity of the **General Purpose** plan, but four
   times the storage capacity.
+
+
+.. _subscription-plans-contracts:
+
+The CrateDB Cloud Contract
+==========================
+
+The **CrateDB Cloud Contract** allows you to pay for a full year's worth of the
+service of your choice in advance. You purchase a certain number of DTUs for
+one of the subscription plans mentioned above, and pay them up front for the
+full year. Depending on the specifics of the contract chosen, it may be
+possible to negotiate a discount based on the up front payment. For more
+information, contact our `Sales team`_.
+
+The process depends on whether you sign up via Azure or via AWS, as described
+below:
+
+
+Azure
+-----
+
+To sign a CrateDB Cloud Contract via Microsoft Azure, follow the `initial steps
+for signup`_ while selecting the CrateDB Cloud Contract as your subscription
+plan. This will automatically alert our Sales team, who will get in touch with
+you to configure the specifics of your contract according to your needs.
+
+
+AWS
+---
+
+To sign a CrateDB Cloud Contract via AWS, simply follow the link to the
+`Contract page on the AWS Marketplace`_. The Contract will be visible as a
+product you can subscribe to. The pricing information is indicative of the cost
+of a single DTU for a given subscription plan (see the descriptions of the
+plans above) for the full year.
+
+.. image:: _assets/img/aws-contract.png
+
+By subscribing to the CrateDB Cloud Contract product, you will automatically be
+put in contact with our Sales department, which will further help you configure
+the right plan and contract according to your needs.
 
 
 .. _subscription-plans-dtus:
@@ -107,8 +148,7 @@ The same principle applies to the pricing. If you scale within a plan, you will
 readily know how much capacity you are getting and also how much you will pay
 per hour. This is because you know the capacity of the plan, the fact that one
 scale unit = one DTU, and the price per DTU/hour for that plan. This provides
-both flexibility and transparency. The pricing can also be estimated through
-the `pricing calculator`_.
+both flexibility and transparency.
 
 The precise calculations of required hardware capacity, actual usage of that
 hardware, and a corresponding cost are all handled by Crate.io. The user only
@@ -139,9 +179,6 @@ unit 3. Since each scale unit is currently simply one DTU, and the **General**
 is three DTU/hour of that plan. Of course, as always, only actual usage is
 billed.
 
-It is easy to try out different other estimations and their corresponding plans
-and prices using the `price calculator on the CrateDB Cloud website`_.
-
 
 .. _azure-plans-notes:
 
@@ -160,15 +197,16 @@ For clarity and to prevent confusion, we add here a few notes of caution:
   given plan. This is true even if you do not scale further upwards, since your
   plan may start at several DTUs even without you scaling it up further.
 * New plans will be offered in the future with different capacity ranges that
-  may suit your use case. Our price calculator and this reference document will
-  then be updated accordingly. Plan terms and prices are subject to change.
+  may suit your use case. This reference document will then be updated
+  accordingly. Plan terms and prices are subject to change.
 
 
 .. _AWS Marketplace: https://aws.amazon.com/marketplace/pp/B089M4B1ND
 .. _AWS offer page: https://aws.amazon.com/marketplace/pp/B089M4B1ND
 .. _Azure Marketplace: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=PlansAndPrice
-.. _pricing calculator: https://crate.io/products/cratedb-cloud/#cloud-calculator
-.. _price calculator on the CrateDB Cloud website: https://crate.io/products/cratedb-cloud/#cloud-calculator
+.. _Contract page on the AWS Marketplace: https://aws.amazon.com/marketplace/pp/B08KHK34RK
+.. _initial steps  for signup: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-azure/signup-azure.html#using-the-cratedb-cloud-offer-on-azure-marketplace
+.. _Sales team: sales@crate.io
 .. |Azure offer page| raw:: html
 
     <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=PlansAndPrice" target="_blank">Azure offer page</a>
