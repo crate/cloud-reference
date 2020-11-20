@@ -313,8 +313,9 @@ towards particular customer use cases: lower capacity vs. higher capacity, more
 storage vs. more processing power, and so forth. They can also be further
 adjusted for different :ref:`scale units<glossary-scale-unit>` per plan.
 Currently there are four subscription plans available on our cloud offers, with
-more to come in the near future. For more information on choosing the right
-subscription plan, refer to our documentation `on the subject`_.
+more to come in the near future, as well as a contract offer. For more
+information on choosing the right subscription plan, refer to our documentation
+on `subscription plans`_.
 
 
 .. _glossary-system-user:
@@ -355,7 +356,7 @@ is associated with a specific email address.
 .. _explanation: https://crate.io/docs/cloud/reference/en/latest/system-user.html
 .. _guide to creating a new organization: https://crate.io/docs/cloud/howtos/en/latest/create-org.html
 .. _guide to creating a new project: https://crate.io/docs/cloud/howtos/en/latest/create-project.html
-.. _on the subject: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
+.. _subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _this article on our blog: https://crate.io/a/connecting-azure-iot-hub-and-cratedb-cloud-for-the-ingestion-of-sensor-data/
 .. _tutorial for deploying a CrateDB Cloud cluster from scratch: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
 .. _user roles: https://crate.io/docs/cloud/reference/en/latest/user-roles.html
