@@ -44,7 +44,7 @@ Azure AD
 Azure AD (Active Directory) is Microsoft's authentication and sign-in service
 for accessing Microsoft hosted services. CrateDB Cloud uses AzureAD as one of
 the means of sign-up and authentication for its service. For documentation on
-Azure AD, refer to the |Microsoft documentation|.
+Azure AD, refer to the `Microsoft documentation on Azure`_.
 
 
 .. _glossary-cluster:
@@ -178,7 +178,7 @@ Offer
 
 An offer or subscription offer is a Software-as-a-Service (:ref:`SaaS
 <glossary-saas>`) product prepared for consumer purchase on a subscription
-basis. CrateDB Cloud has an offer on the |Microsoft Azure Marketplace| and on
+basis. CrateDB Cloud has an offer on the `Microsoft Azure Marketplace`_ and on
 the `AWS Marketplace`_.
 
 .. _glossary-org:
@@ -262,8 +262,8 @@ SaaS
 SaaS stands for "Software-as-a-Service". It refers to a model where software is
 provided to customers on a :ref:`subscription<glossary-subscription>` basis,
 rather than a one-off payment, and is centrally hosted. CrateDB Cloud can be
-used as a service through its SaaS :ref:`offer<glossary-offer>` on |Microsoft
-Azure Marketplace| and the `AWS Marketplace`_.
+used as a service through its SaaS :ref:`offer<glossary-offer>` on `Microsoft
+Azure Marketplace`_ and the `AWS Marketplace`_.
 
 
 .. _glossary-scale-unit:
@@ -354,12 +354,9 @@ defined role within the organization (see our reference on :ref:`user roles
 .. _Croud documentation: https://crate.io/docs/cloud/cli/en/latest/configuration.html#manage-configuration-via-cli
 .. _guide to creating a new organization: https://crate.io/docs/cloud/howtos/en/latest/create-org.html
 .. _guide to creating a new project: https://crate.io/docs/cloud/howtos/en/latest/create-project.html
+.. _Microsoft Azure Marketplace: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview
+.. _Microsoft documentation on Azure: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis
 .. _subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _this article on our blog: https://crate.io/a/connecting-azure-iot-hub-and-cratedb-cloud-for-the-ingestion-of-sensor-data/
 .. _tutorial for deploying a CrateDB Cloud cluster from scratch: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
-.. |Microsoft Azure Marketplace| raw:: html
-
-    <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=PlansAndPrice" target="_blank">Microsoft Azure Marketplace</a>
-.. |Microsoft documentation| raw:: html
-
-    <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis" target="_blank">Microsoft Documentation</a>
+.. _user roles: https://crate.io/docs/cloud/reference/en/latest/user-roles.html

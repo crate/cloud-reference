@@ -40,7 +40,7 @@ Here is a list of all currently available regions for CrateDB Cloud:
 | Bregenz           | `bregenz.a1.cratedb.cloud`_            |
 +-------------------+----------------------------------------+
 
-Azure East-US2 and Azure West-Europe are managed by |Microsoft Azure|. The
+Azure East-US2 and Azure West-Europe are managed by `Microsoft Azure`_. The
 Bregenz region is managed by Crate.io and is located in Austria. The AWS region
 is managed by AWS and is located in Ireland. Note that the AWS region does not
 serve the CrateDB Cloud Console directly.
@@ -361,23 +361,21 @@ Use the Logout button to log out of your current account and leave the CrateDB
 Cloud Console.
 
 
+.. _aks1.eastus2.azure.cratedb.cloud: https://eastus2.azure.cratedb.cloud/
+.. _eks1.eu-west-1.aws.cratedb.cloud: https://eks1.eu-west-1.aws.cratedb.cloud
+.. _aks1.westeurope.azure.cratedb.cloud: https://westeurope.azure.cratedb.cloud/
 .. _an organization admin: https://crate.io/docs/cloud/reference/en/latest/user-roles.html#organization-roles
 .. _bregenz.a1.cratedb.cloud: https://bregenz.a1.cratedb.cloud/
 .. _concepts: https://crate.io/docs/cloud/reference/en/latest/concepts.html
 .. _CrateDB Admin UI: https://crate.io/docs/clients/admin-ui/
 .. _CrateDB architecture documentation: https://crate.io/docs/crate/howtos/en/latest/architecture/shared-nothing.html
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
-.. _aks1.eastus2.azure.cratedb.cloud: https://eastus2.azure.cratedb.cloud/
-.. _eks1.eu-west-1.aws.cratedb.cloud: https://eks1.eu-west-1.aws.cratedb.cloud
 .. _glossary: https://crate.io/docs/cloud/reference/en/latest/glossary.html
 .. _HTTP: https://crate.io/docs/crate/reference/en/latest/interfaces/http.html
+.. _Microsoft Azure: https://azure.microsoft.com/en-us/
 .. _PostgreSQL wire protocol: https://crate.io/docs/crate/reference/en/latest/interfaces/postgres.html
 .. _scaling the cluster: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
 .. _signup tutorial: https://crate.io/docs/cloud/tutorials/en/latest/sign-up.html
 .. _subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _tutorial: https://crate.io/docs/cloud/tutorials/en/latest/getting-started/index.html
 .. _user roles: https://crate.io/docs/cloud/reference/en/latest/user-roles.html
-.. _aks1.westeurope.azure.cratedb.cloud: https://westeurope.azure.cratedb.cloud/
-.. |Microsoft Azure| raw:: html
-
-    <a href="https://azure.microsoft.com/" target="_blank">Microsoft Azure</a>

@@ -127,11 +127,12 @@ operations is as follows:
 | ``SET LICENSE``
 | ``SET TRANSACTION``
 
-More information on CrateDB user privileges can be found `here`_.
+More information on CrateDB user privileges can be found in the `CrateDB
+documentation on privileges`_.
 
 
 .. _adding users: https://crate.io/docs/cloud/howtos/en/latest/add-users.html
-.. _here: https://crate.io/docs/crate/reference/en/latest/admin/privileges.html
 .. _AWS: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-aws/configure-aws.html#wizard-step-2
 .. _Azure: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-azure/configure-azure.html#wizard-step-2
 .. _AL privileges: https://crate.io/docs/crate/reference/en/latest/admin/privileges.html#al
+.. _CrateDB documentation on privileges: https://crate.io/docs/crate/reference/en/latest/admin/privileges.html

@@ -135,7 +135,7 @@ for that plan and the maximum capacity for that plan) is made easy by the
 division into scale units, each of which corresponds to one DTU.
 
 An overview showing the range in terms of capacity of each plan, within which
-the scaling of that plan operates, can be found on the |Azure offer page| and
+the scaling of that plan operates, can be found on the `Azure offer page`_ and
 the `AWS offer page`_ respectively. Here you can also find the price per DTU
 per hour.
 
@@ -204,9 +204,7 @@ For clarity and to prevent confusion, we add here a few notes of caution:
 .. _AWS Marketplace: https://aws.amazon.com/marketplace/pp/B089M4B1ND
 .. _AWS offer page: https://aws.amazon.com/marketplace/pp/B089M4B1ND
 .. _Azure Marketplace: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=PlansAndPrice
+.. _Azure offer page: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview
 .. _Contract page on the AWS Marketplace: https://aws.amazon.com/marketplace/pp/B08KHK34RK
 .. _initial steps  for signup: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-azure/signup-azure.html#using-the-cratedb-cloud-offer-on-azure-marketplace
 .. _Sales team: sales@crate.io
-.. |Azure offer page| raw:: html
-
-    <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=PlansAndPrice" target="_blank">Azure offer page</a>
