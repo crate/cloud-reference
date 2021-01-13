@@ -98,6 +98,7 @@ of a single DTU for a given subscription plan (see the descriptions of the
 plans above) for the full year.
 
 .. image:: _assets/img/aws-contract.png
+   :alt: AWS Marketplace CrateDB Cloud Contract offer
 
 By subscribing to the CrateDB Cloud Contract product, you will automatically be
 put in contact with our Sales department, which will further help you configure

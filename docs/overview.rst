@@ -23,6 +23,7 @@ Basics
 ======
 
 .. image:: _assets/img/start.png
+   :alt: CrateDB Cloud sign-in screen
 
 You must access the CrateDB Cloud Console by region.
 
@@ -67,6 +68,7 @@ If you follow the `tutorial`_ instructions and deploy a test cluster,
 your organization overview will look something like this:
 
 .. image:: _assets/img/organization-overview.png
+   :alt: Cloud Console organization overview
 
 The Organization screen consists of four tabs: *Subscriptions*, *Settings*,
 *Users*, and the *Audit Log*. By default it shows the Subscriptions tab, which
@@ -86,6 +88,7 @@ The Settings tab shows you naming information (name, ID) and notification
 settings for your organization.
 
 .. image:: _assets/img/organization-settings.png
+   :alt: Cloud Console organization settings tab
 
 By clicking the *Edit* button next to the organization, you can rename it. Here
 you can also set the email address for notifications and indicate whether you
@@ -105,6 +108,7 @@ The Users tab shows the users associated with the organization, as well as
 their user role and their email address.
 
 .. image:: _assets/img/organization-users.png
+   :alt: Cloud Console organization users tab
 
 If you are an organization admin, you can edit these by clicking the pen icon
 or delete users by using the bin icon. To add new users to the organization, in
@@ -120,6 +124,7 @@ Organization Audit Log
 This tab shows the Audit Log.
 
 .. image:: _assets/img/organization-audit-log.png
+   :alt: Cloud Console organization audit log tab
 
 In the Audit Log, a user with the correct credentials (`an organization
 admin`_) can see an overview of logged changes to the organization, the
@@ -136,6 +141,7 @@ organization, together with their timestamp of creation, project ID, and region
 of deployment.
 
 .. image:: _assets/img/projects.png
+   :alt: Cloud Console projects overview
 
 The projects are selected by region. By default, the region dropdown menu is
 set to 'All'. To see projects deployed in specific regions, select that region
@@ -172,6 +178,7 @@ showing the total number of users in the project as well as the share of
 members and admins of that total.
 
 .. image:: _assets/img/project-overview.png
+   :alt: Cloud Console project overview page
 
 On the right, you see an overview of all clusters deployed within the project.
 This shows their status, the subscription plan and tier, the date and timestamp
@@ -196,6 +203,7 @@ The Cluster Overview page gives a broad range of relevant data for the cluster
 selected. It also displays metrics for the cluster.
 
 .. image:: _assets/img/cluster-overview.png
+   :alt: Cloud Console cluster overview page
 
 Info
 ~~~~
@@ -270,6 +278,7 @@ functioning. It shows two graph panels: one for the average response time of a
 query (in milliseconds) and one for the total number of queries per second.
 
 .. image:: _assets/img/cluster-metrics.png
+   :alt: Cloud Console cluster metrics page
 
 The contributions of each type of query to the total results displayed in the
 graph panel are displayed in different colors. These values can also be read
@@ -285,6 +294,7 @@ On the page for Cluster Settings you get a quick overview of the subscription
 plan configuration of the cluster.
 
 .. image:: _assets/img/cluster-settings.png
+   :alt: Cloud Console cluster settings page
 
 The blue box on the left shows the current cluster subscription plan, including
 the tier and the scale unit. The scale unit can also be adjusted on this page.
@@ -309,6 +319,7 @@ The Project Users page shows you a list of all the users who have been added to
 the project, their email address, and their user role.
 
 .. image:: _assets/img/project-users.png
+   :alt: Cloud Console project users page
 
 You can edit or delete user data here - if you have the right user permissions
 - by clicking respectively the pen icon and the bin icon. You can also add new
@@ -326,6 +337,7 @@ project. This includes the project name, the project region, and the unique
 project ID.
 
 .. image:: _assets/img/project-settings.png
+   :alt: Cloud Console project settings page
 
 In this screen you can delete a project by clicking the *Delete*
 button at the top right. You can also change the project name by clicking the
@@ -347,6 +359,7 @@ CrateDB Cloud Console. It shows the username as well as the email address
 associated with that username.
 
 .. image:: _assets/img/account.png
+   :alt: Cloud Console account
 
 The latter can be edited in this screen by clicking the *Edit* button at the
 top right.
