@@ -261,9 +261,10 @@ SaaS
 
 SaaS stands for "Software-as-a-Service". It refers to a model where software is
 provided to customers on a :ref:`subscription<glossary-subscription>` basis,
-rather than a one-off payment, and is centrally hosted. CrateDB Cloud can be
-used as a service through its SaaS :ref:`offer<glossary-offer>` on `Microsoft
-Azure Marketplace`_ and the `AWS Marketplace`_.
+rather than a one-off payment, and is centrally hosted. Besides the default
+option of subscribing directly, CrateDB Cloud can be used as a service
+through its SaaS :ref:`offer<glossary-offer>` on `Microsoft Azure Marketplace`_
+and the `AWS Marketplace`_.
 
 
 .. _glossary-scale-unit:
@@ -289,17 +290,17 @@ Subscription
 ------------
 
 A subscription is - for the purposes of CrateDB Cloud - a container in which
-the CrateDB Cloud service is created and managed, supported by one of our cloud
-providers. In other words, once a customer signs up for a CrateDB Cloud
-:ref:`offer<glossary-offer>` and a particular CrateDB Cloud :ref:`subscription
-plan<glossary-subscription-plan>` via one of our cloud providers, they will
-have a subscription to CrateDB Cloud through that particular cloud provider.
+the CrateDB Cloud service is created and managed. You can purchase a CrateDB
+Cloud subscription by following the steps in our `tutorial`_. In the case of
+our :ref:`SaaS<glossary-saas>` :ref:`offers<glossary-offer>` on the cloud
+provider marketplaces, customers subscribe to CrateDB Cloud through that
+particular cloud provider.
 
-The billing for that particular instance of the CrateDB Cloud service is
-managed per subscription. On Microsoft Azure, a given customer can have
-multiple subscriptions. This can be practical in case that customer wants to
-separate different instances of using the CrateDB Cloud service into different
-billing accounts.
+The billing for a particular instance of the CrateDB Cloud service is managed
+per subscription. On Microsoft Azure, a given customer can have multiple
+subscriptions. This can be practical in case that customer wants to separate
+different instances of using the CrateDB Cloud service into different billing
+accounts.
 
 
 .. _glossary-subscription-plan:
@@ -307,15 +308,14 @@ billing accounts.
 Subscription plan
 -----------------
 
-CrateDB Cloud's :ref:`offer<glossary-offer>` consists of multiple subscription
-plans. These plans are combinations of hardware specifications that are geared
-towards particular customer use cases: lower capacity vs. higher capacity, more
-storage vs. more processing power, and so forth. They can also be further
-adjusted for different :ref:`scale units<glossary-scale-unit>` per plan.
-Currently there are four subscription plans available on our cloud offers, with
-more to come in the near future, as well as a contract offer. For more
-information on choosing the right subscription plan, refer to our documentation
-on `subscription plans`_.
+CrateDB Cloud's service comes with several possible subscription plans. These
+plans are combinations of hardware specifications that are geared towards
+particular customer use cases: lower capacity vs. higher capacity, more storage
+vs. more processing power, and so forth. They can also be further adjusted for
+different :ref:`scale units<glossary-scale-unit>` per plan. Currently there are
+four subscription plans available, as well as a separate contract option via
+our marketplace :ref:`offers<glossary-offer>`. For more information, refer to
+our documentation on `subscription plans`_.
 
 
 .. _glossary-system-user:
@@ -358,5 +358,6 @@ defined role within the organization (see our reference on :ref:`user roles
 .. _Microsoft documentation on Azure: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis
 .. _subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _this article on our blog: https://crate.io/a/connecting-azure-iot-hub-and-cratedb-cloud-for-the-ingestion-of-sensor-data/
+.. _tutorial: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
 .. _tutorial for deploying a CrateDB Cloud cluster from scratch: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
 .. _user roles: https://crate.io/docs/cloud/reference/en/latest/user-roles.html
