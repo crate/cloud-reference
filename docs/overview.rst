@@ -50,8 +50,8 @@ From the Cloud Console homepage, you can sign in using your Cloud Console
 username and password (Cognito) or using Microsoft Azure *Active Directory*.
 
 If you don't have a Cloud Console account yet, follow the steps in the `signup
-tutorial`_. Select the sign-in method you wish to use. From there, you will be
-given the option to sign up.
+tutorial`_. Select the authentication method you wish to use. From there, you
+will be given the option to sign up.
 
 Once signed in, you will be presented with your :ref:`organization overview
 <overview-org-overview>` on the Organization page.
@@ -70,15 +70,21 @@ your organization overview will look something like this:
 .. image:: _assets/img/organization-overview.png
    :alt: Cloud Console organization overview
 
-The Organization screen consists of four tabs: *Subscriptions*, *Settings*,
-*Users*, and the *Audit Log*. By default it shows the Subscriptions tab, which
-displays two things. On the left, it shows the possible cloud providers and a
-link for creating a subscription with either. On the right, you see your
-current subscription (if any) with details: the status of the subscription, the
-subscription ID, the subscription cloud provider, the subscription type, and
-finally, any clusters deployed within the subscription with their respective
-subscription plans. You can access the other tabs by clicking their respective
-names at the top.
+The Organization screen consists of five tabs: *Subscriptions*, *Settings*,
+*Users*, the *Audit Log*, and finally *Billing*. By default it shows the
+Subscriptions tab, which displays two things. On the left, it shows the
+possible cloud providers and a link for creating a subscription with them. On
+the right, you will see your current subscription (if any). This panel also
+shows subscription details: the status of the subscription, the subscription
+ID, the subscription cloud provider, the subscription type, and finally, any
+clusters deployed within the subscription with their respective subscription
+plans.
+
+The *Deploy cluster* button at the bottom left of any subscription box allows
+you to directly deploy clusters within that subscription. The button with three
+dots at the bottom right allows you to cancel that subscription.
+
+You can access the other tabs by clicking their respective names at the top.
 
 
 Organization Settings
@@ -129,6 +135,24 @@ This tab shows the Audit Log.
 In the Audit Log, a user with the correct credentials (`an organization
 admin`_) can see an overview of logged changes to the organization, the
 organization's projects, and other such data, each provided with a timestamp.
+
+
+Organization Billing
+--------------------
+
+This tab shows the billing overview. If you have signed up with a credit card
+for your cluster (the recommended route), your card information overview will
+be shown here.
+
+.. image:: _assets/img/organization-billing.png
+   :alt: Cloud Console organization billing tab
+
+In case you use multiple cards, a default card can be set and cards can be
+deleted from the list by using the dots icon to the right of the card listing.
+Click the *Add payment method* button at the top right to add a new card.
+
+On the right-hand side, you will see the billing information. This can be
+edited by using the pen icon at the top right.
 
 
 .. _overview-projects:
