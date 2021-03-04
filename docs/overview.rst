@@ -414,5 +414,5 @@ Cloud Console.
 .. _scaling the cluster: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
 .. _signup tutorial: https://crate.io/docs/cloud/tutorials/en/latest/sign-up.html
 .. _subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
-.. _tutorial: https://crate.io/docs/cloud/tutorials/en/latest/getting-started/index.html
+.. _tutorial: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
 .. _user roles: https://crate.io/docs/cloud/reference/en/latest/user-roles.html
