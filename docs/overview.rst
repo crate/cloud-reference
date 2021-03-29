@@ -53,8 +53,7 @@ If you don't have a Cloud Console account yet, follow the steps in the `signup
 tutorial`_. Select the authentication method you wish to use. From there, you
 will be given the option to sign up.
 
-Once signed in, you will be presented with your :ref:`organization overview
-<overview-org-overview>` on the Organization page.
+Once signed in, you will be presented with the Organization Overview.
 
 
 .. _overview-org-overview:
@@ -62,25 +61,25 @@ Once signed in, you will be presented with your :ref:`organization overview
 Organization
 ============
 
-The Organization page lists the organizations and projects you can access.
+The Organization Overview lists the organizations and projects you can access.
 
-If you follow the `tutorial`_ instructions and deploy a test cluster,
-your organization overview will look something like this:
+If you follow the `tutorial`_ instructions and deploy a test cluster, your
+Organization Overview will look something like this:
 
 .. image:: _assets/img/organization-overview.png
    :alt: Cloud Console organization overview
 
-The Organization screen consists of five tabs: *Subscriptions*, *Settings*,
-*Users*, the *Audit Log*, and finally *Billing*. By default it shows the
-Subscriptions tab, which displays two things. On the left, it shows the
-possible cloud providers and a link for creating a subscription with them. On
-the right, you will see your current subscription (if any). This panel also
+The Organization Overview consists of six tabs: *Subscriptions*, *Settings*,
+*Users*, the *Audit Log*, *Billing*, and finally, *Regions*. By default it
+shows the Subscriptions tab, which displays two things. On the left, it shows
+the possible cloud providers and a link for creating a subscription with them.
+On the right, you will see your current subscription (if any). This panel also
 shows subscription details: the status of the subscription, the subscription
 ID, the subscription cloud provider, the subscription type, and finally, any
 clusters deployed within the subscription with their respective subscription
 plans.
 
-The *Deploy cluster* button at the bottom left of any subscription box allows
+The *Deploy cluster* button at the bottom left of any subscription panel allows
 you to directly deploy clusters within that subscription. The button with three
 dots at the bottom right allows you to cancel that subscription.
 
@@ -155,6 +154,17 @@ On the right-hand side, you will see the billing information. This can be
 edited by using the pen icon at the top right.
 
 
+Organization Regions
+--------------------
+
+The Regions tab shows you the currently available regions for cluster
+deployment. Each panel shows the region, in other words a server location, and
+the corresponding cloud provider or subscription provider responsible for that
+region. Below each region panel you will find a button labeled *Deploy
+Cluster*. Clicking this will allow you to deploy a cluster directly into that
+region.
+
+
 .. _overview-projects:
 
 Projects
@@ -168,9 +178,10 @@ of deployment.
    :alt: Cloud Console projects overview
 
 The projects are selected by region. By default, the region dropdown menu is
-set to 'All'. To see projects deployed in specific regions, select that region
-from the menu. You can also create a new project for the organization in the
-selected region by clicking the *Create project* button in the top right.
+set to the region where your project is located (if any). To see projects
+deployed in specific regions, select that region from the menu. You can also
+create a new project for the organization in the selected region by clicking
+the *Create project* button in the top right.
 
 The cog icon next to each project takes you to the Project Settings page, in
 the menu simply called Settings, as :ref:`described further below
@@ -229,6 +240,7 @@ selected. It also displays metrics for the cluster.
 .. image:: _assets/img/cluster-overview.png
    :alt: Cloud Console cluster overview page
 
+
 Info
 ~~~~
 
@@ -274,8 +286,11 @@ information about the cluster. This includes:
 For more information on the CrateDB concepts used here, refer to the `CrateDB
 architecture documentation`_ or the :ref:`glossary<glossary>`.
 
-Metrics
-~~~~~~~
+
+.. _overview-cluster-overview-metrics:
+
+Configuration, Usage, and Metrics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 On the rest of the page you will find various cluster metrics. In the center
 you will see an overview of general usage in the past week, including storage,
@@ -292,14 +307,34 @@ on the Cluster Metrics page, for which see below. This page can also be
 accessed by clicking the *View metrics* link at the top right.
 
 
+.. _overview-cluster-backups:
+
+Cluster Backups
+---------------
+
+On the Cluster Backups page you can see any backups of your cluster. The
+dropdown menu at the top left allows you to select the timespan of backups you
+want to see.
+
+.. image:: _assets/img/cluster-backups.png
+   :alt: Cloud Console cluster backups page
+
+Any backups are listed with timestamps on the left side, under Timestamp. In
+the middle you will see any tables to restore in the backup, under the category
+Tables, and on the right is a *Restore* button for restoring the backup from
+that timestamp, listed under Action.
+
+
 .. _overview-cluster-metrics:
 
 Cluster Metrics
 ---------------
 
-The Cluster Metrics page provides live visualizations of how the cluster is
-functioning. It shows two graph panels: one for the average response time of a
-query (in milliseconds) and one for the total number of queries per second.
+The Cluster Metrics page (not to be confused with the :ref:`metrics section of
+the Cluster Overview page <overview-cluster-overview-metrics>`) provides live
+visualizations of how the cluster is functioning. It shows two graph panels:
+one for the average response time of a query (in milliseconds) and one for the
+total number of queries per second.
 
 .. image:: _assets/img/cluster-metrics.png
    :alt: Cloud Console cluster metrics page
@@ -314,20 +349,40 @@ directly by hovering over the relevant point on the time axis (the X axis).
 Cluster Settings
 ----------------
 
-On the page for Cluster Settings you get a quick overview of the subscription
-plan configuration of the cluster.
+The Cluster Settings page has two tabs: Cluster Access and Cluster Scale. The
+default tab, Cluster Access, shows you the username and password you defined to
+access your cluster directly. By clicking *Edit* at the top right, you can
+change the password.
 
 .. image:: _assets/img/cluster-settings.png
    :alt: Cloud Console cluster settings page
 
+
+.. _overview-cluster-settings-scale:
+
+Cluster Scale
+~~~~~~~~~~~~~
+
 The blue box on the left shows the current cluster subscription plan, including
 the tier and the scale unit. The scale unit can also be adjusted on this page.
+
+.. image:: _assets/img/cluster-settings-scale.png
+   :alt: Cloud Console cluster scaling page
+
 Using the overview showing the resources and the price for different scale
 units based on the selected subscription plan and tier, you can simply click
 the *Edit scale unit* button to adjust the scaling to the desired level.
 
-You can also delete your cluster here by clicking the bin icon at the top
-right. It will prompt you for confirmation.
+.. NOTE::
+
+    Any promotions or discounts applicable to your cluster will be applied for
+    your organization as a whole at the end of the billing period. Due to
+    technical limitations, they may not be directly visible in the cluster
+    scale pricing shown here, but do not worry! This does not mean that your
+    promotion or discount is not functioning.
+
+You can also delete your cluster here by clicking the *Delete cluster* button
+at the top right. It will prompt you for confirmation.
 
 .. WARNING::
 
