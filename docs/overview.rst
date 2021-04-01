@@ -87,6 +87,8 @@ dots at the bottom right allows you to cancel that subscription.
 You can access the other tabs by clicking their respective names at the top.
 
 
+.. _overview-org-settings:
+
 Organization Settings
 ---------------------
 
@@ -107,6 +109,8 @@ organization.
     contained within it. Deleting an organization is irreversible.
 
 
+.. _overview-org-users:
+
 Organization Users
 ------------------
 
@@ -124,6 +128,8 @@ To learn more about user roles and their meaning, see our documentation on
 `user roles`_.
 
 
+.. _overview-org-audit:
+
 Organization Audit Log
 ----------------------
 
@@ -136,6 +142,8 @@ In the Audit Log, a user with the correct credentials (`an organization
 admin`_) can see an overview of logged changes to the organization, the
 organization's projects, and other such data, each provided with a timestamp.
 
+
+.. _overview-org-billing:
 
 Organization Billing
 --------------------

@@ -28,12 +28,19 @@ Audit log
 ---------
 
 The Audit Log registers and displays all operations associated with a
+
 particular :ref:`organization <gloss-org>`. This includes operations on
 :ref:`users <gloss-user>`, on :ref:`clusters <gloss-cluster>`, on
 :ref:`projects <gloss-project>`, and on :ref:`consumers <gloss-consumer>`. The
 Audit Log can be found in the rightmost tab of the Organization overview page
 in the CrateDB Cloud :ref:`Console <gloss-console>`. Only an *organization
 admin* has access to the Audit Log.
+
+.. SEEALSO::
+
+    :ref:`Audit Log <overview-org-audit>`
+
+    :ref:`User Roles <user-roles>`
 
 
 .. _gloss-azure-ad:
@@ -45,6 +52,10 @@ Azure AD (Active Directory) is Microsoft's authentication and sign-in service
 for accessing Microsoft hosted services. CrateDB Cloud uses AzureAD as one of
 the means of sign-up and authentication for its service. For documentation on
 Azure AD, refer to the `Microsoft documentation on Azure`_.
+
+.. SEEALSO::
+
+    `Sign up for CrateDB Cloud`_
 
 
 .. _gloss-cluster:
@@ -67,6 +78,10 @@ and a number of nodes. Note that clusters are also versioned. For information
 on how to deploy a cluster, please see our `tutorial for deploying a CrateDB
 Cloud cluster from scratch`_.
 
+.. SEEALSO::
+
+    `Cluster deployment`_
+
 
 .. _gloss-console:
 
@@ -83,6 +98,10 @@ deployment of a :ref:`cluster <gloss-cluster>`.
 For information on how to use specific elements of the Console, refer to our
 :ref:`Console overview <overview>`.
 
+.. SEEALSO::
+
+    :ref:`Console overview <overview>`
+
 
 .. _gloss-consumer:
 
@@ -97,6 +116,12 @@ store the data processed by the consumer on the Cloud :ref:`cluster
 blog`_. Operations on consumers are registered in the :ref:`Audit Log
 <gloss-audit-log>`.
 
+.. SEEALSO::
+
+    `Azure IoT tutorial`_
+
+    :ref:`Audit Log <overview-org-audit>`
+
 
 .. _gloss-croud:
 
@@ -110,7 +135,11 @@ is intended for customers who prefer a CLI to the use of a hosted web interface
 such as the CrateDB Cloud :ref:`Console <gloss-console>`. Note however that the
 Console is the default way to interact with CrateDB Cloud, and currently
 clusters can only be deployed within the Console. The documentation for Croud
-can be found under the `Croud CLI header`_ in the Docs sidebar.
+can be found under `Croud CLI`_.
+
+.. SEEALSO::
+
+    `Croud CLI`_
 
 
 .. _gloss-DTU:
@@ -129,6 +158,10 @@ how it matches their use case. This makes using the CrateDB Cloud :ref:`offer
 For a more detailed description of the subscription plans and associated DTUs,
 refer to our :ref:`documentation <subscription-plans>`.
 
+.. SEEALSO::
+
+    :ref:`Subscription plans <subscription-plans>`
+
 
 .. _gloss-endpoint:
 
@@ -141,6 +174,10 @@ of data. In CrateDB Cloud, different :ref:`profiles <gloss-profile>` can be
 used to configure their own associated endpoints, which a user connects to via
 the :ref:`Croud <gloss-croud>` CLI. For information on how to do this, see the
 `Croud documentation`_.
+
+.. SEEALSO::
+
+    `Croud CLI`_
 
 
 .. _gloss-iiot:
@@ -180,6 +217,10 @@ An offer or subscription offer is a Software-as-a-Service (:ref:`SaaS
 basis. CrateDB Cloud has an offer on the `Microsoft Azure Marketplace`_ and on
 the `AWS Marketplace`_.
 
+.. SEEALSO::
+
+    :ref:`Subscription plans <subscription-plans>`
+
 
 .. _gloss-org:
 
@@ -197,6 +238,14 @@ how to manage them, see our :ref:`reference for user roles <user-roles>`.)
 Each organization has a name, a unique ID, and optionally an associated email
 address. For information on how to create an organization, please refer to our
 `guide to creating a new organization`_.
+
+.. SEEALSO::
+
+    :ref:`Console overview <overview>`
+
+    `Create a new organization`_
+
+    :ref:`User roles <user-roles>`
 
 
 .. _gloss-product:
@@ -220,6 +269,10 @@ configuration options. They define API :ref:`endpoints <gloss-endpoint>` and
 the desired output format of interaction with those endpoints. A Croud user can
 create multiple profiles and switch between them as desired.
 
+.. SEEALSO::
+
+    `Croud CLI`_
+
 
 .. _gloss-project:
 
@@ -242,6 +295,12 @@ Each project has a name, an associated region, and a unique ID. For information
 on how to create a project, please refer to our `guide to creating a new
 project`_.
 
+.. SEEALSO::
+
+    `Create a new project`_
+
+    :ref:`User roles <user-roles>`
+
 
 .. _gloss-region:
 
@@ -250,8 +309,6 @@ Region
 
 A region in the sense used for CrateDB Cloud is a set of data centers (servers)
 grouped together on a geographic basis so as to not exceed a certain latency.
-CrateDB Cloud currently has four regions by default, but also offers the option
-to define custom regions.
 
 
 .. _gloss-saas:
@@ -265,6 +322,14 @@ rather than a one-off payment, and is centrally hosted. Besides the default
 option of subscribing directly, CrateDB Cloud can be used as a service through
 its SaaS :ref:`offer <gloss-offer>` on `Microsoft Azure Marketplace`_ and the
 `AWS Marketplace`_.
+
+.. SEEALSO::
+
+    `Subscribe to CrateDB Cloud`_
+
+    `Subscribe via AWS Marketplace`_
+
+    `Subscribe via Azure Marketplace`_
 
 
 .. _gloss-scale-unit:
@@ -282,6 +347,12 @@ Each scale unit added on top of the first scale unit also represents one
 *additional* DTU. However, not all plans *start* at one DTU. For more detailed
 information about subscription plans, scale units, and DTUs, take a look at our
 documentation on :ref:`DTUs and subscription plans<subscription-plans-dtus>`.
+
+.. SEEALSO::
+
+    `Scale your cluster`_
+
+    :ref:`Subscription plans <subscription-plans>`
 
 
 .. _gloss-subscription:
@@ -302,6 +373,16 @@ subscriptions. This can be practical in case that customer wants to separate
 different instances of using the CrateDB Cloud service into different billing
 accounts.
 
+.. SEEALSO::
+
+    `Subscribe to CrateDB Cloud`_
+
+    `Subscribe via AWS Marketplace`_
+
+    `Subscribe via Azure Marketplace`_
+
+    :ref:`Subscription plans <subscription-plans>`
+
 
 .. _gloss-subscription-plan:
 
@@ -316,6 +397,16 @@ different :ref:`scale units <gloss-scale-unit>` per plan. Currently there are
 four subscription plans available, as well as a separate contract option via
 our marketplace :ref:`offers <gloss-offer>`. For more information, refer to our
 documentation on `subscription plans`_.
+
+.. SEEALSO::
+
+    `Subscribe to CrateDB Cloud`_
+
+    `Subscribe via AWS Marketplace`_
+
+    `Subscribe via Azure Marketplace`_
+
+    :ref:`Subscription plans <subscription-plans>`
 
 
 .. _gloss-system-user:
@@ -333,6 +424,10 @@ In CrateDB Cloud, there are two distinct system :ref:`users <gloss-user>`:
   on this second user, refer to our :ref:`explanation <system-user>` in the
   CrateDB Cloud reference.
 
+.. SEEALSO::
+
+    :ref:`Audit Log <overview-org-audit>`
+
 
 .. _gloss-user:
 
@@ -349,14 +444,27 @@ defined role within the organization (see our reference on :ref:`user roles
     Note that currently each CrateDB Cloud user corresponds to only one
     organization.
 
+.. SEEALSO::
 
+    :ref:`User roles <user-roles>`
+
+
+.. _Azure IoT tutorial: https://crate.io/a/azure-iot-hub-cratedb-sensor-data/
 .. _AWS Marketplace: https://aws.amazon.com/marketplace/pp/B089M4B1ND
-.. _Croud CLI header: https://crate.io/docs/cloud/cli/en/latest/index.html
+.. _Cluster deployment: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
+.. _Create a new organization: https://crate.io/docs/cloud/howtos/en/latest/create-org.html
+.. _Create a new project: https://crate.io/docs/cloud/howtos/en/latest/create-project.html
+.. _Croud CLI: https://crate.io/docs/cloud/cli/en/latest/
 .. _Croud documentation: https://crate.io/docs/cloud/cli/en/latest/configuration.html#manage-configuration-via-cli
 .. _guide to creating a new organization: https://crate.io/docs/cloud/howtos/en/latest/create-org.html
 .. _guide to creating a new project: https://crate.io/docs/cloud/howtos/en/latest/create-project.html
 .. _Microsoft Azure Marketplace: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview
 .. _Microsoft documentation on Azure: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis
+.. _Scale your cluster: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
+.. _Sign up for CrateDB Cloud: https://crate.io/docs/cloud/tutorials/en/latest/sign-up.html
+.. _Subscribe to CrateDB Cloud: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
+.. _Subscribe via AWS Marketplace: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-aws/signup-aws.html
+.. _Subscribe via Azure Marketplace: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-azure/signup-azure.html
 .. _subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _this article on our blog: https://crate.io/a/connecting-azure-iot-hub-and-cratedb-cloud-for-the-ingestion-of-sensor-data/
 .. _tutorial for deploying a CrateDB Cloud cluster from scratch: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
