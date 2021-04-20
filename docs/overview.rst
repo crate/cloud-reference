@@ -162,15 +162,30 @@ On the right-hand side, you will see the billing information. This can be
 edited by using the pen icon at the top right.
 
 
+.. _overview-org-regions:
+
 Organization Regions
 --------------------
 
-The Regions tab shows you the currently available regions for cluster
-deployment. Each panel shows the region, in other words a server location, and
-the corresponding cloud provider or subscription provider responsible for that
-region. Below each region panel you will find a button labeled *Deploy
-Cluster*. Clicking this will allow you to deploy a cluster directly into that
-region.
+In this tab, you will see the available :ref:`regions <gloss-region>` for
+cluster deployment. It is possible to deploy clusters on this screen as well,
+by clicking the *Deploy cluster* button under each respective region field.
+
+.. image:: _assets/img/organization-regions.png
+   :alt: Cloud Console organization regions tab
+
+This tab also allows the deployment of :ref:`CrateDB Edge <gloss-edge>`
+clusters in a :ref:`custom region <gloss-region>`. To do so, provide a name for
+the custom region and click the *Create edge region* button. Once created, the
+custom region will appear:
+
+.. image:: _assets/img/organization-regions-edge.png
+   :alt: Cloud Console organization edge region display
+
+This field will show a script to set up the dependencies for cluster deployment
+in the custom region. Apply the script in your local CLI and follow the prompts
+to proceed. A ``--help`` parameter is available within the script for further
+information.
 
 
 .. _overview-projects:
