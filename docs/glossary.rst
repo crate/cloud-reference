@@ -163,6 +163,20 @@ refer to our :ref:`documentation <subscription-plans>`.
     :ref:`Subscription plans <subscription-plans>`
 
 
+.. _gloss-edge:
+
+Edge
+----
+
+CrateDB Edge is a hybrid cloud database solution presented by Crate.io. It
+allows customers to deploy a Kubernetes cluster either on their own cloud
+provider or their own local servers, using the database software and
+maintenance support that CrateDB Cloud offers. It can be accessed through the
+:ref:`CrateDB Cloud Console <gloss-console>`.
+
+Currently, CrateDB Edge is available as a `public beta`_.
+
+
 .. _gloss-endpoint:
 
 Endpoint
@@ -309,6 +323,10 @@ Region
 
 A region in the sense used for CrateDB Cloud is a set of data centers (servers)
 grouped together on a geographic basis so as to not exceed a certain latency.
+CrateDB Edge also permits the creation of custom regions. These regions are
+designed to correspond to servers used by CrateDB Edge customers locally, on
+which they can deploy CrateDB Cloud clusters for use in plants and other
+production facilities.
 
 
 .. _gloss-saas:
@@ -460,6 +478,7 @@ defined role within the organization (see our reference on :ref:`user roles
 .. _guide to creating a new project: https://crate.io/docs/cloud/howtos/en/latest/create-project.html
 .. _Microsoft Azure Marketplace: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview
 .. _Microsoft documentation on Azure: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis
+.. _public beta: https://crate.io/a/announcing-cratedb-edge/
 .. _Scale your cluster: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
 .. _Sign up for CrateDB Cloud: https://crate.io/docs/cloud/tutorials/en/latest/sign-up.html
 .. _Subscribe to CrateDB Cloud: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
