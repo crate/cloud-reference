@@ -23,6 +23,7 @@ Internet of Things (IIoT) <gloss-iiot>` at scale.
     overview
     subscription-plans
     user-roles
+    billing
     glossary
 
 
