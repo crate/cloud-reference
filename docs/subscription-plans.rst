@@ -82,10 +82,11 @@ below:
 Azure
 -----
 
-To sign a CrateDB Cloud Contract via Microsoft Azure, follow the `initial steps
-for signup`_ while selecting the CrateDB Cloud Contract as your subscription
-plan. This will automatically alert our Sales team, who will get in touch with
-you to configure the specifics of your contract according to your needs.
+To sign a CrateDB Cloud Contract via Microsoft Azure, follow the :ref:`initial
+steps for signup <cloud-tutorials:signup-azure-to-cluster-offer>` while
+selecting the CrateDB Cloud Contract as your subscription plan. This will
+automatically alert our Sales team, who will get in touch with you to configure
+the specifics of your contract according to your needs.
 
 
 AWS
@@ -207,5 +208,4 @@ For clarity, we add here a few notes of caution:
 .. _AWS offer page: https://aws.amazon.com/marketplace/pp/B089M4B1ND
 .. _Azure offer page: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview
 .. _Contract page on the AWS Marketplace: https://aws.amazon.com/marketplace/pp/B08KHK34RK
-.. _initial steps  for signup: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-azure/signup-azure.html#using-the-cratedb-cloud-offer-on-azure-marketplace
 .. _Sales team: sales@crate.io
