@@ -64,7 +64,9 @@ Invoicing
 
 Invoicing is handled variously depending on which deployment method you use.
 If you deploy your cluster directly via the CrateDB Cloud Console, you will be
-invoiced at the email address you provided on `signing up with CrateDB Cloud`_.
+invoiced at the email address you provided on :ref:`signing up with CrateDB
+Cloud <cloud-tutorials:sign-up>`.
+
 If you use one of the marketplace offers, the invoicing is handled by the
 marketplace provider in question and will be part of your general invoicing for
 services via that marketplace.
@@ -80,7 +82,8 @@ owners (Microsoft Azure and AWS).
 Payment processing
 ==================
 
-For clusters deployed in the `regular way`_, using our CrateDB Console cluster
+For clusters deployed in the :ref:`regular way
+<cloud-tutorials:cluster-deployment-stripe>`, using our CrateDB Console cluster
 deployment route, payment processing is handled by `Stripe`_. For clusters
 deployed through the `Microsoft Azure Marketplace`_ and the `AWS Marketplace`_,
 payment is handled by Stripe on behalf of the respective marketplaces.
@@ -88,6 +91,4 @@ payment is handled by Stripe on behalf of the respective marketplaces.
 
 .. _AWS Marketplace: https://aws.amazon.com/marketplace/pp/B089M4B1ND
 .. _Microsoft Azure Marketplace: https://portal.azure.com/#create/crate.cratedbcloud/preview
-.. _regular way: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
-.. _signing up with CrateDB Cloud:
-.. _Stripe: https://stripe.com/en-de
+.. _Stripe: https://stripe.com/

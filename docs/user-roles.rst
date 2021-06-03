@@ -28,8 +28,8 @@ CrateDB Cloud user roles
 ========================
 
 This section describes the roles that can be set for users within CrateDB
-Cloud. For information on how to do so, see our documentation on `adding
-users`_.
+Cloud. For information on how to do so, see our documentation on ref:`adding
+users <crate-reference:add-users>`.
 
 
 .. _org-roles:
@@ -112,7 +112,8 @@ Regular database user
 
 Next to the ``crate`` user there is the regular database user, created as part
 of the CrateDB Cloud cluster deployment wizard when deploying a cluster through
-`AWS`_ or `Azure`_.
+:ref:`AWS <cloud-tutorials:configure-aws-to-cluster>` or
+:ref:`Azure <cloud-tutorials:configure-azure-to-cluster>`.
 
 Because the regular database user has `AL privileges`_, there are certain
 operations that they cannot perform. As of CrateDB 4.2.1, the list of such
@@ -127,12 +128,8 @@ operations is as follows:
 | ``SET LICENSE``
 | ``SET TRANSACTION``
 
-More information on CrateDB user privileges can be found in the `CrateDB
-documentation on privileges`_.
+More information on CrateDB user privileges can be found in the :ref:`CrateDB
+documentation on privileges <crate-reference:administration-privileges>`.
 
 
-.. _adding users: https://crate.io/docs/cloud/howtos/en/latest/add-users.html
-.. _AWS: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-aws/configure-aws.html#wizard-step-2
-.. _Azure: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-azure/configure-azure.html#wizard-step-2
 .. _AL privileges: https://crate.io/docs/crate/reference/en/latest/admin/privileges.html#al
-.. _CrateDB documentation on privileges: https://crate.io/docs/crate/reference/en/latest/admin/privileges.html
