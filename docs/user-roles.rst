@@ -28,8 +28,8 @@ CrateDB Cloud user roles
 ========================
 
 This section describes the roles that can be set for users within CrateDB
-Cloud. For information on how to do so, see our documentation on ref:`adding
-users <crate-reference:add-users>`.
+Cloud. For information on how to do so, see our documentation on :ref:`adding
+users <crate-reference:administration_user_management>`.
 
 
 .. _org-roles:
