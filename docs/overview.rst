@@ -66,22 +66,18 @@ The Organization Overview lists the organizations and projects you can access.
 If you follow the `tutorial`_ instructions and deploy a test cluster, your
 Organization Overview will look something like this:
 
-.. image:: _assets/img/organization-overview.png
+.. image:: _assets/img/organization-dashboard.png
    :alt: Cloud Console organization overview
 
-The Organization Overview consists of six tabs: *Subscriptions*, *Settings*,
-*Users*, the *Audit Log*, *Billing*, and finally, *Regions*. By default it
-shows the Subscriptions tab, which displays two things. On the left, it shows
-the possible cloud providers and a link for creating a subscription with them.
-On the right, you will see your current subscription (if any). This panel also
-shows subscription details: the status of the subscription, the subscription
-ID, the subscription cloud provider, the subscription type, and finally, any
-clusters deployed within the subscription with their respective subscription
-plans.
+The Organization Overview consists of seven tabs: *Dashboard*, *Settings*,
+*Users*, the *Audit Log*, *Billing*, *Regions*, and finally, *Subscriptions*.
+By default it shows the Dashboard tab, which displays two things. On the left,
+it shows a link for creating a new cluster, the blue *Deploy new cluster*
+button. On the right, you will see any already deployed clusters.
 
-The *Deploy cluster* button at the bottom left of any subscription panel allows
-you to directly deploy clusters within that subscription. The button with three
-dots at the bottom right allows you to cancel that subscription.
+The *Deploy cluster* button in the left panel allows you to directly deploy
+clusters within your subscription. For information on how to do so, refer to
+`our tutorial on direct cluster deployment`_.
 
 You can access the other tabs by clicking their respective names at the top.
 
@@ -91,21 +87,20 @@ You can access the other tabs by clicking their respective names at the top.
 Organization Settings
 ---------------------
 
-The Settings tab shows you naming information (name, ID) and notification
-settings for your organization.
+The Settings tab shows you the name, ID, and notification settings for your
+organization.
 
 .. image:: _assets/img/organization-settings.png
    :alt: Cloud Console organization settings tab
 
 By clicking the *Edit* button next to the organization, you can rename it. Here
 you can also set the email address for notifications and indicate whether you
-want to receive them or not. By clicking *Delete*, you can delete the
-organization.
+want to receive them or not.
 
 .. warning::
 
-    You cannot delete an organization without first deleting all projects
-    contained within it. Deleting an organization is irreversible.
+    Organizations cannot be deleted in the CrateDB Cloud Console. Contact
+    `CrateDB Cloud support`_ if you need to delete your organization.
 
 
 .. _overview-org-users:
@@ -174,10 +169,10 @@ by clicking the *Deploy cluster* button under each respective region field.
 .. image:: _assets/img/organization-regions.png
    :alt: Cloud Console organization regions tab
 
-This tab also allows the deployment of :ref:`CrateDB Edge <gloss-edge>`
-clusters in a :ref:`custom region <gloss-region>`. To do so, provide a name for
-the custom region and click the *Create edge region* button. Once created, the
-custom region will appear:
+For those with access to `CrateDB Edge`_, This tab also allows the deployment
+of :ref:`CrateDB Edge <gloss-edge>` clusters in a :ref:`custom region
+<gloss-region>`. To do so, provide a name for the custom region and click the
+*Create edge region* button. Once created, the custom region will appear:
 
 .. image:: _assets/img/organization-regions-edge.png
    :alt: Cloud Console organization edge region display
@@ -186,6 +181,20 @@ This field will show a script to set up the dependencies for cluster deployment
 in the custom region. Apply the script in your local CLI and follow the prompts
 to proceed. A ``--help`` parameter is available within the script for further
 information.
+
+
+.. _overview-org-subscriptions:
+
+Organization Subscriptions
+--------------------------
+
+In the Subscriptions tab you can create new subscriptions with one of our
+supported cloud providers, Microsoft Azure and AWS. In the panel, choose either
+*Microsoft Azure* or *Amazon AWS* to create a new subscription with that
+respective provider.
+
+.. image:: _assets/img/organization-subscriptions.png
+   :alt: Cloud Console organization subscriptions tab
 
 
 .. _overview-projects:
@@ -225,33 +234,6 @@ the main Projects page.
     project you selected on the Projects page.
 
 
-.. _overview-projects-overview:
-
-Project Overview
-----------------
-
-The Project Overview page provides information about the selected project.
-Underneath the project name and icon there is a column on the left hand,
-showing the total number of users in the project as well as the share of
-members and admins of that total.
-
-.. image:: _assets/img/project-overview.png
-   :alt: Cloud Console project overview page
-
-On the right, you see an overview of all clusters deployed within the project.
-This shows their status, the subscription plan and tier, the date and timestamp
-of their creation, the version of CrateDB they are running, and finally the
-subscription name associated with the cluster deployment. Clicking on this
-subscription name takes you to the :ref:`Subscriptions tab of the Organization
-page<overview-org-overview>`.
-
-Finally, you can also deploy a cluster from within the Project Overview, by
-clicking the *Deploy cluster* link at the top right. This also takes you back
-to the :ref:`Subscriptions tab of the Organization page
-<overview-org-overview>`, from where clusters can be deployed within a given
-subscription or a new subscription chosen.
-
-
 .. _overview-cluster-overview:
 
 Cluster Overview
@@ -288,19 +270,19 @@ information about the cluster. This includes:
     stateful connections (e.g., JDBC) must be configured to send keep-alive
     heartbeat queries.
 
-* **Cluster demo data**: Follow this link to quickly set up demo data for your
+* **Cluster Demo Data**: Follow this link to quickly set up demo data for your
   cluster. This will demonstrate in an easy way how it can be used in practice.
 
 * **Version**: This indicates the version number of CrateDB the cluster is
   running.
 
-* **Date Created**: The day of the original deployment of the cluster.
+* **Date created**: The day of the original deployment of the cluster.
 
 * **DB Username**: This shows once more the username associated with the
   cluster. You chose this username while setting up the cluster originally.
 
-* **Plan**: This shows what tier of which subscription plan the cluster is
-  running on. For more information on our plans, see the documentation on
+* **Plan**: This shows what subscription plan the cluster is running on. For
+  more information on our plans, see the documentation on
   `subscription plans`_.
 
 * **Subscription**: The name of the subscription itself, with a link to the
@@ -375,10 +357,16 @@ Cluster Settings
 The Cluster Settings page has two tabs: Cluster Access and Cluster Scale. The
 default tab, Cluster Access, shows you the username and password you defined to
 access your cluster directly. By clicking *Edit* at the top right, you can
-change the password.
+change the password (but not the username).
 
 .. image:: _assets/img/cluster-settings.png
    :alt: Cloud Console cluster settings page
+
+Below the username and password, you will find a tickbox for "Cluster
+Security". CLick the box labelled *Deletion Protected* to add deletion
+protection to your cluster. This will ensure that it can only be deleted in
+either the CrateDB Console or croud by a user with :ref:`org admin rights
+<org-roles>` (or a Crate.io employee superuser).
 
 
 .. _overview-cluster-settings-scale:
@@ -410,6 +398,33 @@ at the top right. It will prompt you for confirmation.
 .. WARNING::
 
     All cluster data will be lost on deletion. This action cannot be undone.
+
+
+.. _overview-projects-overview:
+
+Project Overview
+----------------
+
+The Project Overview page provides information about the selected project.
+Underneath the project name and icon there is a column on the left hand,
+showing the total number of users in the project as well as the share of
+members and admins of that total.
+
+.. image:: _assets/img/project-overview.png
+   :alt: Cloud Console project overview page
+
+On the right, you see an overview of all clusters deployed within the project.
+This shows their status, the subscription plan and tier, the date and timestamp
+of their creation, the version of CrateDB they are running, and finally the
+subscription name associated with the cluster deployment. Clicking on this
+subscription name takes you to the :ref:`Subscriptions tab of the Organization
+page<overview-org-overview>`.
+
+Finally, you can also deploy a cluster from within the Project Overview, by
+clicking the *Deploy cluster* link at the top right. This also takes you back
+to the :ref:`Subscriptions tab of the Organization page
+<overview-org-overview>`, from where clusters can be deployed within a given
+subscription or a new subscription chosen.
 
 
 .. _overview-project-users:
@@ -451,6 +466,25 @@ button at the top right. You can also change the project name by clicking the
     within that project. Deleting a project is irreversible.
 
 
+.. _overview-docs:
+
+Documentation
+=============
+
+The Documentation link takes you directly to the CrateDB Cloud documentation,
+which you are reading right now!
+
+
+.. _overview-community:
+
+Community
+=========
+
+The Community link goes to the `CrateDB and CrateDB Cloud Community page`_.
+Here you can ask members of the community and Crate.io employees questions
+about uncertainties or problems you are having when using our products.
+
+
 .. _overview-account:
 
 Account
@@ -478,16 +512,20 @@ Cloud Console.
 
 .. _aks1.eastus2.azure.cratedb.cloud: https://eastus2.azure.cratedb.cloud/
 .. _eks1.eu-west-1.aws.cratedb.cloud: https://eks1.eu-west-1.aws.cratedb.cloud
-.. _aks1.westeurope.azure.cratedb.cloud: https://westeurope.azure.cratedb.cloud/
+.. _aks1.westeurope.azure.cratedb.cloud: https://aks1.westeurope.azure.cratedb.cloud/
 .. _an organization admin: https://crate.io/docs/cloud/reference/en/latest/user-roles.html#organization-roles
 .. _bregenz.a1.cratedb.cloud: https://bregenz.a1.cratedb.cloud/
 .. _concepts: https://crate.io/docs/cloud/reference/en/latest/concepts.html
 .. _CrateDB Admin UI: https://crate.io/docs/clients/admin-ui/
+.. _CrateDB and CrateDB Cloud Community page: https://community.crate.io/
 .. _CrateDB architecture documentation: https://crate.io/docs/crate/howtos/en/latest/architecture/shared-nothing.html
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
+.. _CrateDB Cloud support: support@crate.io
+.. _CrateDB Edge: https://crate.io/products/cratedb-edge/
 .. _glossary: https://crate.io/docs/cloud/reference/en/latest/glossary.html
 .. _HTTP: https://crate.io/docs/crate/reference/en/latest/interfaces/http.html
 .. _Microsoft Azure: https://azure.microsoft.com/en-us/
+.. _our tutorial on direct cluster deployment: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
 .. _PostgreSQL wire protocol: https://crate.io/docs/crate/reference/en/latest/interfaces/postgres.html
 .. _scaling the cluster: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
 .. _signup tutorial: https://crate.io/docs/cloud/tutorials/en/latest/sign-up.html
