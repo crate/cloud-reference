@@ -215,9 +215,21 @@ deployed in specific regions, select that region from the menu. You can also
 create a new project for the organization in the selected region by clicking
 the *Create project* button in the top right.
 
-The cog icon next to each project takes you to the Project Settings page, in
-the menu simply called Settings, as :ref:`described further below
-<overview-project-settings>`.
+If you have previously created a `CrateDB Edge region`_, the *Create project*
+menu will also allow you to set a custom backup location for any cluster
+deployed within your new project. You can do this by defining the name, the
+key, and the secret of the backup location in the project creation menu:
+
+.. image:: _assets/img/projects-create.png
+   :alt: Cloud Console projects creation menu
+
+The *Test connection* button allows you to test the connection to the custom
+backup location you have chosen. The location must be an S3 or equivalent
+endpoint. Note that you cannot proceed unless the connection is functioning.
+
+In either case, the cog icon next to each project takes you to the Project
+Settings page, in the menu simply called Settings, as :ref:`described further
+below <overview-project-settings>`.
 
 To change your current project selection, click the project name in the list on
 the main Projects page.
@@ -247,7 +259,7 @@ selected. It also displays metrics for the cluster.
 
 
 Info
-~~~~
+''''
 
 The column on the left hand side, under the cluster logo and name, displays
 information about the cluster. This includes:
@@ -372,7 +384,7 @@ either the CrateDB Console or croud by a user with :ref:`org admin rights
 .. _overview-cluster-settings-scale:
 
 Cluster Scale
-~~~~~~~~~~~~~
+'''''''''''''
 
 The blue box on the left shows the current cluster subscription plan, including
 the tier and the scale unit. The scale unit can also be adjusted on this page.
@@ -522,6 +534,7 @@ Cloud Console.
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
 .. _CrateDB Cloud support: support@crate.io
 .. _CrateDB Edge: https://crate.io/products/cratedb-edge/
+.. _CrateDB Edge region: https://crate.io/docs/cloud/tutorials/en/latest/edge.html
 .. _glossary: https://crate.io/docs/cloud/reference/en/latest/glossary.html
 .. _HTTP: https://crate.io/docs/crate/reference/en/latest/interfaces/http.html
 .. _Microsoft Azure: https://azure.microsoft.com/en-us/
