@@ -12,15 +12,25 @@ customer is spared the complexity of finding the exact required hardware
 combinations themselves.
 
 At the same time, the plans also offer flexibility, since your use case may
-change. Not only is it possible to switch plans, but within a given plan you
-can scale the required capacity for a cluster up or down. In order to make it
-transparent and yet easy to use, this scaling is measured in terms of Database
-Transaction Units (DTUs).
+change. Not only do we offer multiple plans and tiers with different
+specifications, but within a given plan you can scale the required capacity for
+a cluster up or down by adding or subtracting nodes within a given plan.
+
+In order to make the costs for a given set of hardware transparent and yet easy
+to use, this scaling is measured in terms of Database Transaction Units (DTUs).
+The simple rule of thumb is that plans and tiers increase the price per DTU,
+whereas the number of nodes represents the number of DTUs expended for an hour
+of usage.
 
 This reference gives a brief description of the plans and subsequently explains
-the meaning and usage of DTUs for scaling and pricing within each plan. This
-should make it easy to choose the right plan for your CrateDB Cloud
-subscription.
+the meaning and usage of nodes, tiers, and DTUs. This should make it easy to
+choose the right setup for your CrateDB Cloud subscription.
+
+.. NOTE::
+    `CrateDB Edge`_ works differently. Since it allows hosting CrateDB Cloud
+    on your local or self-service Kubernetes stack, there is no need for
+    different subscription plans. You can combine CrateDB Edge with any
+    suitable hardware configuration that works for your use case.
 
 .. rubric:: Table of contents
 
@@ -34,7 +44,7 @@ CrateDB Cloud subscription plans
 ================================
 
 CrateDB Cloud's service comes with four different subscription plans:
-**Development**, **General Purpose**, **IO Optimized**, and **Storage
+**Development**, **General Purpose**, **I/O Optimized**, and **Storage
 Optimized**. Besides these, we also offer the CrateDB Cloud **Contract**.
 
 * The **Development** plan is aimed at users who want to try out what CrateDB
@@ -45,6 +55,7 @@ Optimized**. Besides these, we also offer the CrateDB Cloud **Contract**.
   added (or subtracted).
 
 .. NOTE::
+
     The **Development** plan is not covered by 24/7 support.
 
 * The **General Purpose** plan suits all general use cases. This plan offers
@@ -52,7 +63,7 @@ Optimized**. Besides these, we also offer the CrateDB Cloud **Contract**.
   plan can also currently be scaled between three scale units, each adding (or
   subtracting) one DTU.
 
-* The **IO Optimized** plan is, as the name suggests, optimized for write and
+* The **I/O Optimized** plan is, as the name suggests, optimized for write and
   query speed. It offers double the capacity for inserts and queries per second
   of the **General Purpose** plan, but does not increase storage capacity.
 
@@ -60,6 +71,98 @@ Optimized**. Besides these, we also offer the CrateDB Cloud **Contract**.
   primarily about (warm) storage and have less emphasis on querying. It offers
   half the insert and query capacity of the **General Purpose** plan, but four
   times the storage capacity.
+
+
+.. _subscription-plans-nodes:
+
+Subscription Plan Tiers and Nodes
+=================================
+
+Besides the hardware composition described above, which outlines the ratio of
+the elements CPU, RAM, and storage HD for each subscription plan, each plan has
+two further dimensions: tiers and nodes.
+
+Tiers are simply multiples of each hardware composition, and therefore allow
+vertical scaling within a given plan. For example, the Basic tier of the
+General Purpose plan has 3.5 CPUs, 14 GiB of RAM, and 1 TiB of storage. The
+next tier of that plan, the Pro tier, has 7 CPUs, 28 GiB of RAM, and 2 TiB of
+storage, and so forth.
+
+The number of nodes in a cluster can also be adjusted manually for a given
+plan. Basic tiers of a plan allow scaling between 3, 4, and 5 nodes, whereas
+higher tiers allow scaling up to 15. (If you need more nodes than this, you can
+`contact us`_ any time.)
+
+.. WARNING::
+
+    An even number of nodes can be used for testing and development without
+    issue, but is not recommended for production workloads, due to the risk of
+    `split-brain syndrome`_.
+
+The Development plan differs from the others: it has only a single tier and
+allows scaling between 1-3 nodes.
+
+.. WARNING::
+
+    When you have scaled a Development plan cluster above one node, you cannot
+    scale it back down to a single node again.
+
+Each node, in turn, corresponds to one DTU, regardless of tier. Put simply, the
+tier determines the hardware 'size' of the node, the number of nodes determines
+the number of DTUs at that size. Since the Development plan starts at 1 node,
+it starts at 1 DTU; other plans start at 3 nodes and therefore start at 3 DTUs.
+
+If you use our SaaS Marketplace offers, you will encounter DTUs/hour as the
+measure of actual usage that we bill for. If you subscribe to CrateDB Cloud
+directly via credit card, you do not have to concern yourself with DTUs. For a
+more detailed explanation of DTUs, see the section below.
+
+
+.. _subscription-plans-dtus:
+
+Explaining DTUs for scaling and billing
+=======================================
+
+What are DTUs and how do they work? As mentioned above, to make finding the
+right combination of hardware capacity more tractable and accessible, CrateDB
+Cloud's offers use DTUs. These DTUs have essentially two purposes: they allow
+the user to choose the right combination of plan and scale to find the capacity
+they need, and they provide clarity for the purposes of pricing. In order to
+keep things simple, scaling in each plan is currently set up so that one scale
+unit = one node = one DTU, and billing is set up so that Crate.io bills only
+for DTUs/hour actually used.
+
+Let's break this down further to clarify what each of these statements mean.
+
+As seen above, CrateDB Cloud's SaaS offer is divided into four plans. Each
+plan has a starting number of nodes (usually 3), that can be scaled to a larger
+number (between 4 and 15). Because the hardware capacity in each plan and tier
+is different, a node of the **GP** plan at the **Basic** tier, for example, is
+of a different size (in terms of storage, memory, and computation) than a node
+in the I/O Optimized plan at tier Premium. But the billing for these varied
+hardware compositions and scales is made easy by the fact that for any given
+plan and tier, one node corresponds to one DTU. Since for SaaS Marketplace
+users we bill in terms of DTUs/hour, all the different dimensions of horizontal
+and vertical hardware scaling are resolved into a single measure.
+
+An overview showing the range in terms of capacity of each plan can be found on
+the `Azure offer page`_ and the `AWS subscription page`_, respectively. All
+details about each hardware dimension, plan, tier, and node, can be found on
+the deployment screen in the CrateDB Cloud console when deploying your cluster.
+For SaaS Marketplace offers, you can also find the price per DTU/hour for each
+subscription plan in the same overview.
+
+To summarize:
+
+The DTU approach to scaling means that although the offered plans differ
+considerably in capacity per plan, tier, and number of nodes, the DTU system
+allows you to easily compare these different magnitudes for a single usage
+price on the SaaS Marketplaces.
+
+The precise calculations of hardware capacity, actual usage of that hardware,
+and a corresponding cost are all handled by Crate.io. The user only needs to
+choose a plan, a tier within that plan, and the number of nodes. You will then
+know the price in DTU/hour that corresponds to your choice.
 
 
 .. _subscription-plans-contracts:
@@ -72,8 +175,8 @@ service of your choice in advance. You purchase a certain number of DTUs for
 one of the subscription plans mentioned above, and pay them up front for the
 full year. Depending on the specifics of the contract chosen, it may be
 possible to negotiate a discount based on the up front payment. The CrateDB
-Cloud Contract is only available via our supported cloud providers. For more
-information, contact our `Sales team`_.
+Cloud Contract is only available via our supported cloud providers on the SaaS
+Marketplaces. For more information, contact our `Sales team`_.
 
 The process depends on whether you sign up via Azure or via AWS, as described
 below:
@@ -106,84 +209,6 @@ put in contact with our Sales department, which will further help you configure
 the right plan and contract according to your needs.
 
 
-.. _subscription-plans-dtus:
-
-Explaining DTUs for scaling and billing
-=======================================
-
-What are DTUs and how do they work? As mentioned above, to make finding the
-right combination of hardware capacity more tractable and accessible, CrateDB
-Cloud's offers use DTUs. These DTUs have essentially two purposes: they allow
-the user to choose the right combination of plan and scale to find the capacity
-they need, and they provide clarity for the purposes of pricing. In order to
-keep things simple, scaling in each plan is currently set up so that one scale
-unit = one DTU, and billing is set up so that Crate.io bills only for DTUs/hour
-actually used.
-
-.. NOTE::
-    Note, however, that scale units do not necessarily *start* at one DTU; for
-    example the **Development** plan starts at three DTUs and then scales up to
-    five DTUs.
-
-Let's break this down further to clarify what each of these statements mean.
-
-As seen above, CrateDB Cloud's cloud offer is divided into four plans. Each
-plan has a starting scale (scale unit 1), which can be scaled up to scale unit
-2 or 3. Because the hardware capacity in each plan is different, a scale unit
-in the **Development** plan, for example, is of a different size (in terms of
-storage, memory, and computation) than a scale unit in the **General Purpose**
-plan. But scaling within each plan (i.e., scaling between the minimum capacity
-for that plan and the maximum capacity for that plan) is made easy by the
-division into scale units, each of which corresponds to one DTU.
-
-An overview showing the range in terms of capacity of each plan, within which
-the scaling of that plan operates, can be found on the subscription plan
-overview when subscribing directly via the CrateDB Cloud Console. In the case
-of our cloud providers, the overview can be found on the `Azure offer page`_
-and the `AWS offer page`_, respectively. In each case, you can also find the
-price per DTU/hour for each subscription plan in the same overview.
-
-To summarize:
-
-The DTU approach to scaling means that although the offered plans differ
-considerably in capacity both between each other and per scale unit within each
-plan, the DTU system allows you to easily compare these different magnitudes.
-
-The same principle applies to the pricing. If you scale within a plan, you will
-readily know how much capacity you are getting and also how much you will pay
-per hour. This is because you know the capacity of the plan, the fact that one
-scale unit = one DTU, and the price per DTU/hour for that plan. This provides
-both flexibility and transparency.
-
-The precise calculations of required hardware capacity, actual usage of that
-hardware, and a corresponding cost are all handled by Crate.io. The user only
-needs to consider a plan, a scale within that plan, and the price in DTU/hour
-that corresponds to it.
-
-
-.. _subscription-plans-example:
-
-A practical example
-===================
-
-Say you have a use case where you expect to need approximately 6000 ingests per
-second and want corresponding capacity in storage, without having to worry
-about the precise storage size. Also, you want this to be easy to set up and
-clearly priced and billed.
-
-CrateDB Cloud provides a straightforward solution to such a use case. Simply
-compare the plans on offer. You will quickly identify that the desired capacity
-falls within the **General Purpose** plan, which begins at 2000 ingests/sec.
-and scales in 2000 ingests/sec. units. You therefore subscribe to this plan and
-scale it up two times, from 2000 to 6000 ingests/sec.
-
-Now you have a ready **General Purpose** plan for your cluster at scale
-unit 3. Since each scale unit is currently simply one DTU, and the **General
-Purpose** plan begins at one DTU, you will directly know that your total cost
-is three DTU/hour of that plan. Of course, as always, only actual usage is
-billed.
-
-
 .. _subscription-plans-notes:
 
 Cautionary notes
@@ -191,21 +216,23 @@ Cautionary notes
 
 For clarity, we add here a few notes of caution:
 
-* The correspondence between one scaling unit and one DTU is provisional and
-  may change in the future.
+* The correspondence between one node and one DTU is provisional and may change
+  in the future.
 * Remember that not all plans, currently or in the future, necessarily *start*
-  at one DTU. The **Development** plan currently starts at three DTUs of that
-  plan. Therefore, when referring to the pricing per DTU/hour on the cloud
-  offer, keep this in mind. This means the price for a single DTU/hour, as
-  listed on the cloud offer pages, is not necessarily the minimum price for a
-  given plan. This is true even if you do not scale further upwards, since your
-  plan may start at several DTUs even without you scaling it up further.
+  at one DTU. All plans except the **Development** plan currently start at
+  three DTUs of that plan. Therefore, when referring to the pricing per
+  DTU/hour on the SaaS Marketplace cloud offer, keep this in mind. The price
+  for a single DTU/hour, as listed on the cloud offer pages, is not necessarily
+  the minimum price for an hour usage of a given plan.
 * New plans may be offered in the future with different capacity ranges that
   may suit your use case. This reference document will then be updated
   accordingly. Plan terms and prices are subject to change.
 
 
-.. _AWS offer page: https://aws.amazon.com/marketplace/pp/B089M4B1ND
+.. _AWS subscription page: https://aws.amazon.com/marketplace/pp/B089M4B1ND
 .. _Azure offer page: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview
+.. _contact us: sales@crate.io
 .. _Contract page on the AWS Marketplace: https://aws.amazon.com/marketplace/pp/B08KHK34RK
+.. _CrateDB Edge: https://crate.io/products/cratedb-edge/
 .. _Sales team: sales@crate.io
+.. _split-brain syndrome: https://en.wikipedia.org/wiki/Split-brain_(computing)
