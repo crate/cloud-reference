@@ -447,6 +447,18 @@ In CrateDB Cloud, there are two distinct system :ref:`users <gloss-user>`:
     :ref:`Audit Log <overview-org-audit>`
 
 
+.. _gloss-tier:
+
+Tier
+----
+
+In the CrateDB Cloud :ref:`subscription plans <gloss-subscription-plan>`, tiers
+offer different magnitudes of the hardware composition of a given plan. For a
+given ratio of storage capacity, memory, and CPUs, going up in tier allows you
+to multiply the hardware values for your cluster deployment without changing
+the hardware ratio.
+
+
 .. _gloss-user:
 
 User
