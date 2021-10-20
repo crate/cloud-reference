@@ -73,9 +73,20 @@ Optimized**. Besides these, we also offer the CrateDB Cloud **Contract**.
   times the storage capacity.
 
 
+.. _subscription-plans-regions:
+
+Subscription plan regions
+=========================
+
+We currently offer three :ref:`regions <gloss-region>` for our subscriptions:
+one from AWS (West Europe) and two from Azure (East US 2 and West Europe). You
+can use any subscription plan in any region. Note that prices for a given plan
+differ depending on the region you select.
+
+
 .. _subscription-plans-nodes:
 
-Subscription Plan Tiers and Nodes
+Subscription plan tiers and nodes
 =================================
 
 Besides the hardware composition described above, which outlines the ratio of
