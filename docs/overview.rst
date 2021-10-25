@@ -6,10 +6,11 @@ Console overview
 
 The *CrateDB Cloud Console* is a hosted web administration interface for
 interacting with `CrateDB Cloud`_. This overview gives you all the basic
-information for using the CrateDB Cloud Console. Refer to individual items in
-the current section of the documentation for more information on how to perform
-specific operations. You can also refer to our `glossary`_ for more information
-on CrateDB Cloud-related terminology.
+information for using the CrateDB Cloud Console. If you ever want to find where
+and how to do something in the Console, start here. Refer to individual items
+in the current section of the documentation for more information on how to
+perform specific operations. You can also refer to our `glossary`_ for more
+information on CrateDB Cloud-related terminology.
 
 .. rubric:: Table of contents
 
@@ -374,11 +375,36 @@ change the password (but not the username).
 .. image:: _assets/img/cluster-settings.png
    :alt: Cloud Console cluster settings page
 
+
+Deletion protection
+'''''''''''''''''''
+
 Below the username and password, you will find a tickbox for "Cluster
-Security". CLick the box labelled *Deletion Protected* to add deletion
-protection to your cluster. This will ensure that it can only be deleted in
-either the CrateDB Console or croud by a user with :ref:`org admin rights
-<org-roles>` (or a Crate.io employee superuser).
+Security".
+
+Click the box labelled *Deletion Protected* to add deletion protection to your
+cluster. This will ensure that it can only be deleted in either the CrateDB
+Console or croud by a user with :ref:`org admin rights <org-roles>` (or by a
+Crate.io employee superuser).
+
+
+Allowlist
+'''''''''
+
+By using the IP whitelisting feature (or allowlist), you can restrict access to
+your cluster to an indicated IP address or `CIDR block`_. Click the blue *Add
+Address* button and you can fill out an IP address or range and give it a
+meaningful description. Click *Save* to store it or the bin icon to delete a
+range. Keep in mind that once IP whitelisting has been set, you cannot access
+the Admin UI for that cluster from any other address.
+
+.. image:: _assets/img/cluster-settings-allowlist.png
+   :alt: Cloud Console cluster settings IP whitelisting option
+
+If no whitelist address or address range is set, the cluster is publicly
+accessible by default. (Of course, the normal authentication procedures are
+always required.) Only an :ref:`org admin <org-roles>` can change the
+allowlist.
 
 
 .. _overview-cluster-settings-scale:
@@ -518,8 +544,8 @@ top right.
 Logout
 ======
 
-Use the Logout button to log out of your current account and leave the CrateDB
-Cloud Console.
+Use the *Logout* button to log out of your current account and leave the
+CrateDB Cloud Console.
 
 
 .. _aks1.eastus2.azure.cratedb.cloud: https://eastus2.azure.cratedb.cloud/
@@ -527,6 +553,7 @@ Cloud Console.
 .. _aks1.westeurope.azure.cratedb.cloud: https://aks1.westeurope.azure.cratedb.cloud/
 .. _an organization admin: https://crate.io/docs/cloud/reference/en/latest/user-roles.html#organization-roles
 .. _bregenz.a1.cratedb.cloud: https://bregenz.a1.cratedb.cloud/
+.. _CIDR block: https://www.keycdn.com/support/what-is-cidr
 .. _concepts: https://crate.io/docs/cloud/reference/en/latest/concepts.html
 .. _CrateDB Admin UI: https://crate.io/docs/clients/admin-ui/
 .. _CrateDB and CrateDB Cloud Community page: https://community.crate.io/
