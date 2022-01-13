@@ -479,7 +479,7 @@ defined role within the organization (see our reference on :ref:`user roles
     :ref:`User roles <user-roles>`
 
 
-.. _Azure IoT tutorial: https://crate.io/a/azure-iot-hub-cratedb-sensor-data/
+.. _Azure IoT tutorial: https://crate.io/blog/azure-iot-hub-cratedb-sensor-data
 .. _AWS Marketplace: https://aws.amazon.com/marketplace/pp/B089M4B1ND
 .. _Cluster deployment: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
 .. _Create a new organization: https://crate.io/docs/cloud/howtos/en/latest/create-org.html
@@ -497,7 +497,7 @@ defined role within the organization (see our reference on :ref:`user roles
 .. _Subscribe via AWS Marketplace: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-aws/signup-aws.html
 .. _Subscribe via Azure Marketplace: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-azure/signup-azure.html
 .. _subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
-.. _this article on our blog: https://crate.io/a/connecting-azure-iot-hub-and-cratedb-cloud-for-the-ingestion-of-sensor-data/
+.. _this article on our blog: https://crate.io/blog/azure-iot-hub-cratedb-sensor-data
 .. _tutorial for deploying a CrateDB Cloud cluster from scratch: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
 .. _tutorial: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
 .. _user roles: https://crate.io/docs/cloud/reference/en/latest/user-roles.html
