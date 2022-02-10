@@ -10,6 +10,12 @@ appear in different places across the CrateDB Cloud interface, this guide
 should function as a single reference document for finding the information you
 need about billing, invoicing, and payments.
 
+You can at any time check your current accumulated bill at the bottom left of
+the CrateDB Cloud Console screen:
+
+.. image:: _assets/img/billing-meter.png
+   :alt: Cloud Console billing meter
+
 
 .. _billing-principles:
 
