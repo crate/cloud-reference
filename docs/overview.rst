@@ -157,6 +157,12 @@ Click the *Add payment method* button at the top right to add a new card.
 On the right-hand side, you will see the billing information. This can be
 edited by using the pen icon at the top right.
 
+You can at any time check your current accumulated bill at the bottom left of
+the CrateDB Cloud Console screen:
+
+.. image:: _assets/img/billing-meter.png
+   :alt: Cloud Console billing meter
+
 
 .. _overview-org-regions:
 
