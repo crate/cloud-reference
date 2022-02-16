@@ -478,10 +478,43 @@ defined role within the organization (see our reference on :ref:`user roles
 
     :ref:`User roles <user-roles>`
 
+.. _gloss-version:
+
+Versions
+--------
+
+CrateDB uses a semantic versioning system called `Semver`_ with three levels of
+versioning: major versions, minor versions, and patch versions. (Versions can
+also be referred to as releases.) CrateDB clusters run on the CrateDB Cloud
+service also refer to this CrateDB versioning system.
+
+A major version of CrateDB is a release that includes significant changes in
+features, performance, and/or supported operations that are not backwards
+compatible with any previous version. It is indicated by the first numeral in
+the versioning sequence, i.e. the 4 in 'version 4.6.7'.
+
+A minor version of CrateDB is a release that includes substantial changes in
+features, performance, and/or supported operations compared to the previous
+such version. It is indicated by the second numeral in the versioning sequence,
+e.g. the 6 in 'version 4.6.7'. You can upgrade minor versions yourself in the
+CrateDB Cloud Console under
+:ref:`Cluster Preferences <overview-cluster-settings-upgrade>`.
+
+A patch version of CrateDB is a release that includes bug fixes and smaller
+quality of life improvements compared to the previous such version. It is
+indicated by the third numeral in the versioning sequence, e.g. the 7 in
+'version 4.6.7'. You can upgrade patch versions yourself in the CrateDB Cloud
+Console under :ref:`Cluster Preferences <overview-cluster-settings-upgrade>`.
+
+.. SEEALSO::
+
+    `CrateDB Release Notes`_
+
 
 .. _Azure IoT tutorial: https://crate.io/blog/azure-iot-hub-cratedb-sensor-data
 .. _AWS Marketplace: https://aws.amazon.com/marketplace/pp/B089M4B1ND
 .. _Cluster deployment: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
+.. _CrateDB Release Notes: https://crate.io/docs/crate/reference/en/4.7/appendices/release-notes/index.html
 .. _Create a new organization: https://crate.io/docs/cloud/howtos/en/latest/create-org.html
 .. _Create a new project: https://crate.io/docs/cloud/howtos/en/latest/create-project.html
 .. _Croud CLI: https://crate.io/docs/cloud/cli/en/latest/
@@ -492,6 +525,7 @@ defined role within the organization (see our reference on :ref:`user roles
 .. _Microsoft documentation on Azure: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis
 .. _public beta: https://crate.io/a/announcing-cratedb-edge/
 .. _Scale your cluster: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
+.. _Semver: https://semver.org/
 .. _Sign up for CrateDB Cloud: https://crate.io/docs/cloud/tutorials/en/latest/sign-up.html
 .. _Subscribe to CrateDB Cloud: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
 .. _Subscribe via AWS Marketplace: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-aws/signup-aws.html

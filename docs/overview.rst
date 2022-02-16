@@ -370,16 +370,16 @@ directly by hovering over the relevant point on the time axis (the X axis).
 
 .. _overview-cluster-settings:
 
-Cluster Settings
-----------------
+Cluster Preferences
+-------------------
 
-The Cluster Settings page has two tabs: Cluster Access and Cluster Scale. The
-default tab, Cluster Access, shows you the username and password you defined to
-access your cluster directly. By clicking *Edit* at the top right, you can
-change the password (but not the username).
+The Cluster Preferences page has three tabs: Cluster Access, Cluster Scale, and
+Upgrade Cluster. The default tab, Cluster Access, shows you the username and
+password you defined to access your cluster directly. By clicking *Edit* at the
+top right, you can change the password (but not the username).
 
 .. image:: _assets/img/cluster-settings.png
-   :alt: Cloud Console cluster settings page
+   :alt: Cloud Console cluster preferences page
 
 
 Deletion protection
@@ -397,17 +397,17 @@ Crate.io employee superuser).
 Allowlist
 '''''''''
 
-By using the IP whitelisting feature (or allowlist), you can restrict access to
-your cluster to an indicated IP address or `CIDR block`_. Click the blue *Add
+By using the IP allowlisting feature, you can restrict access to your cluster
+to an indicated IP address or `CIDR block`_. Click the blue *Add
 Address* button and you can fill out an IP address or range and give it a
 meaningful description. Click *Save* to store it or the bin icon to delete a
-range. Keep in mind that once IP whitelisting has been set, you cannot access
+range. Keep in mind that once IP allowlisting has been set, you cannot access
 the Admin UI for that cluster from any other address.
 
 .. image:: _assets/img/cluster-settings-allowlist.png
-   :alt: Cloud Console cluster settings IP whitelisting option
+   :alt: Cloud Console cluster preferences IP allowlisting option
 
-If no whitelist address or address range is set, the cluster is publicly
+If no allowlist address or address range is set, the cluster is publicly
 accessible by default. (Of course, the normal authentication procedures are
 always required.) Only an :ref:`org admin <org-roles>` can change the
 allowlist.
@@ -422,7 +422,7 @@ The blue box on the left shows the current cluster subscription plan, including
 the tier and the scale unit. The scale unit can also be adjusted on this page.
 
 .. image:: _assets/img/cluster-settings-scale.png
-   :alt: Cloud Console cluster scaling page
+   :alt: Cloud Console cluster scaling tab
 
 Using the overview showing the resources and the price for different scale
 units based on the selected subscription plan and tier, you can simply click
@@ -442,6 +442,37 @@ at the top right. It will prompt you for confirmation.
 .. WARNING::
 
     All cluster data will be lost on deletion. This action cannot be undone.
+
+
+.. _overview-cluster-settings-upgrade:
+
+Upgrade cluster
+'''''''''''''''
+
+The Upgrade cluster tab shows two things: the current version of the cluster
+and, if a :ref:`minor upgrade <gloss-version>` or
+:ref:`patch upgrade <gloss-version>` is possible, a list of available upgrades.
+If no upgrade is possible, because the cluster is up to date with the
+latest version of CrateDB, nothing will be displayed in the Available Upgrades
+panel. You can upgrade a cluster from the Available Upgrades panel by clicking
+the *Upgrade* button on the right. Upgrading may take a brief moment, during
+which other cluster operations will be disabled.
+
+.. image:: _assets/img/cluster-settings-upgrade.png
+   :alt: Cloud Console cluster preferences upgrade tab
+
+For more information on your current version and its feature changes, you can
+click the document icon at the far right of the version number.
+
+Major upgrades of CrateDB are carried out for CrateDB Cloud customers by the
+CrateDB Cloud engineering team.
+
+.. NOTE::
+
+    Using the upgrade method in the CrateDB Cloud Console, you can only
+    upgrade one minor version at a time, and only to the latest or last patch
+    version of a given minor version. (Upgrades to other patch versions are
+    possible using `Croud clusters upgrade`_.) Downgrades are never supported.
 
 
 .. _overview-projects-overview:
@@ -568,6 +599,7 @@ CrateDB Cloud Console.
 .. _CrateDB Cloud support: support@crate.io
 .. _CrateDB Edge: https://crate.io/products/cratedb-edge/
 .. _CrateDB Edge region: https://crate.io/docs/cloud/tutorials/en/latest/edge.html
+.. _Croud clusters upgrade: https://crate.io/docs/cloud/cli/en/latest/commands/clusters.html#clusters-upgrade
 .. _glossary: https://crate.io/docs/cloud/reference/en/latest/glossary.html
 .. _HTTP: https://crate.io/docs/crate/reference/en/latest/interfaces/http.html
 .. _Microsoft Azure: https://azure.microsoft.com/en-us/
