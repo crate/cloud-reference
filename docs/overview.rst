@@ -39,8 +39,6 @@ Here is a list of all currently available regions for CrateDB Cloud:
 +-------------------+----------------------------------------+
 | Azure West Europe | `aks1.westeurope.azure.cratedb.cloud`_ |
 +-------------------+----------------------------------------+
-| Bregenz           | `bregenz.a1.cratedb.cloud`_            |
-+-------------------+----------------------------------------+
 
 Azure East-US2 and Azure West-Europe are managed by `Microsoft Azure`_. The
 Bregenz region is managed by Crate.io and is located in Austria. The AWS region
