@@ -5,32 +5,18 @@ Subscription plans
 ==================
 
 When signing up for the CrateDB Cloud service, you have a choice of four
-different plans. Each plan is preconfigured for different use cases, depending
-on what your product needs are. By presenting plans in terms of ready-made
-configurations of database storage, memory, and computation capacity, the
-customer is spared the complexity of finding the exact required hardware
-combinations themselves.
+different subscription plans. Each plan is preconfigured for different use
+cases, depending on what your needs are. At the same time, the plans also offer
+elasticity, since your use case may change. Within a given plan you can
+horizontally scale the compute capacity of your cluster(s) up or down by adding
+or subtracting nodes. For information on how to do this, refer to our
+`scaling guide`_.
 
-At the same time, the plans also offer flexibility, since your use case may
-change. Not only do we offer multiple plans and tiers with different
-specifications, but within a given plan you can scale the required capacity for
-a cluster up or down by adding or subtracting nodes within a given plan.
-
-In order to make the costs for a given set of hardware transparent and yet easy
-to use, this scaling is measured in terms of Database Transaction Units (DTUs).
-The simple rule of thumb is that plans and tiers increase the price per DTU,
-whereas the number of nodes represents the number of DTUs expended for an hour
-of usage.
-
-This reference gives a brief description of the plans and subsequently explains
-the meaning and usage of nodes, tiers, and DTUs. This should make it easy to
-choose the right setup for your CrateDB Cloud subscription.
-
-.. NOTE::
-    `CrateDB Edge`_ works differently. Since it allows hosting CrateDB Cloud
-    on your local or self-service Kubernetes stack, there is no need for
-    different subscription plans. You can combine CrateDB Edge with any
-    suitable hardware configuration that works for your use case.
+The nature of our plans depends on the method of your subscription. We will
+first explain the plans for the recommended subscription method, `subscribing
+and deploying a cluster directly`_. Subsequently, we will provide some more
+detailed information regarding plans and billing for subscriptions via our
+Marketplace SaaS offers.
 
 .. rubric:: Table of contents
 
@@ -38,12 +24,80 @@ choose the right setup for your CrateDB Cloud subscription.
    :local:
 
 
-.. _subscription-plans-overview:
+.. _subscription-plans-stripe:
 
 CrateDB Cloud subscription plans
 ================================
 
-CrateDB Cloud's service comes with four different subscription plans:
+The standard CrateDB Cloud deployment process offers four subscription plans,
+labelled CR1 to CR4. Each of these plans consists of two dimensions: compute
+and storage. The compute configuration is set for each plan, but can be scaled
+horizontally by adding or subtracting nodes during or after deployment. Storage
+is configured separately: on deployment you can set the desired storage
+capacity for your cluster, within the range of storage capacity options
+provided for that plan. To view the current plans, prices, and compute and
+storage ranges, refer to our `pricing page`_.
+
+For details on signup, cluster configuration, and cluster deployment, you can
+make use of our `deployment tutorial`_.
+
+.. NOTE::
+    `CrateDB Edge`_ works differently. Since it allows hosting CrateDB Cloud
+    on your local or self-service Kubernetes stack, there is no need for
+    different subscription plans. You can combine CrateDB Edge with any
+    suitable hardware configuration that works for your use case.
+
+.. WARNING::
+    CrateDB Cloud does not currently support changing the storage capacity of
+    a cluster once it has been deployed. Additionally, a single node cluster,
+    once scaled up, cannot be scaled down to one node again.
+
+Although you can scale your cluster from a single node to as many nodes as
+desired, only clusters containing 3 or more nodes are covered by our 24/7
+support. You can find our CrateDB Cloud terms and conditions in our `SLA`_.
+
+
+.. _subscription-plans-regions:
+
+Subscription plan regions
+=========================
+
+We currently offer three :ref:`regions <gloss-region>` for our subscriptions:
+one from AWS (West Europe) and two from Azure (East US 2 and West Europe). You
+can use any subscription plan in any region. Note that prices for a given plan
+differ depending on the region you select.
+
+
+.. _subscription-plans-nodes:
+
+Subscription plan nodes
+=======================
+
+For all subscriptions, the number of nodes in a cluster can be adjusted
+manually. You can `scale your cluster`_ any time in the CrateDB Cloud Console
+to up to 15 nodes. (If you need more nodes than this, you can `contact us`_ any
+time.)
+
+.. WARNING::
+
+    An even number of nodes can be used for testing and development without
+    issue, but is not recommended for production workloads, due to the risk of
+    `split-brain syndrome`_.
+
+
+.. _subscription-plans-marketplace:
+
+CrateDB Cloud SaaS offer plans
+==============================
+
+In this section, we explain the plans and billing for our SaaS Marketplace
+offers on `AWS Marketplace`_ and `Azure Marketplace`_. The below information
+applies to these Marketplace subscriptions only. This reference gives a
+brief description of the plans and subsequently explains the meaning and usage
+of nodes, tiers, and DTUs for Marketplace subscriptions. This makes it easy to
+choose the right setup for your CrateDB Cloud SaaS subscription.
+
+CrateDB Cloud's SaaS offer comes with four different subscription plans:
 **Development**, **General Purpose**, **I/O Optimized**, and **Storage
 Optimized**. Besides these, we also offer the CrateDB Cloud **Contract**.
 
@@ -73,50 +127,22 @@ Optimized**. Besides these, we also offer the CrateDB Cloud **Contract**.
   times the storage capacity.
 
 
-.. _subscription-plans-regions:
+.. _subscription-plans-tiers:
 
-Subscription plan regions
-=========================
-
-We currently offer three :ref:`regions <gloss-region>` for our subscriptions:
-one from AWS (West Europe) and two from Azure (East US 2 and West Europe). You
-can use any subscription plan in any region. Note that prices for a given plan
-differ depending on the region you select.
-
-
-.. _subscription-plans-nodes:
-
-Subscription plan tiers and nodes
-=================================
+Subscription plan tiers
+=======================
 
 Besides the hardware composition described above, which outlines the ratio of
-the elements CPU, RAM, and storage HD for each subscription plan, each plan has
-two further dimensions: tiers and nodes.
+the elements CPU, RAM, and storage HD for each SaaS Marketplace subscription
+plan, each such plan can have two further dimensions: tiers and nodes.
 
-Tiers are simply multiples of each hardware composition, and therefore allow
-vertical scaling within a given plan. For example, the Basic tier of the
-General Purpose plan has 3.5 CPUs, 14 GiB of RAM, and 1 TiB of storage. The
-next tier of that plan, the Pro tier, has 7 CPUs, 28 GiB of RAM, and 2 TiB of
-storage, and so forth.
-
-The number of nodes in a cluster can also be adjusted manually for a given
-plan. Basic tiers of a plan allow scaling between 3, 4, and 5 nodes, whereas
-higher tiers allow scaling up to 15. (If you need more nodes than this, you can
-`contact us`_ any time.)
-
-.. WARNING::
-
-    An even number of nodes can be used for testing and development without
-    issue, but is not recommended for production workloads, due to the risk of
-    `split-brain syndrome`_.
-
-The Development plan differs from the others: it has only a single tier and
-allows scaling between 1-3 nodes.
-
-.. WARNING::
-
-    When you have scaled a Development plan cluster above one node, you cannot
-    scale it back down to a single node again.
+Tiers are only used for Marketplace SaaS subscriptions. Tiers are simply
+multiples of each hardware composition, and therefore allow vertical scaling
+within a given plan. For example, the Basic tier of the **General Purpose**
+plan has 3.5 CPUs, 14 GiB of RAM, and 1 TiB of storage. The next tier of that
+plan, the Pro tier, has 7 CPUs, 28 GiB of RAM, and 2 TiB of storage, and so
+forth. The **Development** plan differs from the others: it has only a single
+tier and allows scaling between 1-3 nodes only.
 
 Each node, in turn, corresponds to one DTU, regardless of tier. Put simply, the
 tier determines the hardware 'size' of the node, the number of nodes determines
@@ -136,12 +162,12 @@ Explaining DTUs for scaling and billing
 
 What are DTUs and how do they work? As mentioned above, to make finding the
 right combination of hardware capacity more tractable and accessible, CrateDB
-Cloud's offers use DTUs. These DTUs have essentially two purposes: they allow
-the user to choose the right combination of plan and scale to find the capacity
-they need, and they provide clarity for the purposes of pricing. In order to
-keep things simple, scaling in each plan is currently set up so that one scale
-unit = one node = one DTU, and billing is set up so that Crate.io bills only
-for DTUs/hour actually used.
+Cloud's SaaS offers use DTUs. These DTUs have essentially two purposes: they
+allow the user to choose the right combination of plan and scale to find the
+capacity they need, and they provide clarity for the purposes of pricing. In
+order to keep things simple, scaling in each plan is currently set up so that
+one scale unit = one node = one DTU, and billing is set up so that Crate.io
+bills only for DTUs/hour actually used.
 
 Let's break this down further to clarify what each of these statements mean.
 
@@ -150,18 +176,17 @@ plan has a starting number of nodes (usually 3), that can be scaled to a larger
 number (between 4 and 15). Because the hardware capacity in each plan and tier
 is different, a node of the **GP** plan at the **Basic** tier, for example, is
 of a different size (in terms of storage, memory, and computation) than a node
-in the I/O Optimized plan at tier Premium. But the billing for these varied
+in the **I/O Optimized** plan at tier Premium. But the billing for these varied
 hardware compositions and scales is made easy by the fact that for any given
 plan and tier, one node corresponds to one DTU. Since for SaaS Marketplace
 users we bill in terms of DTUs/hour, all the different dimensions of horizontal
 and vertical hardware scaling are resolved into a single measure.
 
-An overview showing the range in terms of capacity of each plan can be found on
-the `Azure offer page`_ and the `AWS subscription page`_, respectively. All
-details about each hardware dimension, plan, tier, and node, can be found on
-the deployment screen in the CrateDB Cloud console when deploying your cluster.
-For SaaS Marketplace offers, you can also find the price per DTU/hour for each
-subscription plan in the same overview.
+An overview showing the range in terms of capacity of each SaaS plan and the
+price per DTU/hour can be found on the `Azure offer page`_ and the `AWS
+subscription page`_, respectively. All details about each hardware dimension,
+plan, tier, and node, can also be found on the deployment screen in the CrateDB
+Cloud console when deploying your cluster.
 
 To summarize:
 
@@ -216,8 +241,8 @@ plans above) for the full year.
    :alt: AWS Marketplace CrateDB Cloud Contract offer
 
 By subscribing to the CrateDB Cloud Contract product, you will automatically be
-put in contact with our Sales department, which will further help you configure
-the right plan and contract according to your needs.
+put in contact with our `Sales department`_, which will further help you
+configure the right plan and contract according to your needs.
 
 
 .. _subscription-plans-notes:
@@ -229,9 +254,9 @@ For clarity, we add here a few notes of caution:
 
 * The correspondence between one node and one DTU is provisional and may change
   in the future.
-* Remember that not all plans, currently or in the future, necessarily *start*
-  at one DTU. All plans except the **Development** plan currently start at
-  three DTUs of that plan. Therefore, when referring to the pricing per
+* Remember that not all SaaS plans, currently or in the future, necessarily
+  *start* at one DTU. All plans except the **Development** plan currently start
+  at three DTUs of that plan. Therefore, when referring to the pricing per
   DTU/hour on the SaaS Marketplace cloud offer, keep this in mind. The price
   for a single DTU/hour, as listed on the cloud offer pages, is not necessarily
   the minimum price for an hour usage of a given plan.
@@ -240,10 +265,19 @@ For clarity, we add here a few notes of caution:
   accordingly. Plan terms and prices are subject to change.
 
 
+.. _AWS Marketplace: https://aws.amazon.com/marketplace/pp/B089M4B1ND
 .. _AWS subscription page: https://aws.amazon.com/marketplace/pp/B089M4B1ND
+.. _Azure Marketplace: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=PlansAndPrice
 .. _Azure offer page: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview
 .. _contact us: sales@crate.io
 .. _Contract page on the AWS Marketplace: https://aws.amazon.com/marketplace/pp/B08KHK34RK
 .. _CrateDB Edge: https://crate.io/products/cratedb-edge/
+.. _deployment tutorial: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
+.. _pricing page: https://crate.io/pricing
+.. _Sales department: sales@crate.io
 .. _Sales team: sales@crate.io
+.. _scale your cluster: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
+.. _scaling guide: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
+.. _SLA: https://crate.io/legal/service-level-agreement
 .. _split-brain syndrome: https://en.wikipedia.org/wiki/Split-brain_(computing)
+.. _subscribing and deploying a cluster directly: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
