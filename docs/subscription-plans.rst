@@ -75,7 +75,7 @@ Subscription plan nodes
 
 For all subscriptions, the number of nodes in a cluster can be adjusted
 manually. You can `scale your cluster`_ any time in the CrateDB Cloud Console
-to up to 15 nodes. (If you need more nodes than this, you can `contact us`_ any
+to up to 9 nodes. (If you need more nodes than this, you can `contact us`_ any
 time.)
 
 .. WARNING::
@@ -129,8 +129,8 @@ Optimized**. Besides these, we also offer the CrateDB Cloud **Contract**.
 
 .. _subscription-plans-tiers:
 
-Subscription plan tiers
-=======================
+SaaS offer tiers
+================
 
 Besides the hardware composition described above, which outlines the ratio of
 the elements CPU, RAM, and storage HD for each SaaS Marketplace subscription
