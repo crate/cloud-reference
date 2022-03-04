@@ -78,6 +78,11 @@ The *Deploy cluster* button in the left panel allows you to directly deploy
 clusters within your subscription. For information on how to do so, refer to
 `our tutorial on direct cluster deployment`_.
 
+If you are a member of multiple organizations, you can find them in a dropdown
+menu at the top right of the Organization Overview. The CrateDB Cloud Console
+is structured on a per-organization basis: all pages and tabs in the Console
+will display values for the organization you select here.
+
 You can access the other tabs by clicking their respective names at the top.
 
 
