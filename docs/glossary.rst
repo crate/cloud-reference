@@ -147,15 +147,15 @@ can be found under `Croud CLI`_.
 DTU
 ---
 
-DTU stands for Database Transaction Unit. CrateDB Cloud uses DTUs to create
-configurations (combinations) of hardware specifications for specific
-:ref:`subscription plans <gloss-subscription-plan>`. The advantage is that the
-customer does not need to specify every element of the hardware configuration
-themselves, but can simply identify the price per DTU for a given plan and see
-how it matches their use case. This makes using the CrateDB Cloud :ref:`offer
-<gloss-offer>` and scaling to need easy and accessible.
+DTU stands for Database Transaction Unit. CrateDB Cloud uses DTUs for our
+SaaS Marketplace offers to create configurations of hardware specifications for
+specific :ref:`subscription plans <gloss-subscription-plan>`. The advantage is
+that the customer does not need to specify every element of the hardware
+configuration themselves, but can simply identify the price per DTU for a given
+plan and see how it matches their use case. This makes using the CrateDB Cloud
+:ref:`offer <gloss-offer>` and scaling to need easy and accessible.
 
-For a more detailed description of the subscription plans and associated DTUs,
+For a more detailed description of the subscription plans and info on DTUs,
 refer to our :ref:`documentation <subscription-plans>`.
 
 .. SEEALSO::
@@ -194,33 +194,6 @@ the :ref:`Croud <gloss-croud>` CLI. For information on how to do this, see the
     `Croud CLI`_
 
 
-.. _gloss-iiot:
-
-IIoT
-----
-
-The abbreviation IIoT refers to the "Industrial Internet of Things". It is a
-version of :ref:`IoT <gloss-iot>`, but specifically developed for application
-in industrial manufacturing. In this context, the gathering, transfer, and
-storage of data gathered by digital devices installed on machines supports
-greater efficiency and automation potential in the manufacturing sector.
-
-
-.. _gloss-iot:
-
-IoT
----
-
-IoT stands for the "Internet of Things". In essence, the Internet of Things
-refers to the connecting of multiple computers or digital devices, often part
-of existing appliances or physical infrastructure, in such a way that they can
-communicate with one another without the need for human (inter)action. In IoT
-systems, each digital device is provided with a unique ID and communicates with
-other devices on that basis, in particular for the transfer and receiving of
-data. When used in manufacturing and industrial applications, it is also called
-:ref:`IIoT <gloss-iiot>`.
-
-
 .. _gloss-offer:
 
 Offer
@@ -246,7 +219,8 @@ which CrateDB Cloud :ref:`projects <gloss-project>` and associated
 :ref:`products <gloss-product>` are deployed. At the organization level there
 is always at least one organization administrator, who can in turn add
 organization members. Such organization admins and members have access to the
-projects run by the organization. (For more on user roles in CrateDB Cloud and
+projects run by the organization. One account can be a member or admin of
+multiple organizations. (For more on user roles in CrateDB Cloud and
 how to manage them, see our :ref:`reference for user roles <user-roles>`.)
 
 Each organization has a name, a unique ID, and optionally an associated email
@@ -360,11 +334,12 @@ with a number of different scale units. Each scale unit represents an
 (additional) unit multiplying the specific combination of hardware capacity
 that applies to that plan.
 
-The relationship between scale units and :ref:`DTUs <gloss-DTU>` is subtle.
-Each scale unit added on top of the first scale unit also represents one
-*additional* DTU. However, not all plans *start* at one DTU. For more detailed
-information about subscription plans, scale units, and DTUs, take a look at our
-documentation on :ref:`DTUs and subscription plans<subscription-plans-dtus>`.
+For SaaS Marketplace subscriptions, the relationship between scale units and
+:ref:`DTUs <gloss-DTU>` is subtle. Each scale unit added on top of the first
+scale unit also represents one *additional* DTU. However, not all plans *start*
+at one DTU. For more detailed information about subscription plans, scale
+units, and DTUs, take a look at our documentation on
+:ref:`DTUs and subscription plans<subscription-plans-dtus>`.
 
 .. SEEALSO::
 
@@ -409,12 +384,12 @@ Subscription plan
 
 CrateDB Cloud's service comes with several possible subscription plans. These
 plans are combinations of hardware specifications that are geared towards
-particular customer use cases: lower capacity vs. higher capacity, more storage
-vs. more processing power, and so forth. They can also be further adjusted for
-different :ref:`scale units <gloss-scale-unit>` per plan. Currently there are
-four subscription plans available, as well as a separate contract option via
-our marketplace :ref:`offers <gloss-offer>`. For more information, refer to our
-documentation on `subscription plans`_.
+particular customer use cases: from trial and development plans to high-end
+production clusters. They can also be further adjusted for different
+:ref:`scale units <gloss-scale-unit>` per plan. Currently there are four
+subscription plans available for `direct deployment`_, as well as four plans
+and a separate contract option via our Marketplace :ref:`offers <gloss-offer>`.
+For more information, refer to our documentation on `subscription plans`_.
 
 .. SEEALSO::
 
@@ -452,11 +427,11 @@ In CrateDB Cloud, there are two distinct system :ref:`users <gloss-user>`:
 Tier
 ----
 
-In the CrateDB Cloud :ref:`subscription plans <gloss-subscription-plan>`, tiers
-offer different magnitudes of the hardware composition of a given plan. For a
-given ratio of storage capacity, memory, and CPUs, going up in tier allows you
-to multiply the hardware values for your cluster deployment without changing
-the hardware ratio.
+In the CrateDB Cloud :ref:`subscription plans <gloss-subscription-plan>` for
+SaaS Marketplace subscriptions, tiers offer different magnitudes of the
+hardware composition of a given plan. For a given ratio of storage capacity,
+memory, and CPUs, going up in tier allows you to multiply the hardware values
+for your cluster deployment without changing the hardware ratio.
 
 
 .. _gloss-user:
@@ -519,6 +494,7 @@ Console under :ref:`Cluster Preferences <overview-cluster-settings-upgrade>`.
 .. _Create a new project: https://crate.io/docs/cloud/howtos/en/latest/create-project.html
 .. _Croud CLI: https://crate.io/docs/cloud/cli/en/latest/
 .. _Croud documentation: https://crate.io/docs/cloud/cli/en/latest/configuration.html#manage-configuration-via-cli
+.. _direct deployment: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
 .. _guide to creating a new organization: https://crate.io/docs/cloud/howtos/en/latest/create-org.html
 .. _guide to creating a new project: https://crate.io/docs/cloud/howtos/en/latest/create-project.html
 .. _Microsoft Azure Marketplace: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview

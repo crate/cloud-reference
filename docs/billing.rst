@@ -31,10 +31,12 @@ rounded up to the nearest hour of use for Marketplace customers and to the
 nearest minute of use for customers directly deploying via the CrateDB Cloud
 Console.
 
-Thirdly, we measure usage based on Database Transaction Units (DTUs). These
-units represent a given combination of hardware capabilities and storage for a
-given subscription plan. They function as preconfigured usage units to make
-tracking your usage more convenient. This means the price you pay for any
+Thirdly, we measure usage either directly, via your Stripe subscription, or
+(if you subscribed via one of the SaaS Marktplaces) based on Database
+Transaction Units (DTUs). These units represent a given combination of hardware
+and storage capabilities for a given subscription plan. They function as
+preconfigured usage units to make tracking your usage more convenient. This
+means the price you pay for any
 :ref:`subscription plan <gloss-subscription-plan>` is expressed as the cost of
 a given number of DTUs per minute or hour (as explained above). For more
 details about DTUs, see :ref:`our explanation of subscription plans
