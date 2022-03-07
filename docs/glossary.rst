@@ -109,12 +109,11 @@ Consumer
 --------
 
 A consumer in the sense used for CrateDB Cloud architecture and documentation
-is an entity that reads event data from an :ref:`IoT <gloss-iot>` hub. It is
-possible to use a consumer, such as Azure IoT Hub, with CrateDB Cloud: you can
-store the data processed by the consumer on the Cloud :ref:`cluster
-<gloss-cluster>`. For a tutorial on how to do this, see `this article on our
-blog`_. Operations on consumers are registered in the :ref:`Audit Log
-<gloss-audit-log>`.
+is an entity that reads event data from an IoT hub. It is possible to use a
+consumer, such as Azure IoT Hub, with CrateDB Cloud: you can store the data
+processed by the consumer on the Cloud :ref:`cluster <gloss-cluster>`. For a
+tutorial on how to do this, see `this article on our blog`_. Operations on
+consumers are registered in the :ref:`Audit Log <gloss-audit-log>`.
 
 .. SEEALSO::
 

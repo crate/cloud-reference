@@ -4,10 +4,12 @@
 CrateDB Cloud Reference
 =======================
 
-`CrateDB Cloud`_ is a ready version of `CrateDB`_ as a service that runs in the
-cloud and is managed by the experts at `Crate.io`_. CrateDB Cloud supports
-real-time analytics and visualization specialized for the :ref:`Industrial
-Internet of Things (IIoT) <gloss-iiot>` at scale.
+`CrateDB Cloud`_ is the fully-managed cloud database as a service by
+`CrateDB`_. With CrateDB Cloud you can deploy, monitor, back up, and scale your
+clusters in the cloud – without needing to worry about database management.
+
+CrateDB is a distributed, open-source database that combines the performance of
+NoSQL with the power and simplicity of standard SQL.
 
 .. SEEALSO::
 
@@ -27,7 +29,6 @@ Internet of Things (IIoT) <gloss-iiot>` at scale.
     glossary
 
 
-.. _Crate.io: https://crate.io/
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
 .. _CrateDB: https://crate.io/products/cratedb/
 .. _GitHub: https://github.com/crate/cloud-reference/

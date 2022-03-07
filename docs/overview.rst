@@ -439,8 +439,15 @@ the *Edit scale unit* button to adjust the scaling to the desired level.
     scale pricing shown here, but do not worry! This does not mean that your
     promotion or discount is not functioning.
 
-You can also delete your cluster here by clicking the *Delete cluster* button
-at the top right. It will prompt you for confirmation.
+
+.. _overview-cluster-settings-delete:
+
+Delete cluster
+''''''''''''''
+
+You can also delete your cluster in either tab of the Cluster Preferences by
+clicking the *Delete cluster* button at the top right. It will prompt you for
+confirmation.
 
 .. WARNING::
 
