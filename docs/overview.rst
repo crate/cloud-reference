@@ -421,15 +421,15 @@ allowlist.
 Cluster Scale
 '''''''''''''
 
-The blue box on the left shows the current cluster subscription plan, including
-the tier and the scale unit. The scale unit can also be adjusted on this page.
+The blue box on the left shows the current cluster subscription plan. The scale
+unit can be adjusted on this page, and the storage capacity can be increased
+here.
 
 .. image:: _assets/img/cluster-settings-scale.png
    :alt: Cloud Console cluster scaling tab
 
-Using the overview showing the resources and the price for different scale
-units based on the selected subscription plan and tier, you can simply click
-the *Edit scale unit* button to adjust the scaling to the desired level.
+You can scale your cluster here by using the slider under the Cluster Scale
+panel. The cluster capacity indicated will change accordingly.
 
 .. NOTE::
 
@@ -438,6 +438,23 @@ the *Edit scale unit* button to adjust the scaling to the desired level.
     technical limitations, they may not be directly visible in the cluster
     scale pricing shown here, but do not worry! This does not mean that your
     promotion or discount is not functioning.
+
+You can also increase the storage capacity on your cluster. Do this by clicking
+*Edit cluster configuration* at the top right. A dropdown menu will appear
+under the 'Storage' item of the node specification:
+
+.. image:: _assets/img/cluster-settings-storage.png
+   :alt: Cloud Console cluster custom storage dropdown
+
+Pick the desired storage capacity. You will see the footer indicating the new
+cluster price appear. When you are satisfied, hit *Save* at the top right
+again to confirm.
+
+.. WARNING::
+
+    Storage capacity increases for a given cluster are irreversible. To reduce
+    cluster storage capacity, reduce the cluster nodes instead (up to a minimum
+    of 2, although we recommend maintaining a minimum of 3 for production use).
 
 
 .. _overview-cluster-settings-delete:
@@ -545,7 +562,7 @@ In this screen you can delete a project by clicking the *Delete*
 button at the top right. You can also change the project name by clicking the
 *Edit* button next to that button.
 
-.. warning::
+.. WARNING::
 
     You cannot delete a project without first deleting all services deployed
     within that project. Deleting a project is irreversible.
