@@ -26,7 +26,8 @@ Basics
 .. image:: _assets/img/start.png
    :alt: CrateDB Cloud sign-in screen
 
-You must access the CrateDB Cloud Console by region.
+The CrateDB Cloud user interface permalink is the `CrateDB Cloud Console`_. You
+can `deploy a trial cluster on the CrateDB Cloud Console for free`_.
 
 Here is a list of all currently available regions for CrateDB Cloud:
 
@@ -45,8 +46,8 @@ Bregenz region is managed by Crate.io and is located in Austria. The AWS region
 is managed by AWS and is located in Ireland. Note that the AWS region does not
 serve the CrateDB Cloud Console directly.
 
-From the Cloud Console homepage, you can sign in using your Cloud Console
-username and password (Cognito) or using Microsoft Azure *Active Directory*.
+From the Cloud Console homepage, you can sign in using a Github, Google, or
+Microsoft Azure account or by creating a separate username and password.
 
 If you don't have a Cloud Console account yet, follow the steps in the `signup
 tutorial`_. Select the authentication method you wish to use. From there, you
@@ -60,15 +61,15 @@ Once signed in, you will be presented with the Organization Overview.
 Organization
 ============
 
-The Organization Overview lists the organizations and projects you can access.
+The Organization overview lists the organizations and projects you can access.
 
 If you follow the `tutorial`_ instructions and deploy a test cluster, your
-Organization Overview will look something like this:
+Organization overview will look something like this:
 
 .. image:: _assets/img/organization-dashboard.png
    :alt: Cloud Console organization overview
 
-The Organization Overview consists of seven tabs: *Dashboard*, *Settings*,
+The Organization overview consists of seven tabs: *Dashboard*, *Settings*,
 *Users*, the *Audit Log*, *Billing*, *Regions*, and finally, *Subscriptions*.
 By default it shows the Dashboard tab, which displays two things. On the left,
 it shows a link for creating a new cluster, the blue *Deploy new cluster*
@@ -79,7 +80,7 @@ clusters within your subscription. For information on how to do so, refer to
 `our tutorial on direct cluster deployment`_.
 
 If you are a member of multiple organizations, you can find them in a dropdown
-menu at the top right of the Organization Overview. The CrateDB Cloud Console
+menu at the top right of the Organization overview. The CrateDB Cloud Console
 is structured on a per-organization basis: all pages and tabs in the Console
 will display values for the organization you select here.
 
@@ -92,19 +93,15 @@ Organization Settings
 ---------------------
 
 The Settings tab shows you the name, ID, and notification settings for your
-organization.
+currently selected organization.
 
 .. image:: _assets/img/organization-settings.png
    :alt: Cloud Console organization settings tab
 
 By clicking the *Edit* button next to the organization, you can rename it. Here
 you can also set the email address for notifications and indicate whether you
-want to receive them or not.
-
-.. warning::
-
-    Organizations cannot be deleted in the CrateDB Cloud Console. Contact
-    `CrateDB Cloud support`_ if you need to delete your organization.
+want to receive them or not. To create or delete organizations, or to switch
+organization, go to your :ref:`Account <overview-account>` instead.
 
 
 .. _overview-org-users:
@@ -212,7 +209,7 @@ respective provider.
 Projects
 ========
 
-The Projects page shows an overview of all current projects within the
+The Projects page shows an overview of all current projects within the selected
 organization, together with their timestamp of creation, project ID, and region
 of deployment.
 
@@ -358,7 +355,7 @@ Cluster Metrics
 ---------------
 
 The Cluster Metrics page (not to be confused with the :ref:`metrics section of
-the Cluster Overview page <overview-cluster-overview-metrics>`) provides live
+the Cluster overview page <overview-cluster-overview-metrics>`) provides live
 visualizations of how the cluster is functioning. It shows two graph panels:
 one for the average response time of a query (in milliseconds) and one for the
 total number of queries per second.
@@ -594,13 +591,28 @@ Account
 
 The Account page shows the current account you are using to interact with the
 CrateDB Cloud Console. It shows the username as well as the email address
-associated with that username.
+associated with that username. It also shows a list of all organizations you
+are involved in, with your :ref:`user role <user-roles>` and the date of its
+creation.
 
 .. image:: _assets/img/account.png
    :alt: Cloud Console account
 
 The latter can be edited in this screen by clicking the *Edit* button at the
 top right.
+
+You can also create and delete organizations on the Account page. To create a
+new organization, click on *Create new organization* at the top right above
+the organization list. The `organization creation process`_ is then the same as
+when you first sign up for the CrateDB Cloud Console. To delete an
+organization, click the trashcan icon next to the organization in the list.
+Organizations can only be deleted after deleting the projects and clusters they
+contain first.
+
+To switch the active organization, click on the organization name in the list.
+All organization, project, and cluster management options displayed in the
+CrateDB Cloud Console will then refer to that organization until you switch
+organizations again.
 
 
 .. _overview-logout:
@@ -623,13 +635,16 @@ CrateDB Cloud Console.
 .. _CrateDB and CrateDB Cloud Community page: https://community.crate.io/
 .. _CrateDB architecture documentation: https://crate.io/docs/crate/howtos/en/latest/architecture/shared-nothing.html
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
+.. _CrateDB Cloud Console: https://console.cratedb.cloud
 .. _CrateDB Cloud support: support@crate.io
 .. _CrateDB Edge: https://crate.io/products/cratedb-edge/
 .. _CrateDB Edge region: https://crate.io/docs/cloud/tutorials/en/latest/edge.html
 .. _Croud clusters upgrade: https://crate.io/docs/cloud/cli/en/latest/commands/clusters.html#clusters-upgrade
+.. _deploy a trial cluster on the CrateDB Cloud Console for free: https://crate.io/lp-free-trial
 .. _glossary: https://crate.io/docs/cloud/reference/en/latest/glossary.html
 .. _HTTP: https://crate.io/docs/crate/reference/en/latest/interfaces/http.html
 .. _Microsoft Azure: https://azure.microsoft.com/en-us/
+.. _organization creation process: https://crate.io/docs/cloud/howtos/en/latest/create-org.html
 .. _our tutorial on direct cluster deployment: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
 .. _PostgreSQL wire protocol: https://crate.io/docs/crate/reference/en/latest/interfaces/postgres.html
 .. _scaling the cluster: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
