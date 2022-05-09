@@ -443,11 +443,6 @@ some part of an :ref:`organization's <gloss-org>` assets. Each user has a
 defined role within the organization (see our reference on :ref:`user roles
 <user-roles>`) and is associated with a specific email address.
 
-.. NOTE::
-
-    Note that currently each CrateDB Cloud user corresponds to only one
-    organization.
-
 .. SEEALSO::
 
     :ref:`User roles <user-roles>`
