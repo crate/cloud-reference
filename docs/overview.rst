@@ -41,10 +41,9 @@ Here is a list of all currently available regions for CrateDB Cloud:
 | Azure West Europe | `aks1.westeurope.azure.cratedb.cloud`_ |
 +-------------------+----------------------------------------+
 
-Azure East-US2 and Azure West-Europe are managed by `Microsoft Azure`_. The
-Bregenz region is managed by Crate.io and is located in Austria. The AWS region
-is managed by AWS and is located in Ireland. Note that the AWS region does not
-serve the CrateDB Cloud Console directly.
+Azure East-US2 and Azure West-Europe are managed by `Microsoft Azure`_. The AWS
+region is managed by AWS and is located in Ireland. Note that the AWS region
+does not serve the CrateDB Cloud Console directly.
 
 From the Cloud Console homepage, you can sign in using a Github, Google, or
 Microsoft Azure account or by creating a separate username and password.
@@ -53,7 +52,7 @@ If you don't have a Cloud Console account yet, follow the steps in the `signup
 tutorial`_. Select the authentication method you wish to use. From there, you
 will be given the option to sign up.
 
-Once signed in, you will be presented with the Organization Overview.
+Once signed in, you will be presented with the Organization overview.
 
 
 .. _overview-org-overview:
@@ -117,7 +116,12 @@ their user role and their email address.
 
 If you are an organization admin, you can edit these by clicking the pen icon
 or delete users by using the bin icon. To add new users to the organization, in
-this tab, click the *Add user* button in the top right.
+this tab, click the *Add user* button in the top right. In the popup menu, you
+can add users by ID or by email address. If they are not yet a member of your
+organization, they will receive an email invitation to do so.
+
+.. image:: _assets/img/organization-users-email.png
+   :alt: Cloud Console organization users invitation via email
 
 To learn more about user roles and their meaning, see our documentation on
 `user roles`_.
