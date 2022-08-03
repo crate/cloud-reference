@@ -498,8 +498,8 @@ Console under :ref:`Cluster Preferences <overview-cluster-settings-upgrade>`.
 .. _Semver: https://semver.org/
 .. _Sign up for CrateDB Cloud: https://crate.io/docs/cloud/tutorials/en/latest/sign-up.html
 .. _Subscribe to CrateDB Cloud: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
-.. _Subscribe via AWS Marketplace: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-aws/signup-aws.html
-.. _Subscribe via Azure Marketplace: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-azure/signup-azure.html
+.. _Subscribe via AWS Marketplace: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-aws/subscribe-aws.html
+.. _Subscribe via Azure Marketplace: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-azure/subscribe-azure.html
 .. _subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _this article on our blog: https://crate.io/blog/azure-iot-hub-cratedb-sensor-data
 .. _tutorial for deploying a CrateDB Cloud cluster from scratch: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
