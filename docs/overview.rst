@@ -642,7 +642,7 @@ CrateDB Cloud Console.
 .. _CrateDB Cloud Console: https://console.cratedb.cloud
 .. _CrateDB Cloud support: support@crate.io
 .. _CrateDB Edge: https://crate.io/products/cratedb-edge/
-.. _CrateDB Edge region: https://crate.io/docs/cloud/tutorials/en/latest/edge.html
+.. _CrateDB Edge region: https://crate.io/docs/cloud/tutorials/en/latest/edge/index.html
 .. _Croud clusters upgrade: https://crate.io/docs/cloud/cli/en/latest/commands/clusters.html#clusters-upgrade
 .. _deploy a trial cluster on the CrateDB Cloud Console for free: https://crate.io/lp-free-trial
 .. _glossary: https://crate.io/docs/cloud/reference/en/latest/glossary.html
