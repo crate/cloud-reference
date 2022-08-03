@@ -112,8 +112,8 @@ Regular database user
 
 Next to the ``crate`` user there is the regular database user, created as part
 of the CrateDB Cloud cluster deployment wizard when deploying a cluster through
-:ref:`AWS <cloud-tutorials:configure-aws-to-cluster>` or
-:ref:`Azure <cloud-tutorials:configure-azure-to-cluster>`.
+:ref:`AWS <cloud-tutorials:signup-aws-to-cluster>` or
+:ref:`Azure <cloud-tutorials:signup-azure-to-cluster>`.
 
 Because the regular database user has `AL privileges`_, there are certain
 operations that they cannot perform. As of CrateDB 4.2.1, the list of such
