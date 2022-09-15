@@ -69,10 +69,10 @@ Organization overview will look something like this:
    :alt: Cloud Console organization overview
 
 The Organization overview consists of seven tabs: *Dashboard*, *Settings*,
-*Users*, the *Audit Log*, *Billing*, *Regions*, and finally, *Subscriptions*.
-By default it shows the Dashboard tab, which displays two things. On the left,
-it shows a link for creating a new cluster, the blue *Deploy new cluster*
-button. On the right, you will see any already deployed clusters.
+*Users*, the *Audit Log*, *Billing*, *Payment Methods*, and finally,
+*Regions*. By default it shows the Dashboard tab, which displays two things. On
+the left, it shows a link for creating a new cluster, the blue *Deploy new
+cluster* button. On the right, you will see any already deployed clusters.
 
 The *Deploy cluster* button in the left panel allows you to directly deploy
 clusters within your subscription. For information on how to do so, refer to
@@ -147,26 +147,32 @@ organization's projects, and other such data, each provided with a timestamp.
 Organization Billing
 --------------------
 
-This tab shows the billing overview. If you have signed up with a credit card
-for your cluster (the recommended route), your card information overview will
-be shown here.
+This tab shows all your existing subscriptions, along with which cluster is
+currently using the subscription. Current accumulated billing snapshot is also
+visible here, along with additional information:
 
-.. image:: _assets/img/organization-billing.png
-   :alt: Cloud Console organization billing tab
+.. image:: _assets/img/billing-meter.png
+   :alt: Cloud Console billing meter
+
+.. NOTE::
+    Subscriptions cannot be deleted in the billing tab. To delete a
+    subscription, please contact support.
+
+Organization payment methods
+----------------------------
+
+This tab shows all information about your payment methods. If you have signed
+up with a credit card for your cluster (the recommended route), your card
+information overview will be shown here.
 
 In case you use multiple cards, a default card can be set and cards can be
 deleted from the list by using the dots icon to the right of the card listing.
 Click the *Add payment method* button at the top right to add a new card.
 
-On the right-hand side, you will see the billing information. This can be
-edited by using the pen icon at the top right.
+Cloud subscription payment methods can also be added here.
 
-You can at any time check your current accumulated bill at the bottom left of
-the CrateDB Cloud Console screen:
-
-.. image:: _assets/img/billing-meter.png
-   :alt: Cloud Console billing meter
-
+.. image:: _assets/img/payment-methods2.png
+   :alt: Cloud Console payment methods
 
 .. _overview-org-regions:
 

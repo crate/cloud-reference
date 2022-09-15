@@ -4,12 +4,13 @@
 Subscription plans
 ==================
 
-When signing up for the CrateDB Cloud service, you have a choice of four
+When signing up for the CrateDB Cloud service, you have a choice of five
 different subscription plans. Each plan is preconfigured for different use
 cases, depending on what your needs are. At the same time, the plans also offer
 elasticity, since your use case may change. Within a given plan you can
 horizontally scale the compute capacity of your cluster(s) up or down by adding
-or subtracting nodes. For information on how to do this, refer to our
+or subtracting nodes. Limited vertical scaling is also possible, with
+storage scaling (up only). For information on how to do this, refer to our
 `scaling guide`_.
 
 The nature of our plans depends on the method of your subscription. We will
@@ -29,14 +30,15 @@ Marketplace SaaS offers.
 CrateDB Cloud subscription plans
 ================================
 
-The standard CrateDB Cloud deployment process offers four subscription plans,
-labelled CR1 to CR4. Each of these plans consists of two dimensions: compute
+The standard CrateDB Cloud deployment process offers five subscription plans,
+labeled CR0 to CR4. Each of these plans consists of two dimensions: compute
 and storage. The compute configuration is set for each plan, but can be scaled
 horizontally by adding or subtracting nodes during or after deployment. Storage
 is configured separately: on deployment you can set the desired storage
 capacity for your cluster, within the range of storage capacity options
-provided for that plan. To view the current plans, prices, and compute and
-storage ranges, refer to our `pricing page`_.
+provided for that plan. Storage can also be scaled up, but cannot be lowered
+after that. To view the current plans, prices, and compute and storage ranges,
+refer to our `pricing page`_.
 
 For details on signup, cluster configuration, and cluster deployment, you can
 make use of our `deployment tutorial`_.
@@ -97,7 +99,7 @@ brief description of the plans and subsequently explains the meaning and usage
 of nodes, tiers, and DTUs for Marketplace subscriptions. This makes it easy to
 choose the right setup for your CrateDB Cloud SaaS subscription.
 
-CrateDB Cloud's SaaS offer comes with four different subscription plans:
+CrateDB Cloud's SaaS offer comes with five different subscription plans:
 **Development**, **General Purpose**, **I/O Optimized**, and **Storage
 Optimized**. Besides these, we also offer the CrateDB Cloud **Contract**.
 
@@ -171,7 +173,7 @@ bills only for DTUs/hour actually used.
 
 Let's break this down further to clarify what each of these statements mean.
 
-As seen above, CrateDB Cloud's SaaS offer is divided into four plans. Each
+As seen above, CrateDB Cloud's SaaS offer is divided into five plans. Each
 plan has a starting number of nodes (usually 3), that can be scaled to a larger
 number (between 4 and 15). Because the hardware capacity in each plan and tier
 is different, a node of the **GP** plan at the **Basic** tier, for example, is
