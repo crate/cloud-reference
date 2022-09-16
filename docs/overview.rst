@@ -161,7 +161,7 @@ visible here, along with additional information:
 Organization payment methods
 ----------------------------
 
-This tab shows all information about your payment methods. If you have signed
+This tab shows all the information about your payment methods. If you have signed
 up with a credit card for your cluster (the recommended route), your card
 information overview will be shown here.
 
