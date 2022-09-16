@@ -54,7 +54,7 @@ filled out whenever you make use of an offer on CrateDB Cloud that is not free
 (when you only use a free offer, the billing info page will not be visible to
 you). There are several ways you can provide the necessary billing information:
 
-  You can add a new payment method even without deploying a new cluster. Simply
+* You can add a new payment method even without deploying a new cluster. Simply
   navigate to the payment methods tab in the Organization section. You can then
   use this payment method when deploying a cluster later.
 * As part of deploying a cluster for a new organization. If you deploy a
