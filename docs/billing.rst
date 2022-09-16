@@ -10,8 +10,8 @@ appear in different places across the CrateDB Cloud interface, this guide
 should function as a single reference document for finding the information you
 need about billing, invoicing, and payments.
 
-You can at any time check your current accumulated bill at the bottom left of
-the CrateDB Cloud Console screen:
+Your current accumulated bill can be always found under the billing tab in
+Organization section:
 
 .. image:: _assets/img/billing-meter.png
    :alt: Cloud Console billing meter
@@ -45,8 +45,8 @@ details about DTUs, see :ref:`our explanation of subscription plans
 
 .. _billing-info:
 
-Billing information
-===================
+Billing information & Payment methods
+=====================================
 
 Your billing information consists of your (company) address, credit card
 details, country of residence, VAT info, and so forth. This information can be
@@ -54,6 +54,9 @@ filled out whenever you make use of an offer on CrateDB Cloud that is not free
 (when you only use a free offer, the billing info page will not be visible to
 you). There are several ways you can provide the necessary billing information:
 
+* You can add a new payment method even without deploying a new cluster. Simply
+  navigate to the payment methods tab in the Organization section. You can then
+  use this payment method when deploying a cluster later.
 * As part of deploying a cluster for a new organization. If you deploy a
   cluster that is not free, you will be prompted for your billing information
   as part of the configuration wizard.
@@ -63,6 +66,12 @@ you). There are several ways you can provide the necessary billing information:
   clicking the fifth tab from the left. Here you can enter your billing details
   and your billing method (credit card). See the :ref:`CrateDB Console
   walkthrough <overview-org-billing>` for more information.
+
+Address information, along with the payment methods can be edited in the
+payment methods tab, in Organization section:
+
+.. image:: _assets/img/payment-methods2.png
+   :alt: Cloud Console payment methods
 
 
 .. _billing-invoicing:
