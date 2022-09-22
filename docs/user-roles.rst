@@ -103,6 +103,7 @@ In CrateDB, when you create a cluster node (through whatever method), a
 ``crate`` user is automatically generated. ``crate`` is a superuser and can
 perform all possible operations. It is not possible to create additional
 superusers.
+Authentication for ``crate`` is restricted to ``localhost``.
 
 
 .. _db-user:
