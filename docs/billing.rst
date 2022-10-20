@@ -99,15 +99,16 @@ Custom contract
 ===============
 
 Crate also offers a special type of payment method suited for large customers
-that don't want to use credit card or marketplace subscriptions (AWS/Azure).
-With this type of subcription a contract is created directly with Crate.
+that don't want to use a credit card or marketplace subscriptions (AWS/Azure).
+With this type of subscription, a contract is created directly with Crate.
 
 .. image:: _assets/img/custom-contract.png
    :alt: Custom contract payment option
 
 .. NOTE::
     This type of payment method does not show up in your Cloud console
-    automatically as it needs to be configures specifically per-customer.
+    automatically as it needs to be configured specifically for every
+    customer.
     
     If you're interested in this option, don't hesitate and contact us at
     **support@crate.io**
