@@ -111,7 +111,7 @@ With this type of subscription, a contract is created directly with Crate.
     customer.
     
     If you're interested in this option, don't hesitate and contact us at
-    **support@crate.io**
+    **sales@crate.io**
 
 .. _billing-processing:
 
