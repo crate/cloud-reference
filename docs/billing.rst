@@ -93,6 +93,25 @@ Crate.io and are added to the invoices described above. For deployments via the
 marketplaces, any VAT charges due are handled by the respective marketplace
 owners (Microsoft Azure and AWS).
 
+.. _billing-custom-contract:
+
+Custom contract
+===============
+
+Crate also offers a special type of payment method suited for large customers
+that don't want to use a credit card or marketplace subscriptions (AWS/Azure).
+With this type of subscription, a contract is created directly with Crate.
+
+.. image:: _assets/img/custom-contract.png
+   :alt: Custom contract payment option
+
+.. NOTE::
+    This type of payment method does not show up in your Cloud console
+    automatically as it needs to be configured specifically for every
+    customer.
+    
+    If you're interested in this option, don't hesitate and contact us at
+    **sales@crate.io**
 
 .. _billing-processing:
 
