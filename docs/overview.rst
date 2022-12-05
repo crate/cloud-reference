@@ -61,6 +61,8 @@ Organization
 ============
 
 The Organization overview lists the organizations and projects you can access.
+For the first-time users, an organization called "My organization" is automatically
+crated upon first login.
 
 If you follow the `tutorial`_ instructions and deploy a test cluster, your
 Organization overview will look something like this:
@@ -97,10 +99,10 @@ currently selected organization.
 .. image:: _assets/img/organization-settings.png
    :alt: Cloud Console organization settings tab
 
-By clicking the *Edit* button next to the organization, you can rename it. Here
-you can also set the email address for notifications and indicate whether you
-want to receive them or not. To create or delete organizations, or to switch
-organization, go to your :ref:`Account <overview-account>` instead.
+By clicking the *Edit* button next to the organization, you can rename it. 
+Here you can also set the email address for notifications and indicate whether
+you want to receive them or not. To create or delete organizations, or to
+switch organization, go to your :ref:`Account <overview-account>` instead.
 
 
 .. _overview-org-users:
