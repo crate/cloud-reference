@@ -61,7 +61,7 @@ Organization
 ============
 
 The Organization overview lists the organizations and projects you can access.
-For the first-time users, organization "My organization" is automatically
+For the first-time users, an organization called "My organization" is automatically
 crated upon first login.
 
 If you follow the `tutorial`_ instructions and deploy a test cluster, your
