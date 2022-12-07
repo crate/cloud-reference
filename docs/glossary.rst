@@ -260,35 +260,6 @@ create multiple profiles and switch between them as desired.
 
     `Croud CLI`_
 
-
-.. _gloss-project:
-
-Project
--------
-
-A project is contained within an :ref:`organization <gloss-org>`. A project
-exists to contain any number of associated services (see :ref:`products
-<gloss-product>`) deployed in a particular :ref:`region <gloss-region>` for a
-specific organizational need. For example, an organization may use distinct
-projects to separate between development and production environments.
-
-A given organization can have any number of projects. Just as organizations
-have administrators and members, so projects have their own administrators and
-members. The two groups can but need not overlap. (For more on user roles in
-CrateDB Cloud and how to manage them, see our :ref:`reference for user roles
-<user-roles>`.)
-
-Each project has a name, an associated region, and a unique ID. For information
-on how to create a project, please refer to our `guide to creating a new
-project`_.
-
-.. SEEALSO::
-
-    `Create a new project`_
-
-    :ref:`User roles <user-roles>`
-
-
 .. _gloss-region:
 
 Region
@@ -485,12 +456,10 @@ Console under :ref:`Cluster Preferences <overview-cluster-settings-upgrade>`.
 .. _Cluster deployment: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
 .. _CrateDB Release Notes: https://crate.io/docs/crate/reference/en/4.7/appendices/release-notes/index.html
 .. _Create a new organization: https://crate.io/docs/cloud/howtos/en/latest/create-org.html
-.. _Create a new project: https://crate.io/docs/cloud/howtos/en/latest/create-project.html
 .. _Croud CLI: https://crate.io/docs/cloud/cli/en/latest/
 .. _Croud documentation: https://crate.io/docs/cloud/cli/en/latest/configuration.html#manage-configuration-via-cli
 .. _direct deployment: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
 .. _guide to creating a new organization: https://crate.io/docs/cloud/howtos/en/latest/create-org.html
-.. _guide to creating a new project: https://crate.io/docs/cloud/howtos/en/latest/create-project.html
 .. _Microsoft Azure Marketplace: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview
 .. _Microsoft documentation on Azure: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis
 .. _public beta: https://crate.io/a/announcing-cratedb-edge/
