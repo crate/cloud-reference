@@ -4,14 +4,14 @@
 Glossary
 ========
 
-This reference article is a glossary. It is meant to provide a general overview
-of terms common to CrateDB Cloud. Because it forms a counterpart to the
-Glossary for CrateDB, we mainly cover terms here that are specific or primary
-to CrateDB Cloud; terms particular to the whole CrateDB architecture will
-appear in the CrateDB glossary instead. We hope this glossary will help you
-understand the basic meaning of concepts in the CrateDB Console, documentation,
-the Croud CLI, and other CrateDB Cloud-related sources. It is not meant to be a
-general guide to IT or IIoT terminology.
+This reference article is a glossary. It is meant to provide a general
+overview of terms common to CrateDB Cloud. Because it forms a counterpart to
+the Glossary for CrateDB, we mainly cover terms here that are specific or
+primary to CrateDB Cloud; terms particular to the whole CrateDB architecture
+will appear in the CrateDB glossary instead. We hope this glossary will help
+you understand the basic meaning of concepts in the CrateDB Console,
+documentation, the Croud CLI, and other CrateDB Cloud-related sources. It is
+not meant to be a general guide to IT or IIoT terminology.
 
 In entries, terms used that have entries of their own are cross-referenced
 through links. The entries are presented in alphabetical order.
@@ -30,11 +30,11 @@ Audit log
 The Audit Log registers and displays all operations associated with a
 
 particular :ref:`organization <gloss-org>`. This includes operations on
-:ref:`users <gloss-user>`, on :ref:`clusters <gloss-cluster>`, on
-:ref:`projects <gloss-project>`, and on :ref:`consumers <gloss-consumer>`. The
-Audit Log can be found in the rightmost tab of the Organization overview page
-in the CrateDB Cloud :ref:`Console <gloss-console>`. Only an *organization
-admin* has access to the Audit Log.
+:ref:`users <gloss-user>`, on :ref:`clusters <gloss-cluster>`, and 
+on :ref:`consumers <gloss-consumer>`. The Audit Log can be found in the
+rightmost tab of the Organization overview page in the CrateDB Cloud
+:ref:`Console <gloss-console>`. Only an *organization admin* has access to the
+Audit Log.
 
 .. SEEALSO::
 
@@ -63,20 +63,20 @@ Azure AD, refer to the `Microsoft documentation on Azure`_.
 Cluster
 -------
 
-Within each :ref:`project <gloss-project>`, a project administrator can deploy
-any number of :ref:`products <gloss-product>`. One such service is the
-deployment of clusters, which can be done through the CrateDB Cloud Console. A
-cluster is a set of two or more CrateDB instances (referred to as nodes) which
-form a single, distributed database. Effectively, each cluster within CrateDB
-Cloud is a hosted (part of) a database. Depending on the user's
+Within each :ref:`organization <gloss-org>`, an administrator can deploy any
+number of :ref:`products <gloss-product>`. One such service is the deployment
+of clusters, which can be done through the CrateDB Cloud Console. A cluster is
+a set of two or more CrateDB instances (referred to as nodes) which form a
+single, distributed database. Effectively, each cluster within CrateDB Cloud 
+is a hosted (part of) a database. Depending on the user's
 :ref:`subscription plan <gloss-subscription-plan>` and scaling, each cluster
 will have a certain storage capacity and can process a certain amount of
 ingests and queries per second. Only actual cluster usage is billed.
 
-A cluster has a name, a unique ID, as well as a storage and processing capacity
-and a number of nodes. Note that clusters are also versioned. For information
-on how to deploy a cluster, please see our `tutorial for deploying a CrateDB
-Cloud cluster from scratch`_.
+A cluster has a name, a unique ID, as well as a storage and processing 
+capacity and a number of nodes. Note that clusters are also versioned. For
+information on how to deploy a cluster, please see our `tutorial for deploying
+a CrateDB Cloud cluster from scratch`_.
 
 .. SEEALSO::
 
@@ -88,12 +88,12 @@ Cloud cluster from scratch`_.
 Console
 -------
 
-The CrateDB Cloud Console is the hosted user interface for CrateDB Cloud. It is
-a fully supported, easy-to-use UI which allows customers to interact with every
-aspect of the CrateDB Cloud service (subject to :ref:`user role permissions
-<user-roles>`.) While CrateDB Cloud also supports a CLI for interacting with
-the service, we assume use of the Console by default. Only the Console allows
-deployment of a :ref:`cluster <gloss-cluster>`.
+The CrateDB Cloud Console is the hosted user interface for CrateDB Cloud. It
+is a fully supported, easy-to-use UI which allows customers to interact with
+every aspect of the CrateDB Cloud service (subject to :ref:`user role
+permissions <user-roles>`.) While CrateDB Cloud also supports a CLI for
+interacting with the service, we assume use of the Console by default. Only
+the Console allows deployment of a :ref:`cluster <gloss-cluster>`.
 
 For information on how to use specific elements of the Console, refer to our
 :ref:`Console overview <overview>`.
@@ -128,11 +128,11 @@ Croud
 -----
 
 Croud is the name of the CrateDB Cloud Command-Line Interface (CLI). You can
-use Croud to interact with the :ref:`organization <gloss-org>`, :ref:`projects
-<gloss-project>` and :ref:`products <gloss-product>` you have access to. Croud
-is intended for customers who prefer a CLI to the use of a hosted web interface
-such as the CrateDB Cloud :ref:`Console <gloss-console>`. Note however that the
-Console is the default way to interact with CrateDB Cloud, and currently
+use Croud to interact with the :ref:`organization <gloss-org>` and
+:ref:`products <gloss-product>` you have access to. Croud is intended for
+customers who prefer a CLI to the use of a hosted web interface
+such as the CrateDB Cloud :ref:`Console <gloss-console>`. Note however that
+the Console is the default way to interact with CrateDB Cloud, and currently
 clusters can only be deployed within the Console. The documentation for Croud
 can be found under `Croud CLI`_.
 
@@ -147,12 +147,13 @@ DTU
 ---
 
 DTU stands for Database Transaction Unit. CrateDB Cloud uses DTUs for our
-SaaS Marketplace offers to create configurations of hardware specifications for
-specific :ref:`subscription plans <gloss-subscription-plan>`. The advantage is
-that the customer does not need to specify every element of the hardware
-configuration themselves, but can simply identify the price per DTU for a given
-plan and see how it matches their use case. This makes using the CrateDB Cloud
-:ref:`offer <gloss-offer>` and scaling to need easy and accessible.
+SaaS Marketplace offers to create configurations of hardware specifications
+for specific :ref:`subscription plans <gloss-subscription-plan>`. The
+advantage is that the customer does not need to specify every element of the
+hardware configuration themselves, but can simply identify the price per DTU
+for a given plan and see how it matches their use case. This makes using the
+CrateDB Cloud :ref:`offer <gloss-offer>` and scaling to need easy and
+accessible.
 
 For a more detailed description of the subscription plans and info on DTUs,
 refer to our :ref:`documentation <subscription-plans>`.
@@ -182,11 +183,11 @@ Endpoint
 --------
 
 An endpoint is the end or goal of a communication channel. A user or client
-communicates with an endpoint via a defined method, which returns a defined set
-of data. In CrateDB Cloud, different :ref:`profiles <gloss-profile>` can be
-used to configure their own associated endpoints, which a user connects to via
-the :ref:`Croud <gloss-croud>` CLI. For information on how to do this, see the
-`Croud documentation`_.
+communicates with an endpoint via a defined method, which returns a defined
+set of data. In CrateDB Cloud, different :ref:`profiles <gloss-profile>` can
+be used to configure their own associated endpoints, which a user connects to
+via the :ref:`Croud <gloss-croud>` CLI. For information on how to do this, see
+the `Croud documentation`_.
 
 .. SEEALSO::
 
@@ -214,13 +215,13 @@ Organization
 ------------
 
 Organizations represent the larger structure - for example a company - within
-which CrateDB Cloud :ref:`projects <gloss-project>` and associated
-:ref:`products <gloss-product>` are deployed. At the organization level there
-is always at least one organization administrator, who can in turn add
-organization members. Such organization admins and members have access to the
-projects run by the organization. One account can be a member or admin of
-multiple organizations. (For more on user roles in CrateDB Cloud and
-how to manage them, see our :ref:`reference for user roles <user-roles>`.)
+which CrateDB Cloud :ref:`products <gloss-product>` are deployed. At the
+organization level there is always at least one organization administrator,
+who can in turn add organization members. Such organization admins and members
+have access to the clusters run by the organization. One account can be a
+member or admin of multiple organizations. (For more on user roles in CrateDB
+Cloud and how to manage them, see our :ref:`reference for user roles
+<user-roles>`.)
 
 Each organization has a name, a unique ID, and optionally an associated email
 address. For information on how to create an organization, please refer to our
@@ -242,9 +243,8 @@ Product
 
 A product in the sense used in CrateDB Cloud is something that uses the Cloud
 service for the storage of data. It consists of either a :ref:`consumer
-<gloss-consumer>` or a :ref:`cluster <gloss-cluster>` and is run within a
-:ref:`project <gloss-project>` of an :ref:`organization <gloss-org>`.
-
+<gloss-consumer>` or a :ref:`cluster <gloss-cluster>` and is run within an
+:ref:`organization <gloss-org>`.
 
 .. _gloss-profile:
 
@@ -253,8 +253,8 @@ Profile
 
 In CrateDB Cloud's CLI, :ref:`Croud <gloss-croud>`, profiles are sets of
 configuration options. They define API :ref:`endpoints <gloss-endpoint>` and
-the desired output format of interaction with those endpoints. A Croud user can
-create multiple profiles and switch between them as desired.
+the desired output format of interaction with those endpoints. A Croud user
+can create multiple profiles and switch between them as desired.
 
 .. SEEALSO::
 
@@ -265,12 +265,12 @@ create multiple profiles and switch between them as desired.
 Region
 ------
 
-A region in the sense used for CrateDB Cloud is a set of data centers (servers)
-grouped together on a geographic basis so as to not exceed a certain latency.
-CrateDB Edge also permits the creation of custom regions. These regions are
-designed to correspond to servers used by CrateDB Edge customers locally, on
-which they can deploy CrateDB Cloud clusters for use in plants and other
-production facilities.
+A region in the sense used for CrateDB Cloud is a set of data centers 
+(servers) grouped together on a geographic basis so as to not exceed a certain
+latency. CrateDB Edge also permits the creation of custom regions. These
+regions are designed to correspond to servers used by CrateDB Edge customers
+locally, on which they can deploy CrateDB Cloud clusters for use in plants and
+other production facilities.
 
 
 .. _gloss-saas:
@@ -278,8 +278,8 @@ production facilities.
 SaaS
 ----
 
-SaaS stands for "Software-as-a-Service". It refers to a model where software is
-provided to customers on a :ref:`subscription <gloss-subscription>` basis,
+SaaS stands for "Software-as-a-Service". It refers to a model where software
+is provided to customers on a :ref:`subscription <gloss-subscription>` basis,
 rather than a one-off payment, and is centrally hosted. Besides the default
 option of subscribing directly, CrateDB Cloud can be used as a service through
 its SaaS :ref:`offer <gloss-offer>` on `Microsoft Azure Marketplace`_ and the
@@ -299,16 +299,16 @@ its SaaS :ref:`offer <gloss-offer>` on `Microsoft Azure Marketplace`_ and the
 Scale unit
 ----------
 
-The CrateDB Cloud :ref:`subscription plans <gloss-subscription-plan>` each come
-with a number of different scale units. Each scale unit represents an
+The CrateDB Cloud :ref:`subscription plans <gloss-subscription-plan>` each
+come with a number of different scale units. Each scale unit represents an
 (additional) unit multiplying the specific combination of hardware capacity
 that applies to that plan.
 
 For SaaS Marketplace subscriptions, the relationship between scale units and
 :ref:`DTUs <gloss-DTU>` is subtle. Each scale unit added on top of the first
-scale unit also represents one *additional* DTU. However, not all plans *start*
-at one DTU. For more detailed information about subscription plans, scale
-units, and DTUs, take a look at our documentation on
+scale unit also represents one *additional* DTU. However, not all plans 
+*start* at one DTU. For more detailed information about subscription plans,
+scale units, and DTUs, take a look at our documentation on
 :ref:`DTUs and subscription plans<subscription-plans-dtus>`.
 
 .. SEEALSO::
@@ -358,8 +358,9 @@ particular customer use cases: from trial and development plans to high-end
 production clusters. They can also be further adjusted for different
 :ref:`scale units <gloss-scale-unit>` per plan. Currently there are four
 subscription plans available for `direct deployment`_, as well as four plans
-and a separate contract option via our Marketplace :ref:`offers <gloss-offer>`.
-For more information, refer to our documentation on `subscription plans`_.
+and a separate contract option via our 
+Marketplace :ref:`offers <gloss-offer>`. For more information, refer to our
+documentation on `subscription plans`_.
 
 .. SEEALSO::
 
@@ -423,10 +424,10 @@ defined role within the organization (see our reference on :ref:`user roles
 Versions
 --------
 
-CrateDB uses a semantic versioning system called `Semver`_ with three levels of
-versioning: major versions, minor versions, and patch versions. (Versions can
-also be referred to as releases.) CrateDB clusters run on the CrateDB Cloud
-service also refer to this CrateDB versioning system.
+CrateDB uses a semantic versioning system called `Semver`_ with three levels
+of versioning: major versions, minor versions, and patch versions. (Versions
+can also be referred to as releases.) CrateDB clusters run on the CrateDB
+Cloud service also refer to this CrateDB versioning system.
 
 A major version of CrateDB is a release that includes significant changes in
 features, performance, and/or supported operations that are not backwards
@@ -435,9 +436,9 @@ the versioning sequence, i.e. the 4 in 'version 4.6.7'.
 
 A minor version of CrateDB is a release that includes substantial changes in
 features, performance, and/or supported operations compared to the previous
-such version. It is indicated by the second numeral in the versioning sequence,
-e.g. the 6 in 'version 4.6.7'. You can upgrade minor versions yourself in the
-CrateDB Cloud Console under
+such version. It is indicated by the second numeral in the versioning
+sequence, e.g. the 6 in 'version 4.6.7'. You can upgrade minor versions
+yourself in the CrateDB Cloud Console under
 :ref:`Cluster Preferences <overview-cluster-settings-upgrade>`.
 
 A patch version of CrateDB is a release that includes bug fixes and smaller
