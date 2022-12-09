@@ -5,16 +5,17 @@ User roles, types, and privileges
 =================================
 
 On this page you can find information about the different user roles and
-privileges relevant to CrateDB Cloud. The first section describes these for the
-users created within CrateDB Cloud: the organization and project roles,
-respectively. The second section describes a different type of users, namely
-CrateDB users, and their privileges and constraints.
+privileges relevant to CrateDB Cloud. The first section describes these for 
+the users created within CrateDB Cloud: the organization roles. The second 
+section describes a different type of users, namely CrateDB users, and their
+privileges and constraints.
 
 In general, CrateDB Cloud users are created by the admins of their respective
-organizations, and their function is to support project management for these
-organizations in CrateDB Cloud. By contrast, CrateDB users are either generated
-automatically or created as part of the CrateDB Cloud cluster deployment
-process, and support the operation of CrateDB Cloud clusters specifically.
+organizations, and their function is to support management for these
+organizations in CrateDB Cloud. By contrast, CrateDB users are either
+generated automatically or created as part of the CrateDB Cloud cluster
+deployment process, and support the operation of CrateDB Cloud clusters
+specifically.
 
 .. rubric:: Table of contents
 
@@ -37,34 +38,14 @@ users <crate-reference:administration_user_management>`.
 Organization roles
 ------------------
 
-An *organization admin* can add users to and remove users from an organization.
-Admins can perform all available operations for projects and services. They
-have access to the organization's Audit Log.
+An *organization admin* can add users to and remove users from an 
+organization. Admins can perform all available operations for any services.
+They have access to the organization's Audit Log.
 
 Each organization must have at least one admin.
 
 An *organization member* is able to view the list of organization users but
 can't edit, add, or remove users.
-
-They only have access to projects they are part of.
-
-
-.. _project-roles:
-
-Project roles
--------------
-
-A *project admin* can add users to and remove users from a project. They can
-also perform every available operation inside that project.
-
-.. NOTE::
-
-    This means that an *organization member* who is also a *project admin* can
-    perform all available operations within that project, but not within the
-    organization.
-
-A *project member* has read-only access to the project.
-
 
 .. _user-roles-db:
 
@@ -82,8 +63,9 @@ and constraints are described below.
 ``System`` user
 ---------------
 
-In CrateDB Cloud, the backend uses a user called ``system`` in order to perform
-Cloud cluster upgrades, backups and scaling functions, among other things.
+In CrateDB Cloud, the backend uses a user called ``system`` in order to 
+perform Cloud cluster upgrades, backups and scaling functions, among other
+things.
 
 .. WARNING::
 
@@ -112,8 +94,8 @@ Regular database user
 ---------------------
 
 Next to the ``crate`` user there is the regular database user, created as part
-of the CrateDB Cloud cluster deployment wizard when deploying a cluster through
-:ref:`AWS <cloud-tutorials:signup-aws-to-cluster>` or
+of the CrateDB Cloud cluster deployment wizard when deploying a cluster 
+through :ref:`AWS <cloud-tutorials:signup-aws-to-cluster>` or
 :ref:`Azure <cloud-tutorials:signup-azure-to-cluster>`.
 
 Because the regular database user has `AL privileges`_, there are certain

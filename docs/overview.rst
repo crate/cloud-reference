@@ -6,10 +6,10 @@ Console overview
 
 The *CrateDB Cloud Console* is a hosted web administration interface for
 interacting with `CrateDB Cloud`_. This overview gives you all the basic
-information for using the CrateDB Cloud Console. If you ever want to find where
-and how to do something in the Console, start here. Refer to individual items
-in the current section of the documentation for more information on how to
-perform specific operations. You can also refer to our `glossary`_ for more
+information for using the CrateDB Cloud Console. If you ever want to find
+where and how to do something in the Console, start here. Refer to individual
+items in the current section of the documentation for more information on how
+to perform specific operations. You can also refer to our `glossary`_ for more
 information on CrateDB Cloud-related terminology.
 
 .. rubric:: Table of contents
@@ -26,8 +26,8 @@ Basics
 .. image:: _assets/img/start.png
    :alt: CrateDB Cloud sign-in screen
 
-The CrateDB Cloud user interface permalink is the `CrateDB Cloud Console`_. You
-can `deploy a trial cluster on the CrateDB Cloud Console for free`_.
+The CrateDB Cloud user interface permalink is the `CrateDB Cloud Console`_.
+You can `deploy a trial cluster on the CrateDB Cloud Console for free`_.
 
 Here is a list of all currently available regions for CrateDB Cloud:
 
@@ -41,9 +41,9 @@ Here is a list of all currently available regions for CrateDB Cloud:
 | Azure West Europe | `aks1.westeurope.azure.cratedb.cloud`_ |
 +-------------------+----------------------------------------+
 
-Azure East-US2 and Azure West-Europe are managed by `Microsoft Azure`_. The AWS
-region is managed by AWS and is located in Ireland. Note that the AWS region
-does not serve the CrateDB Cloud Console directly.
+Azure East-US2 and Azure West-Europe are managed by `Microsoft Azure`_. The
+AWS region is managed by AWS and is located in Ireland. Note that the AWS
+region does not serve the CrateDB Cloud Console directly.
 
 From the Cloud Console homepage, you can sign in using a Github, Google, or
 Microsoft Azure account or by creating a separate username and password.
@@ -60,9 +60,9 @@ Once signed in, you will be presented with the Organization overview.
 Organization
 ============
 
-The Organization overview lists the organizations and projects you can access.
-For the first-time users, an organization called "My organization" is automatically
-crated upon first login.
+The Organization overview lists the organizations you can access.
+For the first-time users, an organization called "My organization" is 
+automatically crated upon first login.
 
 If you follow the `tutorial`_ instructions and deploy a test cluster, your
 Organization overview will look something like this:
@@ -72,8 +72,8 @@ Organization overview will look something like this:
 
 The Organization overview consists of seven tabs: *Dashboard*, *Settings*,
 *Users*, the *Audit Log*, *Billing*, *Payment Methods*, and finally,
-*Regions*. By default it shows the Dashboard tab, which displays two things. On
-the left, it shows a link for creating a new cluster, the blue *Deploy new
+*Regions*. By default it shows the Dashboard tab, which displays two things.
+On the left, it shows a link for creating a new cluster, the blue *Deploy new
 cluster* button. On the right, you will see any already deployed clusters.
 
 The *Deploy cluster* button in the left panel allows you to directly deploy
@@ -117,10 +117,10 @@ their user role and their email address.
    :alt: Cloud Console organization users tab
 
 If you are an organization admin, you can edit these by clicking the pen icon
-or delete users by using the bin icon. To add new users to the organization, in
-this tab, click the *Add user* button in the top right. In the popup menu, you
-can add users by ID or by email address. If they are not yet a member of your
-organization, they will receive an email invitation to do so.
+or delete users by using the bin icon. To add new users to the organization,
+in this tab, click the *Add user* button in the top right. In the popup menu,
+you can add users by ID or by email address. If they are not yet a member of
+your organization, they will receive an email invitation to do so.
 
 .. image:: _assets/img/organization-users-email.png
    :alt: Cloud Console organization users invitation via email
@@ -140,9 +140,7 @@ This tab shows the Audit Log.
    :alt: Cloud Console organization audit log tab
 
 In the Audit Log, a user with the correct credentials (`an organization
-admin`_) can see an overview of logged changes to the organization, the
-organization's projects, and other such data, each provided with a timestamp.
-
+admin`_) can see an overview of logged changes to the organization.
 
 .. _overview-org-billing:
 
@@ -163,9 +161,9 @@ visible here, along with additional information:
 Organization payment methods
 ----------------------------
 
-This tab shows all the information about your payment methods. If you have signed
-up with a credit card for your cluster (the recommended route), your card
-information overview will be shown here.
+This tab shows all the information about your payment methods. If you have
+signed up with a credit card for your cluster (the recommended route), your
+card information overview will be shown here.
 
 In case you use multiple cards, a default card can be set and cards can be
 deleted from the list by using the dots icon to the right of the card listing.
@@ -196,10 +194,10 @@ of :ref:`CrateDB Edge <gloss-edge>` clusters in a :ref:`custom region
 .. image:: _assets/img/organization-regions-edge.png
    :alt: Cloud Console organization edge region display
 
-This field will show a script to set up the dependencies for cluster deployment
-in the custom region. Apply the script in your local CLI and follow the prompts
-to proceed. A ``--help`` parameter is available within the script for further
-information.
+This field will show a script to set up the dependencies for cluster
+deployment in the custom region. Apply the script in your local CLI and follow
+the prompts to proceed. A ``--help`` parameter is available within the script
+for further information.
 
 
 .. _overview-org-subscriptions:
@@ -208,62 +206,12 @@ Organization Subscriptions
 --------------------------
 
 In the Subscriptions tab you can create new subscriptions with one of our
-supported cloud providers, Microsoft Azure and AWS. In the panel, choose either
-*Microsoft Azure* or *Amazon AWS* to create a new subscription with that
-respective provider.
+supported cloud providers, Microsoft Azure and AWS. In the panel, choose
+either *Microsoft Azure* or *Amazon AWS* to create a new subscription with
+that respective provider.
 
 .. image:: _assets/img/organization-subscriptions.png
    :alt: Cloud Console organization subscriptions tab
-
-
-.. _overview-projects:
-
-Projects
-========
-
-The Projects page shows an overview of all current projects within the selected
-organization, together with their timestamp of creation, project ID, and region
-of deployment.
-
-.. image:: _assets/img/projects.png
-   :alt: Cloud Console projects overview
-
-The projects are selected by region. By default, the region dropdown menu is
-set to the region where your project is located (if any). To see projects
-deployed in specific regions, select that region from the menu. You can also
-create a new project for the organization in the selected region by clicking
-the *Create project* button in the top right.
-
-If you have previously created a `CrateDB Edge region`_, the *Create project*
-menu will also allow you to set a custom backup location for any cluster
-deployed within your new project. You can do this by defining the name, the
-key, and the secret of the backup location in the project creation menu:
-
-.. image:: _assets/img/projects-create.png
-   :alt: Cloud Console projects creation menu
-
-The *Test connection* button allows you to test the connection to the custom
-backup location you have chosen. The location must be an S3 or equivalent
-endpoint. Note that you cannot proceed unless the connection is functioning.
-
-In either case, the cog icon next to each project takes you to the Project
-Settings page, in the menu simply called Settings, as :ref:`described further
-below <overview-project-settings>`.
-
-To change your current project selection, click the project name in the list on
-the main Projects page.
-
-.. NOTE::
-
-    The menu bar on the left hand side of the Console is divided in two by a
-    line. By design, all menu items below the bar refer to the currently
-    selected project, which is visible at the top left. The next sections of
-    this documentation are therefore project specific and here referred to as
-    "Project Overview", "Project Settings", etc. For elegance of design,
-    however, the menu bar simply says "Overview", "Settings", and so forth,
-    omitting the 'Project' referent. Nonetheless, these each still refer to the
-    project you selected on the Projects page.
-
 
 .. _overview-cluster-overview:
 
@@ -291,7 +239,8 @@ information about the cluster. This includes:
 * **Access cluster**: The *open cluster administration* button connects you to
   the `CrateDB Admin UI`_ for the cluster at its unique URL. Alternatively,
   you can follow the link *how to connect* to the cluster to find various
-  helpful code snippets for connecting to the cluster via a terminal or client.
+  helpful code snippets for connecting to the cluster via a terminal or
+  client.
 
 .. NOTE::
 
@@ -302,7 +251,8 @@ information about the cluster. This includes:
     heartbeat queries.
 
 * **Cluster Demo Data**: Follow this link to quickly set up demo data for your
-  cluster. This will demonstrate in an easy way how it can be used in practice.
+  cluster. This will demonstrate in an easy way how it can be used in
+  practice.
 
 * **Version**: This indicates the version number of CrateDB the cluster is
   running.
@@ -356,9 +306,9 @@ want to see.
    :alt: Cloud Console cluster backups page
 
 Any backups are listed with timestamps on the left side, under Timestamp. In
-the middle you will see any tables to restore in the backup, under the category
-Tables, and on the right is a *Restore* button for restoring the backup from
-that timestamp, listed under Action.
+the middle you will see any tables to restore in the backup, under the
+category Tables, and on the right is a *Restore* button for restoring the
+backup from that timestamp, listed under Action.
 
 
 .. _overview-cluster-metrics:
@@ -385,10 +335,10 @@ directly by hovering over the relevant point on the time axis (the X axis).
 Cluster Preferences
 -------------------
 
-The Cluster Preferences page has three tabs: Cluster Access, Cluster Scale, and
-Upgrade Cluster. The default tab, Cluster Access, shows you the username and
-password you defined to access your cluster directly. By clicking *Edit* at the
-top right, you can change the password (but not the username).
+The Cluster Preferences page has three tabs: Cluster Access, Cluster Scale,
+and Upgrade Cluster. The default tab, Cluster Access, shows you the username
+and password you defined to access your cluster directly. By clicking *Edit*
+at the top right, you can change the password (but not the username).
 
 .. image:: _assets/img/cluster-settings.png
    :alt: Cloud Console cluster preferences page
@@ -430,9 +380,9 @@ allowlist.
 Cluster Scale
 '''''''''''''
 
-The blue box on the left shows the current cluster subscription plan. The scale
-unit can be adjusted on this page, and the storage capacity can be increased
-here.
+The blue box on the left shows the current cluster subscription plan. The
+scale unit can be adjusted on this page, and the storage capacity can be
+increased here.
 
 .. image:: _assets/img/cluster-settings-scale.png
    :alt: Cloud Console cluster scaling tab
@@ -448,9 +398,9 @@ panel. The cluster capacity indicated will change accordingly.
     scale pricing shown here, but do not worry! This does not mean that your
     promotion or discount is not functioning.
 
-You can also increase the storage capacity on your cluster. Do this by clicking
-*Edit cluster configuration* at the top right. A dropdown menu will appear
-under the 'Storage' item of the node specification:
+You can also increase the storage capacity on your cluster. Do this by
+clicking *Edit cluster configuration* at the top right. A dropdown menu will
+appear under the 'Storage' item of the node specification:
 
 .. image:: _assets/img/cluster-settings-storage.png
    :alt: Cloud Console cluster custom storage dropdown
@@ -462,8 +412,9 @@ again to confirm.
 .. WARNING::
 
     Storage capacity increases for a given cluster are irreversible. To reduce
-    cluster storage capacity, reduce the cluster nodes instead (up to a minimum
-    of 2, although we recommend maintaining a minimum of 3 for production use).
+    cluster storage capacity, reduce the cluster nodes instead (up to a
+    minimum of 2, although we recommend maintaining a minimum of 3 for
+    production use).
 
 
 .. _overview-cluster-settings-delete:
@@ -487,12 +438,12 @@ Upgrade cluster
 
 The Upgrade cluster tab shows two things: the current version of the cluster
 and, if a :ref:`minor upgrade <gloss-version>` or
-:ref:`patch upgrade <gloss-version>` is possible, a list of available upgrades.
-If no upgrade is possible, because the cluster is up to date with the
-latest version of CrateDB, nothing will be displayed in the Available Upgrades
-panel. You can upgrade a cluster from the Available Upgrades panel by clicking
-the *Upgrade* button on the right. Upgrading may take a brief moment, during
-which other cluster operations will be disabled.
+:ref:`patch upgrade <gloss-version>` is possible, a list of available
+upgrades. If no upgrade is possible, because the cluster is up to date with 
+the latest version of CrateDB, nothing will be displayed in the Available
+Upgrades panel. You can upgrade a cluster from the Available Upgrades panel by
+clicking the *Upgrade* button on the right. Upgrading may take a brief moment,
+during which other cluster operations will be disabled.
 
 .. image:: _assets/img/cluster-settings-upgrade.png
    :alt: Cloud Console cluster preferences upgrade tab
@@ -509,73 +460,6 @@ CrateDB Cloud engineering team.
     upgrade one minor version at a time, and only to the latest or last patch
     version of a given minor version. (Upgrades to other patch versions are
     possible using `Croud clusters upgrade`_.) Downgrades are never supported.
-
-
-.. _overview-projects-overview:
-
-Project Overview
-----------------
-
-The Project Overview page provides information about the selected project.
-Underneath the project name and icon there is a column on the left hand,
-showing the total number of users in the project as well as the share of
-members and admins of that total.
-
-.. image:: _assets/img/project-overview.png
-   :alt: Cloud Console project overview page
-
-On the right, you see an overview of all clusters deployed within the project.
-This shows their status, the subscription plan and tier, the date and timestamp
-of their creation, the version of CrateDB they are running, and finally the
-subscription name associated with the cluster deployment. Clicking on this
-subscription name takes you to the :ref:`Subscriptions tab of the Organization
-page<overview-org-overview>`.
-
-Finally, you can also deploy a cluster from within the Project Overview, by
-clicking the *Deploy cluster* link at the top right. This also takes you back
-to the :ref:`Subscriptions tab of the Organization page
-<overview-org-overview>`, from where clusters can be deployed within a given
-subscription or a new subscription chosen.
-
-
-.. _overview-project-users:
-
-Project Users
--------------
-
-The Project Users page shows you a list of all the users who have been added to
-the project, their email address, and their user role.
-
-.. image:: _assets/img/project-users.png
-   :alt: Cloud Console project users page
-
-You can edit or delete user data here - if you have the right user permissions
-- by clicking respectively the pen icon and the bin icon. You can also add new
-users to the project in this panel by clicking the *Add user* button at the top
-right.
-
-
-.. _overview-project-settings:
-
-Project Settings
-----------------
-
-On the Project Settings page you will see the essential data for your selected
-project. This includes the project name, the project region, and the unique
-project ID.
-
-.. image:: _assets/img/project-settings.png
-   :alt: Cloud Console project settings page
-
-In this screen you can delete a project by clicking the *Delete*
-button at the top right. You can also change the project name by clicking the
-*Edit* button next to that button.
-
-.. WARNING::
-
-    You cannot delete a project without first deleting all services deployed
-    within that project. Deleting a project is irreversible.
-
 
 .. _overview-docs:
 
@@ -615,15 +499,13 @@ top right.
 
 You can also create and delete organizations on the Account page. To create a
 new organization, click on *Create new organization* at the top right above
-the organization list. The `organization creation process`_ is then the same as
-when you first sign up for the CrateDB Cloud Console. To delete an
+the organization list. The `organization creation process`_ is then the same
+as when you first sign up for the CrateDB Cloud Console. To delete an
 organization, click the trashcan icon next to the organization in the list.
-Organizations can only be deleted after deleting the projects and clusters they
-contain first.
 
 To switch the active organization, click on the organization name in the list.
-All organization, project, and cluster management options displayed in the
-CrateDB Cloud Console will then refer to that organization until you switch
+All organization, and cluster management options displayed in the CrateDB
+Cloud Console will then refer to that organization until you switch
 organizations again.
 
 
