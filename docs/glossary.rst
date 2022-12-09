@@ -66,12 +66,12 @@ Cluster
 Within each :ref:`organization <gloss-org>`, an administrator can deploy any
 number of :ref:`products <gloss-product>`. The main service is the deployment
 of clusters, which can be done through the CrateDB Cloud Console. A cluster is
-a set of at least one instance (referred to as nodes) which form a single,
-distributed database. Effectively, each cluster within CrateDB Cloud  is a
-hosted database. Depending on the user's
-:ref:`subscription plan <gloss-subscription-plan>` and scaling, each cluster
-will have a certain storage capacity and can process a certain amount of
-ingests and queries per second. Only actual cluster usage is billed.
+a set of at least one instance (referred to as node) which forms a database.
+It is also possible (and recommended) to deploy multi-node clusters. Then the
+the database is truly distributed. Depending on the user's :ref:`subscription
+plan <gloss-subscription-plan>` and scaling, each cluster will have a certain
+storage capacity and can process a certain amount of ingests and queries per
+second. Only actual cluster usage is billed.
 
 A cluster has a name, a unique ID, as well as a storage and processing 
 capacity and a number of nodes. Note that clusters are also versioned. For
