@@ -298,18 +298,31 @@ accessed by clicking the *View metrics* link at the top right.
 Cluster Backups
 ---------------
 
-On the Cluster Backups page you can see any backups of your cluster. The
-dropdown menu at the top left allows you to select the timespan of backups you
-want to see.
+You can find the Backups page in the detailed view of your cluster. By
+default, a backup is made every hour. You can see and restore all existing
+backups here.
 
 .. image:: _assets/img/cluster-backups.png
    :alt: Cloud Console cluster backups page
 
-Any backups are listed with timestamps on the left side, under Timestamp. In
-the middle you will see any tables to restore in the backup, under the
-category Tables, and on the right is a *Restore* button for restoring the
-backup from that timestamp, listed under Action.
+You can also control the schedule of your backups by clicking the *Edit backup
+schedule* button.
 
+.. image:: _assets/img/cluster-backups-edit.png
+   :alt: Cloud Console cluster backups edit page
+
+Here you can create a custom schedule by selecting any number of hour slots.
+Backups will be created at selected times. At least one backup a day is
+mandatory.
+
+To restore a particular backup, click the *Restore* button. A popup window
+with a SQL statement will appear. Input this statement to your Admin UI
+console eitheir by copy-pasting it, or clicking the *Run query in Admin UI*.
+The latter will bring you directly to the Admin UI console with the statement
+automatically pre-filled.
+
+.. image:: _assets/img/cluster-backups-restore.png
+   :alt: Cloud Console cluster backups restore page 
 
 .. _overview-cluster-metrics:
 
@@ -507,7 +520,6 @@ To switch the active organization, click on the organization name in the list.
 All organization, and cluster management options displayed in the CrateDB
 Cloud Console will then refer to that organization until you switch
 organizations again.
-
 
 .. _overview-logout:
 
