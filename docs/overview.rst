@@ -318,7 +318,7 @@ mandatory.
 To restore a particular backup, click the *Restore* button. A popup window
 with a SQL statement will appear. Input this statement to your Admin UI
 console eitheir by copy-pasting it, or clicking the *Run query in Admin UI*.
-The latter will bring you directly to the Admin UI with the statement
+The latter will bring you directly to the Admin UI console with the statement
 automatically pre-filled.
 
 .. image:: _assets/img/cluster-backups-restore.png
