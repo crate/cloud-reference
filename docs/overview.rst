@@ -324,24 +324,6 @@ automatically pre-filled.
 .. image:: _assets/img/cluster-backups-restore.png
    :alt: Cloud Console cluster backups restore page 
 
-.. _overview-cluster-metrics:
-
-Cluster Metrics
----------------
-
-The Cluster Metrics page (not to be confused with the :ref:`metrics section of
-the Cluster overview page <overview-cluster-overview-metrics>`) provides live
-visualizations of how the cluster is functioning. It shows two graph panels:
-one for the average response time of a query (in milliseconds) and one for the
-total number of queries per second.
-
-.. image:: _assets/img/cluster-metrics.png
-   :alt: Cloud Console cluster metrics page
-
-The contributions of each type of query to the total results displayed in the
-graph panel are displayed in different colors. These values can also be read
-directly by hovering over the relevant point on the time axis (the X axis).
-
 .. _overview-cluster-cloning:
 
 Cluster Cloning
@@ -376,25 +358,47 @@ selected a cluster, click the *Clone to selected cluster*.
 Failed cloning
 ''''''''''''''
 
-There are circumstances under which cloning can fail. These are:
+There are circumstances under which cloning can fail or behave unexpectedly.
+These are:
 
 * If you already have tables with the same names in the target cluster
   as in the source snapshot, the entire clone operation will fail.
 
 * There isn't enough storage left on the target cluster to accommodate the
-  tables you're trying to clone.
+  tables you're trying to clone. In this case, you might get an incomplete
+  cloning as the cluster will run out of storage.
 
 * You're trying to clone an invalid or no longer existing snapshot. This can
-  happen if you're cloning through `Croud`_.
+  happen if you're cloning through `Croud`_. In this case, the cloning will
+  fail.
 
 * You're trying to restore a table that is not included in the snapshot. This
-  can happen if you're restoring snapshots through `Croud`_.
+  can happen if you're restoring snapshots through `Croud`_. In this case, the cloning will
+  fail.
 
 When cloning fails, it is indicated by a banner in the cluster overview
 screen.
 
 .. image:: _assets/img/cluster-clone-failed.png
    :alt: Cloud Console cluster failed cloning
+
+.. _overview-cluster-metrics:
+
+Cluster Metrics
+---------------
+
+The Cluster Metrics page (not to be confused with the :ref:`metrics section of
+the Cluster overview page <overview-cluster-overview-metrics>`) provides live
+visualizations of how the cluster is functioning. It shows two graph panels:
+one for the average response time of a query (in milliseconds) and one for the
+total number of queries per second.
+
+.. image:: _assets/img/cluster-metrics.png
+   :alt: Cloud Console cluster metrics page
+
+The contributions of each type of query to the total results displayed in the
+graph panel are displayed in different colors. These values can also be read
+directly by hovering over the relevant point on the time axis (the X axis).
 
 .. _overview-cluster-settings:
 
