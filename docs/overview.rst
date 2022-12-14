@@ -378,9 +378,8 @@ Failed cloning
 
 There are circumstances under which cloning can fail. These are:
 
-* In the snapshot you're trying to clone exists a table with a name, that is
-  already present on the target cluster. This leads to conflict, and cloning
-  will fail.
+* If you already have tables with the same names in the target cluster
+  as in the source snapshot. The entire clone operation will fail in that case.
 
 * There isn't enough storage left on the target cluster to accommodate the
   tables you're trying to clone.
