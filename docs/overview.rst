@@ -342,6 +342,60 @@ The contributions of each type of query to the total results displayed in the
 graph panel are displayed in different colors. These values can also be read
 directly by hovering over the relevant point on the time axis (the X axis).
 
+.. _overview-cluster-cloning:
+
+Cluster Cloning
+---------------
+
+Cluster cloning is a process of duplicating all the data from a
+specific snapshot into a different cluster. Creating the new cluster isn't
+part of the cloning process, you need to create a target cluster yourself. You
+can clone a cluster from the Backups page. 
+
+.. image:: _assets/img/cluster-backups.png
+   :alt: Cloud Console cluster backup snapshots
+
+Choose a snapshot and click the *Clone* button. A popup window will appear,
+where you can specify to which existing cluster the snapshot should be cloned.
+If you don't have a second cluster created, click the *Deploy a new cluster*
+button, and you will be brought to the cluster deployment screen. After you've
+selected a cluster, click the *Clone to selected cluster*. 
+
+.. image:: _assets/img/cluster-clone-popup.png
+   :alt: Cloud Console cluster clone popup
+
+.. NOTE::
+
+    Keep in mind that cloning a cluster will rewrite the all existing users
+    from the target cluster. The tables already existing on the target cluster
+    are not affected. Cloning also doesn't distinguish between cluster plans,
+    meaning you can clone from CR2 to CR1 or any other variation.
+
+.. _overview-cluster-cloning-fail:
+
+Failed cloning
+''''''''''''''
+
+There are circumstances under which cloning can fail. These are:
+
+* In the snapshot you're trying to clone exists a table with a name, that is
+  already present on the target cluster. This leads to conflict, and cloning
+  will fail.
+
+* There isn't enough storage left on the target cluster to accommodate the
+  tables you're trying to clone.
+
+* You're trying to clone an invalid or no longer existing snapshot. This can
+  happen if you're cloning through `Croud`_.
+
+* You're trying to restore a table that is not included in the snapshot. This
+  can happen if you're restoring snapshots through `Croud`_.
+
+When cloning fails, it is indicated by a banner in the cluster overview
+screen.
+
+.. image:: _assets/img/cluster-clone-failed.png
+   :alt: Cloud Console cluster failed cloning
 
 .. _overview-cluster-settings:
 
@@ -545,6 +599,7 @@ CrateDB Cloud Console.
 .. _CrateDB Cloud support: support@crate.io
 .. _CrateDB Edge: https://crate.io/products/cratedb-edge/
 .. _CrateDB Edge region: https://crate.io/docs/cloud/tutorials/en/latest/edge/index.html
+.. _Croud: https://crate.io/docs/cloud/cli/en/latest/
 .. _Croud clusters upgrade: https://crate.io/docs/cloud/cli/en/latest/commands/clusters.html#clusters-upgrade
 .. _deploy a trial cluster on the CrateDB Cloud Console for free: https://crate.io/lp-free-trial
 .. _glossary: https://crate.io/docs/cloud/reference/en/latest/glossary.html
