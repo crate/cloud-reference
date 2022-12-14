@@ -349,7 +349,7 @@ Cluster Cloning
 
 Cluster cloning is a process of duplicating all the data from a
 specific snapshot into a different cluster. Creating the new cluster isn't
-part of the cloning process, you need to create a target cluster yourself. You
+part of the cloning process, you need to create the target cluster yourself. You
 can clone a cluster from the Backups page. 
 
 .. image:: _assets/img/cluster-backups.png
@@ -366,7 +366,7 @@ selected a cluster, click the *Clone to selected cluster*.
 
 .. NOTE::
 
-    Keep in mind that cloning a cluster will rewrite the all existing users
+    Keep in mind that cloning a cluster will rewrite all the existing users
     from the target cluster. The tables already existing on the target cluster
     are not affected. Cloning also doesn't distinguish between cluster plans,
     meaning you can clone from CR2 to CR1 or any other variation.
