@@ -224,7 +224,6 @@ selected. It also displays metrics for the cluster.
 .. image:: _assets/img/cluster-overview.png
    :alt: Cloud Console cluster overview page
 
-
 Info
 ''''
 
@@ -233,8 +232,21 @@ information about the cluster. This includes:
 
 * **Cluster ID**: The unique ID of the cluster.
 
-* **Status**: The status of the cluster. This can be 'available', 'not
-  available', or 'setting up cluster'.
+* **Status**: Current status of your cluster:
+   
+   - GREEN: Your cluster is healthy.
+   - YELLOW: Some of your tables have under-replicated shards. Please log in
+     to your cluster's Admin UI to check.
+   - RED: Some of your tables have missing shards. This can happen if you've
+     recently restarted a node. Our support team is already notified and
+     investigating the issue.
+   - UNREACHABLE: Your cluster could not be reached and is unavailable. Our
+     support team is already notified and investigating the issue.
+   - SUSPENDED: Your cluster is suspended and is not available. You are
+     currently only paying for the amount of storage used.
+   - UNKNOWN: We could not determine your cluster's status. This can happen
+     if you have recently started your cluster. Our support team will be 
+     notified if the situation persists.
 
 * **Access cluster**: The *open cluster administration* button connects you to
   the `CrateDB Admin UI`_ for the cluster at its unique URL. Alternatively,
