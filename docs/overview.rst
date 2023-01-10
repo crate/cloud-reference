@@ -303,9 +303,8 @@ Security
 ~~~~~~~~
 
 Click the box labelled *Deletion Protected* to add deletion protection to your
-cluster. This will ensure that it can only be deleted in either the CrateDB
-Console or croud by a user with :ref:`org admin rights <org-roles>` (or by a
-Crate.io employee superuser).
+cluster. This will ensure that your cluster cannot be deleted while the
+Deletion Protection is turned on.
 
 .. _overview-cluster-overview-allowlist:
 
@@ -332,6 +331,10 @@ Private endpoints
 A private endpoint, or private link, is a mechanism that allows a secure, 
 private connection to your cluster. Effectively, it allows you to bypass the
 public internet when accessing the environment where your cluster is deployed.
+Note that private endpoints don't work accross providers, meaning that if you
+want to securely access your AWS cluster, you must do so from within the AWS
+environment.
+
 
 If you're interested in this feature, fill out the provided form by clicking
 "Request Private Link".
