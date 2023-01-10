@@ -594,7 +594,6 @@ CrateDB Cloud Console.
 .. _bregenz.a1.cratedb.cloud: https://bregenz.a1.cratedb.cloud/
 .. _CIDR block: https://www.keycdn.com/support/what-is-cidr
 .. _concepts: https://crate.io/docs/cloud/reference/en/latest/concepts.html
-.. _contact us: https://crate.io/contact
 .. _CrateDB Admin UI: https://crate.io/docs/clients/admin-ui/
 .. _CrateDB and CrateDB Cloud Community page: https://community.crate.io/
 .. _CrateDB architecture documentation: https://crate.io/docs/crate/howtos/en/latest/architecture/shared-nothing.html
