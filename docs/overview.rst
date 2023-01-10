@@ -59,10 +59,10 @@ Once signed in, you will be presented with the Organization overview.
 Organization
 ============
 
-The organization is the highest structure in yout CrateDB Cloud Console.
-Multiple clusters and users can exist in a organization at any moment. For the
+The organization is the highest structure in your CrateDB Cloud Console.
+Multiple clusters and users can exist in a organization at any moment. For 
 first-time users, an organization called "My organization" is automatically 
-crated upon first login.
+created upon first login.
 
 To see list of all the clusters in your organization, go to the Account
 tab in your left-hand menu:
@@ -72,7 +72,7 @@ tab in your left-hand menu:
 
 The Organization overview consists of seven tabs: *Clusters*, *Settings*,
 *Users*, *Billing*, *Payment Methods*, *Audit Logs*, and *Regions*. By default
-you are brought to the Clusters tab, which provides quick overview of all
+you are brought to the Clusters tab, which provides a quick overview of all
 your clusters.
 
 If you are a member of multiple organizations, you can quickly change
@@ -131,7 +131,7 @@ Organization Billing
 --------------------
 
 The Billing tab shows all your existing subscriptions, along with which
-cluster is currently using the subscription. Current accumulated billing
+cluster is currently using the subscription. The current accumulated billing
 snapshot is also visible here, along with additional information:
 
 .. image:: _assets/img/billing-meter.png
@@ -164,7 +164,7 @@ Cloud subscription payment methods can also be added here.
 Organization Audit Logs
 -----------------------
 
-This tab shows the Audit Logs of current organization.
+This tab shows the Audit Logs of the current organization.
 
 .. image:: _assets/img/organization-audit-log.png
    :alt: Cloud Console organization audit log tab
@@ -269,7 +269,7 @@ Next Steps
 
 * **Demo data**: Clicking the "import the demo data" will show you two
   snippets that can be used in the SQL Console of your Admin UI. The first
-  snippet a "nyc_taxi" table, and the second one will populate it with our 
+  snippet will create a "nyc_taxi" table, and the second one will populate it with our 
   demo dataset.
 
 * **Backups**: The "see my backups" will take you to the Backups tab, where 
@@ -295,7 +295,7 @@ information about private endpoints.
 Credentials
 ~~~~~~~~~~~
 
-Here you can change your CrateDB Console password.
+Here you can change your CrateDB database password.
 
 .. _overview-cluster-overview-security:
 
@@ -465,10 +465,10 @@ in the top-right:
 Now you can do three different things:
 
 - Change the plan of your cluster
-- Increase node's storage
+- Increase storage on each node
 - Icrease/decrease the number of nodes
 
-You can do only one of those operations each time, i.e. you can't change plane
+You can do only one of those operations at a time, i.e. you can't change plans
 and scale the number of nodes at the same time.
 
 The difference in price of the cluster can be seen on the bottom right, when
@@ -500,8 +500,8 @@ and, if a :ref:`minor upgrade <gloss-version>` or
 upgrades. If no upgrade is possible, because the cluster is up to date with 
 the latest version of CrateDB, nothing will be displayed in the Available
 Upgrades panel. You can upgrade a cluster from the Available upgrades panel by
-clicking the *Upgrade* button next to a specific shown version. Upgrading may
-take a brief moment, during which other cluster operations will be disabled.
+clicking the *Upgrade* button next to a specific shown version. Depending on how much data you have in your cluster, upgrading might take a while, during which other cluster operations will be disabled. Your cluster's nodes
+will be upgraded one at a time, so your cluster will remain available through the process.
 
 .. image:: _assets/img/cluster-upgrade.png
    :alt: Cloud Console cluster upgrade tab
