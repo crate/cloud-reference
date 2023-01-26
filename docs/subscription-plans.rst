@@ -278,8 +278,8 @@ For clarity, we add here a few notes of caution:
 .. _pricing page: https://crate.io/pricing
 .. _Sales department: sales@crate.io
 .. _Sales team: sales@crate.io
-.. _scale your cluster: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
-.. _scaling guide: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
+.. _scale your cluster: https://crate.io/docs/cloud/howtos/en/latest/reconfigure-cluster.html
+.. _scaling guide: hhttps://crate.io/docs/cloud/howtos/en/latest/reconfigure-cluster.html
 .. _SLA: https://crate.io/legal/service-level-agreement
 .. _split-brain syndrome: https://en.wikipedia.org/wiki/Split-brain_(computing)
 .. _subscribing and deploying a cluster directly: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
