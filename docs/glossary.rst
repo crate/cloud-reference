@@ -462,7 +462,7 @@ Tab <overview-cluster-upgrade>` of the cluster detailed view.
 .. _Microsoft Azure Marketplace: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview
 .. _Microsoft documentation on Azure: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis
 .. _public beta: https://crate.io/a/announcing-cratedb-edge/
-.. _Scale your cluster: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
+.. _Scale your cluster: https://crate.io/docs/cloud/howtos/en/latest/reconfigure-cluster.html
 .. _Semver: https://semver.org/
 .. _Sign up for CrateDB Cloud: https://crate.io/docs/cloud/tutorials/en/latest/sign-up.html
 .. _Subscribe to CrateDB Cloud: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
