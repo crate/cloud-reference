@@ -27,6 +27,7 @@ NoSQL with the power and simplicity of standard SQL.
     user-roles
     billing
     glossary
+    api
 
 
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/

@@ -437,15 +437,13 @@ the versioning sequence, i.e. the 4 in 'version 4.6.7'.
 A minor version of CrateDB is a release that includes substantial changes in
 features, performance, and/or supported operations compared to the previous
 such version. It is indicated by the second numeral in the versioning
-sequence, e.g. the 6 in 'version 4.6.7'. You can upgrade minor versions
-yourself in the CrateDB Cloud Console under
-:ref:`Cluster Preferences <overview-cluster-settings-upgrade>`.
+sequence, e.g. the 6 in 'version 4.6.7'. 
 
 A patch version of CrateDB is a release that includes bug fixes and smaller
 quality of life improvements compared to the previous such version. It is
 indicated by the third numeral in the versioning sequence, e.g. the 7 in
-'version 4.6.7'. You can upgrade patch versions yourself in the CrateDB Cloud
-Console under :ref:`Cluster Preferences <overview-cluster-settings-upgrade>`.
+'version 4.6.7'. All available upgrades are visible in the :ref:`Upgrades
+Tab <overview-cluster-upgrade>` of the cluster detailed view.
 
 .. SEEALSO::
 
