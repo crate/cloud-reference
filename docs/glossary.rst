@@ -437,15 +437,13 @@ the versioning sequence, i.e. the 4 in 'version 4.6.7'.
 A minor version of CrateDB is a release that includes substantial changes in
 features, performance, and/or supported operations compared to the previous
 such version. It is indicated by the second numeral in the versioning
-sequence, e.g. the 6 in 'version 4.6.7'. You can upgrade minor versions
-yourself in the CrateDB Cloud Console under
-:ref:`Cluster Preferences <overview-cluster-settings-upgrade>`.
+sequence, e.g. the 6 in 'version 4.6.7'. 
 
 A patch version of CrateDB is a release that includes bug fixes and smaller
 quality of life improvements compared to the previous such version. It is
 indicated by the third numeral in the versioning sequence, e.g. the 7 in
-'version 4.6.7'. You can upgrade patch versions yourself in the CrateDB Cloud
-Console under :ref:`Cluster Preferences <overview-cluster-settings-upgrade>`.
+'version 4.6.7'. All available upgrades are visible in the :ref:`Upgrades
+Tab <overview-cluster-upgrade>` of the cluster detailed view.
 
 .. SEEALSO::
 
@@ -464,7 +462,7 @@ Console under :ref:`Cluster Preferences <overview-cluster-settings-upgrade>`.
 .. _Microsoft Azure Marketplace: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview
 .. _Microsoft documentation on Azure: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis
 .. _public beta: https://crate.io/a/announcing-cratedb-edge/
-.. _Scale your cluster: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
+.. _Scale your cluster: https://crate.io/docs/cloud/howtos/en/latest/reconfigure-cluster.html
 .. _Semver: https://semver.org/
 .. _Sign up for CrateDB Cloud: https://crate.io/docs/cloud/tutorials/en/latest/sign-up.html
 .. _Subscribe to CrateDB Cloud: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
