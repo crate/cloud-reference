@@ -2,7 +2,7 @@
 API
 ===
 
-Similarly to Croud, we offer API to allow programmatic access to our Cloud
+Similar to Croud, we offer an API to allow programmatic access to our Cloud
 products. API is operated using a key and a secret. These can be created in
 your account page:
 
