@@ -17,12 +17,17 @@ Access
 ------
 
 The key and secret can be used as HTTP Basic Auth credentials when calling the
-API:
+API, e.g.
 
 .. code-block:: console
 
-    sh$ $ curl -s -u $your_key:$your_secret https://console.cratedb.cloud/api/v2/users/me/ {"email":"some@example.com","hmac":"...","is_superuser":false,"name":"Some User","organization_id":"123","status":"active","uid":"uid","username":"some@example.com"}
+    sh$ $ curl -s -u $your_key:$your_secret https://console.cratedb.cloud/api/v2/users/me
 
+This example will return details of the current user:
+
+.. code-block:: console
+
+  {"email":"some@example.com","hmac":"...","is_superuser":false,"name":"Some User","organization_id":"123","status":"active","uid":"uid","username":"some@example.com"}
 
 Examples
 --------
