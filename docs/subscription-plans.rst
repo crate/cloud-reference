@@ -4,14 +4,14 @@
 Subscription plans
 ==================
 
-When signing up for the CrateDB Cloud service, you have a choice of five
+When signing up for the CrateDB Cloud service, you have a choice of six
 different subscription plans. Each plan is preconfigured for different use
-cases, depending on what your needs are. At the same time, the plans also offer
-elasticity, since your use case may change. Within a given plan you can
-horizontally scale the compute capacity of your cluster(s) up or down by adding
-or subtracting nodes. Limited vertical scaling is also possible, with
-storage scaling (up only). For information on how to do this, refer to our
-`scaling guide`_.
+cases, depending on what your storage, and computation needs are. At the same
+time, the plans also offer elasticity, since your use case may change. Within 
+a given plan you can horizontally scale the compute capacity of your 
+cluster up or down by adding or subtracting nodes. Limited vertical 
+scaling is also possible, with storage scaling (up only). For information on
+how to do this, refer to our `scaling guide`_.
 
 The nature of our plans depends on the method of your subscription. We will
 first explain the plans for the recommended subscription method, `subscribing
@@ -30,15 +30,24 @@ Marketplace SaaS offers.
 CrateDB Cloud subscription plans
 ================================
 
-The standard CrateDB Cloud deployment process offers five subscription plans,
-labeled CR0 to CR4. Each of these plans consists of two dimensions: compute
-and storage. The compute configuration is set for each plan, but can be scaled
-horizontally by adding or subtracting nodes during or after deployment. Storage
-is configured separately: on deployment you can set the desired storage
-capacity for your cluster, within the range of storage capacity options
-provided for that plan. Storage can also be scaled up, but cannot be lowered
-after that. To view the current plans, prices, and compute and storage ranges,
-refer to our `pricing page`_.
+The standard CrateDB Cloud deployment process offers six subscription plans,
+labeled: 
+
+- CRFREE
+- CR0
+- CR1
+- CR2
+- CR3
+- CR4
+
+Each of these plans consists of two dimensions: compute and storage. The
+compute configuration is set for each plan, but can be scaled
+horizontally by adding or subtracting nodes during or after deployment. 
+Storage is configured separately: on deployment you can set the desired 
+storage capacity for your cluster, within the range of storage capacity 
+options provided for that plan. Storage can also be scaled up, but cannot be
+lowered after that. To view the current plans, prices, and compute and storage
+ranges, refer to our `pricing page`_.
 
 For details on signup, cluster configuration, and cluster deployment, you can
 make use of our `deployment tutorial`_.
@@ -49,15 +58,49 @@ make use of our `deployment tutorial`_.
     different subscription plans. You can combine CrateDB Edge with any
     suitable hardware configuration that works for your use case.
 
-.. WARNING::
-    CrateDB Cloud does not currently support changing the storage capacity of
-    a cluster once it has been deployed. Additionally, a single node cluster,
-    once scaled up, cannot be scaled down to one node again.
-
 Although you can scale your cluster from a single node to as many nodes as
 desired, only clusters containing 3 or more nodes are covered by our 24/7
 support. You can find our CrateDB Cloud terms and conditions in our `SLA`_.
 
+CRFREE
+------
+
+This plan is aimed at new users that want to test and evaluate our offerings.
+It is perpetually free to use. Every user can deploy one Free Tier cluster in
+their organization without having to add a payment method. This plan
+also doesn't consume any 
+:ref:`Free Credit <cloud-tutorials:free-trial-budget>` that you may have
+available. They are limited to one node with 2 CPUs, 2 GiB of memory, and 4
+GiB of storage.
+
+CRFREE was made for active testing and evaluation, which is why any CRFREE
+cluster deletes after 7 days of inactivity. When this happens, the user is
+notified via email.
+
+CR0
+---
+
+The CR0 plan, or Shared-resource cluster, is a special category of cluster
+that allows better utilization of resources. These clusters share compute and
+storage resources with other clusters in this category. Because of this, they 
+offer a more cost-effective solution for smaller teams and experimental 
+deployments of low-traffic applications. They are limited to one node with 2 
+CPUs, 2 GiB of memory, and 4 GiB of storage.
+
+CR1-CR4
+-------
+
+These are our base plans that offer the best performance, and the biggest
+flexibility. Their specs start from 1.75 CPU, 7 GiB RAM, and 32GiB storage all
+the way to 14 CPU, 55 GiB RAM, and 512 GiB storage per-node. These plans can 
+be scaled to up to 9 nodes. If you need more nodes than this, feel free to
+`contact us`_ at any time.
+
+.. WARNING::
+
+    An even number of nodes can be used for testing and development without
+    issue, but is not recommended for production workloads, due to the risk of
+    `split-brain syndrome`_.
 
 .. _subscription-plans-regions:
 
@@ -67,67 +110,8 @@ Subscription plan regions
 We currently offer three :ref:`regions <gloss-region>` for our subscriptions:
 one from AWS (West Europe) and two from Azure (East US 2 and West Europe). You
 can use any subscription plan in any region. Note that prices for a given plan
-differ depending on the region you select.
-
-
-.. _subscription-plans-nodes:
-
-Subscription plan nodes
-=======================
-
-For all subscriptions, the number of nodes in a cluster can be adjusted
-manually. You can `scale your cluster`_ any time in the CrateDB Cloud Console
-to up to 9 nodes. (If you need more nodes than this, you can `contact us`_ any
-time.)
-
-.. WARNING::
-
-    An even number of nodes can be used for testing and development without
-    issue, but is not recommended for production workloads, due to the risk of
-    `split-brain syndrome`_.
-
-
-.. _subscription-plans-marketplace:
-
-CrateDB Cloud SaaS offer plans
-==============================
-
-In this section, we explain the plans and billing for our SaaS Marketplace
-offers on `AWS Marketplace`_ and `Azure Marketplace`_. The below information
-applies to these Marketplace subscriptions only. This reference gives a
-brief description of the plans and subsequently explains the meaning and usage
-of nodes, tiers, and DTUs for Marketplace subscriptions. This makes it easy to
-choose the right setup for your CrateDB Cloud SaaS subscription.
-
-CrateDB Cloud's SaaS offer comes with five different subscription plans:
-**Development**, **General Purpose**, **I/O Optimized**, and **Storage
-Optimized**. Besides these, we also offer the CrateDB Cloud **Contract**.
-
-* The **Development** plan is aimed at users who want to try out what CrateDB
-  Cloud has to offer. It offers modest but robust storage, memory, and
-  computation capacity. Although intended for setting up trial clusters to
-  evaluate the product, it offers full flexibility and functionality. The
-  capacity can be scaled along three scale units. Per scale unit, one DTU is
-  added (or subtracted).
-
-.. NOTE::
-
-    The **Development** plan is not covered by 24/7 support.
-
-* The **General Purpose** plan suits all general use cases. This plan offers
-  significant storage, memory, and computation capacity. The General Purpose
-  plan can also currently be scaled between three scale units, each adding (or
-  subtracting) one DTU.
-
-* The **I/O Optimized** plan is, as the name suggests, optimized for write and
-  query speed. It offers double the capacity for inserts and queries per second
-  of the **General Purpose** plan, but does not increase storage capacity.
-
-* The **Storage Optimized** plan is, by contrast, suited for use cases that are
-  primarily about (warm) storage and have less emphasis on querying. It offers
-  half the insert and query capacity of the **General Purpose** plan, but four
-  times the storage capacity.
-
+differ depending on the region you select. We also accept region requests, in
+case your preferred region is not currently available.
 
 .. _subscription-plans-tiers:
 
@@ -208,10 +192,10 @@ know the price in DTU/hour that corresponds to your choice.
 The CrateDB Cloud Contract
 ==========================
 
-The **CrateDB Cloud Contract** allows you to pay for a full year's worth of the
-service of your choice in advance. You purchase a certain number of DTUs for
-one of the subscription plans mentioned above, and pay them up front for the
-full year. Depending on the specifics of the contract chosen, it may be
+The **CrateDB Cloud Contract** allows you to pay for a full year's worth of 
+the service of your choice in advance. You purchase a certain number of DTUs
+for one of the subscription plans mentioned above, and pay them up front for 
+the full year. Depending on the specifics of the contract chosen, it may be
 possible to negotiate a discount based on the up front payment. The CrateDB
 Cloud Contract is only available via our supported cloud providers on the SaaS
 Marketplaces. For more information, contact our `Sales team`_.
@@ -279,7 +263,7 @@ For clarity, we add here a few notes of caution:
 .. _Sales department: sales@crate.io
 .. _Sales team: sales@crate.io
 .. _scale your cluster: https://crate.io/docs/cloud/howtos/en/latest/reconfigure-cluster.html
-.. _scaling guide: hhttps://crate.io/docs/cloud/howtos/en/latest/reconfigure-cluster.html
+.. _scaling guide: https://crate.io/docs/cloud/howtos/en/latest/reconfigure-cluster.html
 .. _SLA: https://crate.io/legal/service-level-agreement
 .. _split-brain syndrome: https://en.wikipedia.org/wiki/Split-brain_(computing)
 .. _subscribing and deploying a cluster directly: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
