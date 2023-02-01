@@ -67,7 +67,7 @@ CRFREE
 
 This plan is aimed at new users that want to test and evaluate our offerings.
 It is perpetually free to use. Every user can deploy one Free Tier cluster in
-their organization, without the need of adding a payment method. This plan 
+their organization without having to add a payment method. This plan
 also doesn't consume any 
 :ref:`Free Credit <cloud-tutorials:free-trial-budget>` that you may have
 available. They are limited to one node with 2 CPUs, 2 GiB of memory, and 4
@@ -80,8 +80,8 @@ notified via email.
 CR0
 ---
 
-The CR0 plan, or Shared-resource cluster are a special category of clusters
-that allow better utilization of resources. These clusters share compute and 
+The CR0 plan, or Shared-resource cluster, is a special category of cluster
+that allows better utilization of resources. These clusters share compute and
 storage resources with other clusters in this category. Because of this, they 
 offer a more cost-effective solution for smaller teams and experimental 
 deployments of low-traffic applications. They are limited to one node with 2 
@@ -93,7 +93,7 @@ CR1-CR4
 These are our base plans that offer the best performance, and the biggest
 flexibility. Their specs start from 1.75 CPU, 7 GiB RAM, and 32GiB storage all
 the way to 14 CPU, 55 GiB RAM, and 512 GiB storage per-node. These plans can 
-be to up to 9 nodes. If you need more nodes than this, feel free to 
+be scaled to up to 9 nodes. If you need more nodes than this, feel free to
 `contact us`_ at any time.
 
 .. WARNING::
