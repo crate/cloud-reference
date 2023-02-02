@@ -61,9 +61,9 @@ support. You can find our CrateDB Cloud terms and conditions in our `SLA`_.
 CRFREE
 ------
 
-This plan is aimed at new users that want to test and evaluate our offerings.
-It is perpetually free to use. Every user can deploy one Free Tier cluster in
-their organization without having to add a payment method. This plan
+This plan is aimed at new users who want to test and evaluate our offerings 
+and is perpetually free to use. Every user can deploy one free tier cluster 
+in their organization without adding a payment method. This plan
 also doesn't consume any 
 :ref:`Free Credit <cloud-tutorials:free-trial-budget>` that you may have
 available. They are limited to one node with 2 CPUs, 2 GiB of memory, and 4
