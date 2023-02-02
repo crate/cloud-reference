@@ -10,12 +10,16 @@ appear in different places across the CrateDB Cloud interface, this guide
 should function as a single reference document for finding the information you
 need about billing, invoicing, and payments.
 
+.. rubric:: Table of contents
+
+.. contents::
+   :local:
+
 Your current accumulated bill can be always found under the billing tab in
 Organization section:
 
 .. image:: _assets/img/billing-meter.png
    :alt: Cloud Console billing meter
-
 
 .. _billing-principles:
 
