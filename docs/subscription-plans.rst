@@ -33,21 +33,17 @@ CrateDB Cloud subscription plans
 The standard CrateDB Cloud deployment process offers six subscription plans,
 labeled: 
 
-- CRFREE
-- CR0
-- CR1
-- CR2
-- CR3
-- CR4
+- *CRFREE*, *CR0*, *CR1*, *CR2*, *CR3*, *CR4*
 
 Each of these plans consists of two dimensions: compute and storage. The
 compute configuration is set for each plan, but can be scaled
-horizontally by adding or subtracting nodes during or after deployment. 
-Storage is configured separately: on deployment you can set the desired 
-storage capacity for your cluster, within the range of storage capacity 
-options provided for that plan. Storage can also be scaled up, but cannot be
-lowered after that. To view the current plans, prices, and compute and storage
-ranges, refer to our `pricing page`_.
+horizontally by adding or subtracting nodes during or after deployment.
+Storage is configured separately: on deployment you can set the
+desired storage capacity for your cluster, within the range of storage
+capacity options provided for that plan. Storage can also be scaled up, but
+cannot be lowered after that. To view the current plans, prices, and compute
+and storage ranges, refer to our `pricing page`_. The exceptions to this are
+CRFREE and CR0, which cannot be scaled, or reconfigured.
 
 For details on signup, cluster configuration, and cluster deployment, you can
 make use of our `deployment tutorial`_.
@@ -65,9 +61,9 @@ support. You can find our CrateDB Cloud terms and conditions in our `SLA`_.
 CRFREE
 ------
 
-This plan is aimed at new users that want to test and evaluate our offerings.
-It is perpetually free to use. Every user can deploy one Free Tier cluster in
-their organization without having to add a payment method. This plan
+This plan is aimed at new users who want to test and evaluate CrateDB Cloud
+and is perpetually free to use. Every user can deploy one free tier cluster 
+in their organization without adding a payment method. This plan
 also doesn't consume any 
 :ref:`Free Credit <cloud-tutorials:free-trial-budget>` that you may have
 available. They are limited to one node with 2 CPUs, 2 GiB of memory, and 4
@@ -115,77 +111,20 @@ case your preferred region is not currently available.
 
 .. _subscription-plans-tiers:
 
-SaaS offer tiers
-================
+Marketplace offer
+=================
 
-Besides the hardware composition described above, which outlines the ratio of
-the elements CPU, RAM, and storage HD for each SaaS Marketplace subscription
-plan, each such plan can have two further dimensions: tiers and nodes.
+If you have an existing Azure/AWS marketplace account and want to subscribe to
+CrateDB Cloud using that, you can. The principles are the same as with credit
+card subscription, which allows maximum flexibility regarding deployment and
+scaling up/down:
 
-Tiers are only used for Marketplace SaaS subscriptions. Tiers are simply
-multiples of each hardware composition, and therefore allow vertical scaling
-within a given plan. For example, the Basic tier of the **General Purpose**
-plan has 3.5 CPUs, 14 GiB of RAM, and 1 TiB of storage. The next tier of that
-plan, the Pro tier, has 7 CPUs, 28 GiB of RAM, and 2 TiB of storage, and so
-forth. The **Development** plan differs from the others: it has only a single
-tier and allows scaling between 1-3 nodes only.
+- Usage is billed based on consumption
+- Blling is done in $0.001 increments for the compute + storage usage
 
-Each node, in turn, corresponds to one DTU, regardless of tier. Put simply, the
-tier determines the hardware 'size' of the node, the number of nodes determines
-the number of DTUs at that size. Since the Development plan starts at 1 node,
-it starts at 1 DTU; other plans start at 3 nodes and therefore start at 3 DTUs.
-
-If you use our SaaS Marketplace offers, you will encounter DTUs/hour as the
-measure of actual usage that we bill for. If you subscribe to CrateDB Cloud
-directly via credit card, you do not have to concern yourself with DTUs. For a
-more detailed explanation of DTUs, see the section below.
-
-
-.. _subscription-plans-dtus:
-
-Explaining DTUs for scaling and billing
-=======================================
-
-What are DTUs and how do they work? As mentioned above, to make finding the
-right combination of hardware capacity more tractable and accessible, CrateDB
-Cloud's SaaS offers use DTUs. These DTUs have essentially two purposes: they
-allow the user to choose the right combination of plan and scale to find the
-capacity they need, and they provide clarity for the purposes of pricing. In
-order to keep things simple, scaling in each plan is currently set up so that
-one scale unit = one node = one DTU, and billing is set up so that Crate.io
-bills only for DTUs/hour actually used.
-
-Let's break this down further to clarify what each of these statements mean.
-
-As seen above, CrateDB Cloud's SaaS offer is divided into five plans. Each
-plan has a starting number of nodes (usually 3), that can be scaled to a larger
-number (between 4 and 15). Because the hardware capacity in each plan and tier
-is different, a node of the **GP** plan at the **Basic** tier, for example, is
-of a different size (in terms of storage, memory, and computation) than a node
-in the **I/O Optimized** plan at tier Premium. But the billing for these varied
-hardware compositions and scales is made easy by the fact that for any given
-plan and tier, one node corresponds to one DTU. Since for SaaS Marketplace
-users we bill in terms of DTUs/hour, all the different dimensions of horizontal
-and vertical hardware scaling are resolved into a single measure.
-
-An overview showing the range in terms of capacity of each SaaS plan and the
-price per DTU/hour can be found on the `Azure offer page`_ and the `AWS
-subscription page`_, respectively. All details about each hardware dimension,
-plan, tier, and node, can also be found on the deployment screen in the CrateDB
-Cloud console when deploying your cluster.
-
-To summarize:
-
-The DTU approach to scaling means that although the offered plans differ
-considerably in capacity per plan, tier, and number of nodes, the DTU system
-allows you to easily compare these different magnitudes for a single usage
-price on the SaaS Marketplaces.
-
-The precise calculations of hardware capacity, actual usage of that hardware,
-and a corresponding cost are all handled by Crate.io. The user only needs to
-choose a plan, a tier within that plan, and the number of nodes. You will then
-know the price in DTU/hour that corresponds to your choice.
-
+For details visit :ref:`Azure
+<cloud-tutorials:signup-azure-to-cluster>`, or :ref:`AWS
+<cloud-tutorials:signup-aws-to-cluster>` marketplace deployment tutorials.
 
 .. _subscription-plans-contracts:
 
@@ -193,63 +132,11 @@ The CrateDB Cloud Contract
 ==========================
 
 The **CrateDB Cloud Contract** allows you to pay for a full year's worth of 
-the service of your choice in advance. You purchase a certain number of DTUs
-for one of the subscription plans mentioned above, and pay them up front for 
-the full year. Depending on the specifics of the contract chosen, it may be
-possible to negotiate a discount based on the up front payment. The CrateDB
-Cloud Contract is only available via our supported cloud providers on the SaaS
-Marketplaces. For more information, contact our `Sales team`_.
-
-The process depends on whether you sign up via Azure or via AWS, as described
-below:
-
-
-Azure
------
-
-To sign a CrateDB Cloud Contract via Microsoft Azure, follow the :ref:`initial
-steps for signup <cloud-tutorials:signup-azure-to-cluster-offer>` while
-selecting the CrateDB Cloud Contract as your subscription plan. This will
-automatically alert our Sales team, who will get in touch with you to configure
-the specifics of your contract according to your needs.
-
-
-AWS
----
-
-To sign a CrateDB Cloud Contract via AWS, simply follow the link to the
-`Contract page on the AWS Marketplace`_. The Contract will be visible as a
-product you can subscribe to. The pricing information is indicative of the cost
-of a single DTU for a given subscription plan (see the descriptions of the
-plans above) for the full year.
-
-.. image:: _assets/img/aws-contract.png
-   :alt: AWS Marketplace CrateDB Cloud Contract offer
-
-By subscribing to the CrateDB Cloud Contract product, you will automatically be
-put in contact with our `Sales department`_, which will further help you
-configure the right plan and contract according to your needs.
-
-
-.. _subscription-plans-notes:
-
-Cautionary notes
-================
-
-For clarity, we add here a few notes of caution:
-
-* The correspondence between one node and one DTU is provisional and may change
-  in the future.
-* Remember that not all SaaS plans, currently or in the future, necessarily
-  *start* at one DTU. All plans except the **Development** plan currently start
-  at three DTUs of that plan. Therefore, when referring to the pricing per
-  DTU/hour on the SaaS Marketplace cloud offer, keep this in mind. The price
-  for a single DTU/hour, as listed on the cloud offer pages, is not necessarily
-  the minimum price for an hour usage of a given plan.
-* New plans may be offered in the future with different capacity ranges that
-  may suit your use case. This reference document will then be updated
-  accordingly. Plan terms and prices are subject to change.
-
+the service of your choice in advance. Depending on the specifics of the 
+contract chosen, it may be possible to negotiate a discount based on the up
+front payment. The CrateDB Cloud Contract is only available via our supported
+cloud providers on the SaaS Marketplaces. For more information, contact our
+`Sales team`_.
 
 .. _AWS Marketplace: https://aws.amazon.com/marketplace/pp/B089M4B1ND
 .. _AWS subscription page: https://aws.amazon.com/marketplace/pp/B089M4B1ND
