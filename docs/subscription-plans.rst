@@ -61,7 +61,7 @@ support. You can find our CrateDB Cloud terms and conditions in our `SLA`_.
 CRFREE
 ------
 
-This plan is aimed at new users who want to test and evaluate our offerings 
+This plan is aimed at new users who want to test and evaluate CrateDB Cloud
 and is perpetually free to use. Every user can deploy one free tier cluster 
 in their organization without adding a payment method. This plan
 also doesn't consume any 
@@ -119,7 +119,7 @@ CrateDB Cloud using that, you can. The principles are the same as with credit
 card subscription, which allows maximum flexibility regarding deployment and
 scaling up/down:
 
-- User is billed based on their consumption
+- Usage is billed based on consumption
 - Blling is done in $0.001 increments for the compute + storage usage
 
 For details visit :ref:`Azure
