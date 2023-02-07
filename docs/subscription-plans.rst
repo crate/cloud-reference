@@ -120,7 +120,7 @@ card subscription, which allows maximum flexibility regarding deployment and
 scaling up/down:
 
 - Usage is billed based on consumption
-- Blling is done in $0.001 increments for the compute + storage usage
+- Billing is done in $0.001 increments for the compute + storage usage
 
 For details visit :ref:`Azure
 <cloud-tutorials:signup-azure-to-cluster>`, or :ref:`AWS
