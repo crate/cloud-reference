@@ -281,13 +281,6 @@ come with a number of different scale units. Each scale unit represents an
 (additional) unit multiplying the specific combination of hardware capacity
 that applies to that plan.
 
-For SaaS Marketplace subscriptions, the relationship between scale units and
-:ref:`DTUs <gloss-DTU>` is subtle. Each scale unit added on top of the first
-scale unit also represents one *additional* DTU. However, not all plans 
-*start* at one DTU. For more detailed information about subscription plans,
-scale units, and DTUs, take a look at our documentation on
-:ref:`DTUs and subscription plans<subscription-plans-dtus>`.
-
 .. SEEALSO::
 
     `Scale your cluster`_
