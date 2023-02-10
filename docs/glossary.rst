@@ -140,29 +140,6 @@ can be found under `Croud CLI`_.
 
     `Croud CLI`_
 
-
-.. _gloss-DTU:
-
-DTU
----
-
-DTU stands for Database Transaction Unit. CrateDB Cloud uses DTUs for our
-SaaS Marketplace offers to create configurations of hardware specifications
-for specific :ref:`subscription plans <gloss-subscription-plan>`. The
-advantage is that the customer does not need to specify every element of the
-hardware configuration themselves, but can simply identify the price per DTU
-for a given plan and see how it matches their use case. This makes using the
-CrateDB Cloud :ref:`offer <gloss-offer>` and scaling to need easy and
-accessible.
-
-For a more detailed description of the subscription plans and info on DTUs,
-refer to our :ref:`documentation <subscription-plans>`.
-
-.. SEEALSO::
-
-    :ref:`Subscription plans <subscription-plans>`
-
-
 .. _gloss-edge:
 
 Edge
