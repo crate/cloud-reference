@@ -351,7 +351,12 @@ In the Data tab, users can conveniently import data from a URL.
    :alt: Cloud Console cluster data tab
 
 To import data, simply fill out the URL, name of the table which will be
-created and populated with your data, data format, and whether it is compressed.
+created and populated with your data, data format, and whether it is 
+compressed. 
+
+If a table with the chosen name doesn't exist, it will be automatically
+created. Please note that in this case the importer will attempt to guess the
+data types of each column, and might do so sub-optimally. 
 
 The following data formats are supported:
 
