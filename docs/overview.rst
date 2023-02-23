@@ -64,8 +64,8 @@ Multiple clusters and users can exist in a organization at any moment. For
 first-time users, an organization called "My organization" is automatically 
 created upon first login.
 
-To see list of all the clusters in your organization, go to the Account
-tab in your left-hand menu:
+To see list of all the organizations your account is associated with, go to 
+the My Account page in the dropdown menu in the top-right.
 
 .. image:: _assets/img/organization-dashboard.png
    :alt: Cloud Console organization overview
@@ -77,7 +77,7 @@ your clusters.
 
 If you are a member of multiple organizations, you can quickly change
 between them on every tab/page in the Cloud Console. Simply use the
-dropdown menu at the top right of the current page/tab: 
+dropdown menu at the top-right of the current page/tab: 
 
 .. image:: _assets/img/change-organization.png
    :alt: Cloud Console quick org swap
@@ -338,6 +338,36 @@ environment.
 
 If you're interested in this feature, fill out the provided form by clicking
 "Request Private Link".
+
+.. _overview-cluster-data:
+
+Data
+----
+
+In the Data tab, users can conveniently import data from a URL.
+
+.. image:: _assets/img/cluster-data-tab.png
+   :alt: Cloud Console cluster data tab
+
+To import data, simply fill out the URL, name of the table which will be
+created and populated with your data, data format, and compression.
+
+Following data formats are supported:
+
+- CSV
+- JSON
+- Parquet
+
+Gzip compressed files are also supported.
+
+.. NOTE::
+
+    - CSV files must have a header, otherwise the first row will be used as
+      headers.
+    - For JSON documents, each line must be a JSON document (arrays not
+      supported)
+    - For JSON documents, only "document-per-line" is supported -> 
+      https://jsonlines.org/
 
 .. _overview-cluster-backups:
 
