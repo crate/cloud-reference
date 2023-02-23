@@ -364,10 +364,9 @@ Gzip compressed files are also supported.
 
     - CSV files must have a header, otherwise the first row will be used as
       headers.
-    - For JSON documents, each line must be a JSON document (arrays not
+    - For JSON files, only "document-per-line" is supported, as defined in https://jsonlines.org/
+    - Additionally for JSON files, each line must be a JSON document (arrays not
       supported)
-    - For JSON documents, only "document-per-line" is supported -> 
-      https://jsonlines.org/
 
 .. _overview-cluster-backups:
 
