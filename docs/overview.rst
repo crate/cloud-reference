@@ -64,7 +64,8 @@ Multiple clusters and users can exist in a organization at any moment. For
 first-time users, an organization called "My organization" is automatically 
 created upon first login.
 
-To see list of all the organizations your account is associated with, go to 
+To see a list of all the organizations you have acesss to, go to 
+
 the My Account page in the dropdown menu in the top-right.
 
 .. image:: _assets/img/organization-dashboard.png
