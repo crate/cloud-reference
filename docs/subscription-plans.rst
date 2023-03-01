@@ -70,8 +70,8 @@ available. They are limited to one node with 2 CPUs, 2 GiB of memory, and 4
 GiB of storage.
 
 CRFREE was made for active testing and evaluation, which is why any CRFREE
-cluster deletes after 7 days of inactivity. When this happens, the user is
-notified via email.
+cluster is suspended after 7 days of inactivity. When this happens, the user 
+is notified via email.
 
 CR0
 ---
