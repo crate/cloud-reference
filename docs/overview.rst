@@ -345,18 +345,29 @@ If you're interested in this feature, fill out the provided form by clicking
 Data
 ----
 
-In the Data tab, users can conveniently import data from a URL.
+In the Data tab, users can conveniently import data from a URL, or from a 
+file.
+
+.. _overview-cluster-data-url:
+
+Import from URL
+~~~~~~~~~~~~~~~
 
 .. image:: _assets/img/cluster-data-tab.png
    :alt: Cloud Console cluster data tab
 
-To import data, simply fill out the URL, name of the table which will be
-created and populated with your data, data format, and whether it is 
-compressed. 
+Here you can choose between the Import from URL and Import from file. To 
+import from a URL, click the Import from a URL button:
 
-If a table with the chosen name doesn't exist, it will be automatically
-created. Please note that in this case the importer will attempt to guess the
-data types of each column, and might do so sub-optimally. 
+.. image:: _assets/img/cluster-data-tab-url.png
+   :alt: Cloud Console cluster upload from url
+
+To import data, fill out the URL, name of the table which will be created and
+populated with your data, data format, and whether it is compressed.
+
+If a table with the chosen name doesn’t exist, it will be automatically 
+created. Please note that in this case, the importer will attempt to guess 
+the data types of each column and might do so sub-optimally.
 
 The following data formats are supported:
 
@@ -366,13 +377,30 @@ The following data formats are supported:
 
 Gzip compressed files are also supported.
 
+.. _overview-cluster-data-file:
+
+Import from a file
+~~~~~~~~~~~~~~~~~~
+
+Uploading directly from your computer offers more control over your data.
+From the security point of view, you don’t have to share the data on the 
+internet just to be able to import it to your cluster. You also have more 
+control over who has access to your data.
+
+.. image:: _assets/img/cluster-data-tab-file.png
+   :alt: Cloud Console cluster upload from file
+
+As with the URL import, CSV, JSON, and Parquet files are supported. There is 
+also a limit to file size, currently 1GB.
+
 .. NOTE::
 
     - CSV files must have a header, otherwise the first row will be used as
       headers.
-    - For JSON files, only "document-per-line" is supported, as defined in https://jsonlines.org/
-    - Additionally for JSON files, each line must be a JSON document (arrays not
-      supported)
+    - For JSON files, only "document-per-line" is supported, as defined in 
+      https://jsonlines.org/
+    - Additionally for JSON files, each line must be a JSON document (arrays 
+      not supported)
 
 .. _overview-cluster-backups:
 
