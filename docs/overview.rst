@@ -71,10 +71,13 @@ the My Account page in the dropdown menu in the top-right.
 .. image:: _assets/img/organization-dashboard.png
    :alt: Cloud Console organization overview
 
-The Organization overview consists of seven tabs: *Clusters*, *Settings*,
-*Users*, *Billing*, *Payment Methods*, *Audit Logs*, and *Regions*. By default
+The Organization overview consists of seven tabs: *Clusters*, *Settings*, 
+*Billing*, *Payment Methods*, *Audit Logs*, and *Regions*. By default
 you are brought to the Clusters tab, which provides a quick overview of all
 your clusters.
+
+.. image:: _assets/img/clusters-overview.png
+   :alt: Cloud Console clusters overview
 
 If you are a member of multiple organizations, you can quickly change
 between them on every tab/page in the Cloud Console. Simply use the
@@ -88,43 +91,25 @@ and tabs in the Console will display values for the currently selected
 organization.
 
 
-.. _overview-org-settings:
+.. _overview-general-settings:
 
-Organization Settings
----------------------
+Settings
+--------
 
 The Settings tab shows you the name, notification settings, and ID of your
 currently selected organization.
 
-.. image:: _assets/img/organization-settings.png
-   :alt: Cloud Console organization settings tab
+.. image:: _assets/img/general-settings.png
+   :alt: Cloud Console general settings tab
 
 By clicking the *Edit* button next to the organization, you can rename it. 
 Here you can also set the email address for notifications and indicate whether
-you want to receive them or not. 
+you want to receive them or not.
 
-.. _overview-org-users:
-
-Organization Users
-------------------
-
-The Users tab shows the users associated with the organization, as well as
-their user role and their email address.
-
-.. image:: _assets/img/organization-users.png
-   :alt: Cloud Console organization users tab
-
-If you are an organization admin, you can edit these by clicking the pen icon
-or delete users by using the bin icon. To add new users to the organization,
-in this tab, click the *Add user* button in the top right. In the popup menu,
-you can add users by ID or by email address. If they are not yet a member of
-your organization, they will receive an email invitation to do so.
-
-.. image:: _assets/img/organization-users-email.png
-   :alt: Cloud Console organization users invitation via email
-
-To learn more about user roles and their meaning, see our documentation on
-`user roles`_.
+It also shows a list of users in your organization. You can add new users by
+clicking the "Add user" button. You can also choose the role of a new user. 
+To learn more about user roles and their meaning, see our documentation 
+on `user roles`_.
 
 .. _overview-org-billing:
 
@@ -142,7 +127,7 @@ snapshot is also visible here, along with additional information:
     Subscriptions cannot be deleted in the billing tab. To delete a
     subscription, please contact support.
 
-.. _overview-org-payment-methofs:
+.. _overview-org-payment-methods:
 
 Organization payment methods
 ----------------------------
@@ -182,7 +167,7 @@ In this tab, you will see the available :ref:`regions <gloss-region>` for
 cluster deployment. It is possible to deploy clusters on this screen as well,
 by clicking the *Deploy cluster* button under each respective region field.
 
-For those with access to `CrateDB Edge`_, This tab also allows the deployment
+For those with access to `CrateDB Edge`_, this tab also allows the deployment
 of :ref:`CrateDB Edge <gloss-edge>` clusters in a :ref:`custom region
 <gloss-region>`. To do so, provide a name for the custom region and click the
 *Create edge region* button. Once created, the custom region will appear:
@@ -221,27 +206,24 @@ Overview
      recently restarted a node. Our support team is already notified and
      investigating the issue.
 
-* **Cluster ID**: The unique ID of the cluster.
-
 * **Region**: Name of the region where the cluster is deployed.
 
 * **Plan**: This shows what subscription plan the cluster is running on. For
   more information on our plans, see the documentation on
   `subscription plans`_.
 
-* **Version**: This indicates the version number of CrateDB the cluster is
-  running.
-
-* **Storage metrics**: Used and overall storage of the cluster.
-
-* **Date created**: The day of the original deployment of the cluster.
-
-* **CPU metrics**: Current CPU utilization of the cluster.
+* **CPU metrics**: Average CPU utilization on average per node. The sparkline shows the trend for the last hour.
 
 * **Number of nodes**: Number of nodes in the cluster.
 
-* **Deletion protection**: Displays whether the deletion protection feature is
-  on or off.
+* **RAM metric**: Percentage of ram used in each node on average. The sparkline shows the trend for the last hour.
+
+* **Storage metrics**: Used and overall storage of the cluster. The sparkline shows the trend for the last hour.
+
+* **Version**: This indicates the version number of CrateDB the cluster is
+  running.
+
+* **Query metric**: Queries per second.
 
 .. _overview-cluster-overview-admin-ui:
 
@@ -264,81 +246,28 @@ Admin UI
 Next Steps
 ~~~~~~~~~~
 
-* **Connect to your cluster**: Click the "view code snippets" link to
-  see a list of snippets for the available clients and libraries. These
-  include: CLI clients, Java, JavaScript, PHP, Python, and Ruby.
+* **Import Data**: Import some data into your cluster using our data import 
+  tool.
 
-* **Demo data**: Clicking the "import the demo data" will show you two
-  snippets that can be used in the SQL Console of your Admin UI. The first
-  snippet will create a "nyc_taxi" table, and the second one will populate it with our 
-  demo dataset.
+* **See my backups**: The "see my backups" will take you to the Backups tab, where 
+  you can see all your backups. CrateDB Cloud clusters can now be cloned to a new 
+  cluster from any backup.
 
-* **Backups**: The "see my backups" will take you to the Backups tab, where 
-  you can see all your backups.
-
+* **API endpoint**: CrateDB Cloud provides a Prometheus-compatible API 
+  endpoint for cluster metrics.
 
 For more information on the CrateDB concepts used here, refer to the `CrateDB
 architecture documentation`_ or the :ref:`glossary<glossary>`.
 
+.. _overview-connect-to-your-cluster:
+
+Connecting to your cluster
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Here you can see a list of snippets for the available clients and libraries. 
+These include: CLI, Python, Ruby, Java, JavaScript, PHP.
+
 .. _overview-cluster-overview-access:
-
-Access
-------
-
-The access tab contains your credentials, security settings, allowlist, and
-information about private endpoints.
-
-.. image:: _assets/img/cluster-access.png
-   :alt: Cloud Console cluster access tab
-
-.. _overview-cluster-overview-credentials:
-
-Credentials
-~~~~~~~~~~~
-
-Here you can change your CrateDB database password.
-
-.. _overview-cluster-overview-security:
-
-Security
-~~~~~~~~
-
-Click the box labelled *Deletion Protected* to add deletion protection to your
-cluster. This will ensure that your cluster cannot be deleted while the
-Deletion Protection is turned on.
-
-.. _overview-cluster-overview-allowlist:
-
-Allowlist
-~~~~~~~~~
-
-By using the IP allowlisting feature, you can restrict access to your cluster
-to an indicated IP address or `CIDR block`_. Click the blue *Add
-Address* button and you can fill out an IP address or range and give it a
-meaningful description. Click *Save* to store it or the bin icon to delete a
-range. Keep in mind that once IP allowlisting has been set, you cannot access
-the Admin UI for that cluster from any other address.
-
-If no allowlist address or address range is set, the cluster is publicly
-accessible by default. (Of course, the normal authentication procedures are
-always required.) Only an :ref:`org admin <org-roles>` can change the
-allowlist.
-
-.. _overview-cluster-overview-private-endpoints:
-
-Private endpoints
-~~~~~~~~~~~~~~~~~
-
-A private endpoint, or private link, is a mechanism that allows a secure, 
-private connection to your cluster. Effectively, it allows you to bypass the
-public internet when accessing the environment where your cluster is deployed.
-Note that private endpoints don't work accross providers, meaning that if you
-want to securely access your AWS cluster, you must do so from within the AWS
-environment.
-
-
-If you're interested in this feature, fill out the provided form by clicking
-"Request Private Link".
 
 .. _overview-cluster-data:
 
@@ -494,22 +423,6 @@ screen.
 .. image:: _assets/img/cluster-clone-failed.png
    :alt: Cloud Console cluster failed cloning
 
-.. _overview-cluster-overview-metrics:
-
-Metrics
--------
-
-The Metrics tab show shows two graph panels: one for the average response time
-of a query (in milliseconds) and one for the total number of queries per
-second.
-
-.. image:: _assets/img/cluster-metrics.png
-   :alt: Cloud Console cluster metrics page
-
-The contributions of each type of query to the total results displayed in the
-graph panel are displayed in different colors. These values can also be read
-directly by hovering over the relevant point on the time axis (the X axis).
-
 .. _overview-cluster-settings-scale:
 
 Scale
@@ -555,47 +468,55 @@ choosing different configurations.
     minimum of 2, although we recommend maintaining a minimum of 3 for
     production use).
 
-.. _overview-cluster-upgrade:
+.. _overview-cluster-manage:
 
-Upgrades
---------
+Manage
+------
 
-The Upgrade cluster tab shows two things: the current version of the cluster
-and, if a :ref:`minor upgrade <gloss-version>` or
-:ref:`patch upgrade <gloss-version>` is possible, a list of available
-upgrades. If no upgrade is possible, because the cluster is up to date with 
-the latest version of CrateDB, nothing will be displayed in the Available
-Upgrades panel. You can upgrade a cluster from the Available upgrades panel by
-clicking the *Upgrade* button next to a specific shown version. Depending on how much data you have in your cluster, upgrading might take a while, during which other cluster operations will be disabled. Your cluster's nodes
-will be upgraded one at a time, so your cluster will remain available through the process.
+The manage tab contains credentials settings, deletion protection, upgrades, 
+IP allowlist, private links, suspend cluster, and delete cluster options.
 
-.. image:: _assets/img/cluster-upgrade.png
-   :alt: Cloud Console cluster upgrade tab
+.. image:: _assets/img/cluster-manage.png
+   :alt: Cloud Console Manage tab
 
-You can also click the document icon next to a listed version. This will bring
-you to the release notes of said version.
+* **Credentials** - These are the username and password used for accessing the
+  Admin UI of your cluster. Username is always admin and the password can be
+  changed.
 
-Major upgrades of CrateDB are carried out for CrateDB Cloud customers by the
-CrateDB Cloud engineering team.
+* **Deletion protection** - While this is enabled, your cluster cannot be
+  deleted.
 
-.. NOTE::
+* **Upgrade CrateDB** - Here you can enable the CrateDB version running on
+  your cluster.
 
-    Using the upgrade method in the CrateDB Cloud Console, you can only
-    upgrade one minor version at a time, and only to the latest or last patch
-    version of a given minor version. (Upgrades to other patch versions are
-    possible using `Croud clusters upgrade`_.) Downgrades are never supported.
+* **IP Allowlist** - By using the IP allowlisting feature, you can restrict 
+  access to your cluster to an indicated IP address or `CIDR block`_. Click 
+  the blue *Add Address* button and you can fill out an IP address or range 
+  and give it a meaningful description. Click *Save* to store it or the bin
+  icon to  delete a range. Keep in mind that once IP allowlisting has been 
+  set, you cannot access the Admin UI for that cluster from any other address.
 
-.. _overview-cluster-delete:
+  If no allowlist address or address range is set, the cluster is publicly
+  accessible by default. (Of course, the normal authentication procedures are
+  always required.) Only an :ref:`org admin <org-roles>` can change the
+  allowlist.
 
-Delete cluster
---------------
+* **Private links** - A private endpoint, or private link, is a mechanism 
+  that allows a secure,  private connection to your cluster. Effectively, it
+  allows you to bypass the public internet when accessing the environment 
+  where your cluster is deployed. Note that private endpoints don't work
+  accross providers, meaning that if you want to securely access your AWS
+  cluster, you must do so from within the AWS environment.
 
-Clusters can be deleted on any of the Cluster overview tabs, by clicking the
-*Delete cluster* button in the top-right.
+* **Suspend cluster**
+  Cluster suspension is a feature that enables you to temporarily pause your 
+  cluster while retaining all its data. An example situation might be that 
+  the project you’re working on has been put on hold. The cost of running a 
+  cluster is split into two parts: Compute and Storage. The benefit here is 
+  that while the cluster is suspended, you are only charged for the storage.
 
-.. WARNING::
-
-    All cluster data will be lost on deletion. This action cannot be undone.
+* **Delete cluster**
+  All cluster data will be lost on deletion. This action cannot be undone.
 
 .. _overview-docs:
 
@@ -613,42 +534,6 @@ Community
 The Community link goes to the `CrateDB and CrateDB Cloud Community page`_.
 Here you can ask members of the community and Crate.io employees questions
 about uncertainties or problems you are having when using our products.
-
-.. _overview-account:
-
-Account
-=======
-
-The Account page shows the current account you are using to interact with the
-CrateDB Cloud Console. It shows the username as well as the email address
-associated with that username. It also shows a list of all organizations you
-are involved in, with your :ref:`user role <user-roles>` and the date of its
-creation.
-
-.. image:: _assets/img/account.png
-   :alt: Cloud Console account
-
-The latter can be edited in this screen by clicking the *Edit* button at the
-top right.
-
-You can also create and delete organizations on the Account page. To create a
-new organization, click on *Create new organization* at the top right above
-the organization list. The `organization creation process`_ is then the same
-as when you first sign up for the CrateDB Cloud Console. To delete an
-organization, click the trashcan icon next to the organization in the list.
-
-To switch the active organization, click on the organization name in the list.
-All organization, and cluster management options displayed in the CrateDB
-Cloud Console will then refer to that organization until you switch
-organizations again.
-
-.. _overview-logout:
-
-Logout
-======
-
-Use the *Logout* button to log out of your current account and leave the
-CrateDB Cloud Console.
 
 .. _aks1.eastus2.azure.cratedb.cloud: https://eastus2.azure.cratedb.cloud/
 .. _eks1.eu-west-1.aws.cratedb.cloud: https://eks1.eu-west-1.aws.cratedb.cloud
