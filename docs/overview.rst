@@ -212,13 +212,13 @@ Overview
   more information on our plans, see the documentation on
   `subscription plans`_.
 
-* **CPU metrics**: Current CPU utilization of the cluster.
+* **CPU metrics**: Average CPU utilization on average per node. The sparkline shows the trend for the last hour.
 
 * **Number of nodes**: Number of nodes in the cluster.
 
-* **RAM metric**: Amount of memory of your cluster.
+* **RAM metric**: Percentage of ram used in each node on average. The sparkline shows the trend for the last hour.
 
-* **Storage metrics**: Used and overall storage of the cluster.
+* **Storage metrics**: Used and overall storage of the cluster. The sparkline shows the trend for the last hour.
 
 * **Version**: This indicates the version number of CrateDB the cluster is
   running.
@@ -249,7 +249,8 @@ Next Steps
 * **Import Data**: Import some data into your cluster using our data import 
   tool.
 
-* **See my backups**: CrateDB Cloud clusters can now be cloned to a new 
+* **See my backups**: The "see my backups" will take you to the Backups tab, where 
+  you can see all your backups. CrateDB Cloud clusters can now be cloned to a new 
   cluster from any backup.
 
 * **API endpoint**: CrateDB Cloud provides a Prometheus-compatible API 
