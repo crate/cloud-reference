@@ -412,8 +412,8 @@ sequence, e.g. the 6 in 'version 4.6.7'.
 A patch version of CrateDB is a release that includes bug fixes and smaller
 quality of life improvements compared to the previous such version. It is
 indicated by the third numeral in the versioning sequence, e.g. the 7 in
-'version 4.6.7'. All available upgrades are visible in the :ref:`Upgrades
-Tab <overview-cluster-upgrade>` of the cluster detailed view.
+'version 4.6.7'. All available upgrades are visible in the :ref:`Manage
+Tab <overview-cluster-manage>` of the cluster detailed view.
 
 .. SEEALSO::
 
