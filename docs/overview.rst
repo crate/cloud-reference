@@ -322,14 +322,39 @@ control over who has access to your data.
 As with the URL import, CSV, JSON, and Parquet files are supported. There is 
 also a limit to file size, currently 1GB.
 
-.. NOTE::
+.. _overview-cluster-data-limitations:
 
-    - CSV files must have a header, otherwise the first row will be used as
-      headers.
-    - For JSON files, only "document-per-line" is supported, as defined in 
-      https://jsonlines.org/
-    - Additionally for JSON files, each line must be a JSON document (arrays 
-      not supported)
+Import Limitations
+~~~~~~~~~~~~~~~~~~
+
+**CSV** files:
+
+1. CSV files must have a valid header to parse properly, for example:
+
+   .. code-block:: console
+
+       id,text
+       1,example
+       2,example2
+
+2. Column type inference for CSV files is limited when auto-creating tables. 
+   Please pre-create your table if you want the correct types to be used.
+
+**JSON** files:
+
+1. Your JSON file must be JSON-Lines (link) formatted, for example:
+
+    .. code-block:: console
+
+        {"id":1, "text": "example"}
+        {"id":2, "text": "example2"}
+
+2. Array types are not supported when auto-creating tables. Please pre-create
+   your table manually with the correct type for your array:
+
+    .. code-block:: console
+
+        {"id":1, "text": "example", "things": ["thing1", "thing2"]}
 
 .. _overview-cluster-backups:
 
