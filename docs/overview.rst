@@ -365,8 +365,7 @@ You can find the Backups page in the detailed view of your cluster, you can
 see and restore all existing backups here. 
 
 By default, a backup is made every hour. The backups are kept for 14 days.
-If a cluster is suspended for a longer period, we also keep the last 14 
-backups indefinitely.
+We also keep the last 14 backups indefinitely, no matter the state of your cluster.
 
 The Backups tab provides a list of all your backups. By default, a backup is
 made every hour.
