@@ -314,7 +314,12 @@ Import from a file
 Uploading directly from your computer offers more control over your data.
 From the security point of view, you don’t have to share the data on the 
 internet just to be able to import it to your cluster. You also have more 
-control over who has access to your data.
+control over who has access to your data. Your files are temporarily uploaded
+to a secure location managed by Crate (an S3 bucket in AWS) which is not
+publicly accessible. The files are automatically deleted after 3 days. 
+You may re-import the same file into multiple tables without having to
+re-upload it within those 3 days. Up to 5 files may be uploaded at the same
+time, with the oldest ones being automatically deleted if you upload more.
 
 .. image:: _assets/img/cluster-data-tab-file.png
    :alt: Cloud Console cluster upload from file
