@@ -361,9 +361,11 @@ Import Limitations
 Backups
 -------
 
-You can find the Backups page in the detailed view of your cluster. By
-default, a backup is made every hour. You can see and restore all existing
-backups here.
+You can find the Backups page in the detailed view of your cluster and you can
+see and restore all existing backups here. 
+
+By default, a backup is made every hour. The backups are kept for 14 days.
+We also keep the last 14 backups indefinitely, no matter the state of your cluster.
 
 The Backups tab provides a list of all your backups. By default, a backup is
 made every hour.
