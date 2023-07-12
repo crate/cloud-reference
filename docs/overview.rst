@@ -347,19 +347,39 @@ Import Limitations
 
 **JSON** files:
 
-1. Your JSON file must be JSON-Lines (link) formatted, for example:
+The following formats are supported for JSON:
 
-    .. code-block:: console
+1. JSON Documents. Will insert as a single row in the table.
 
-        {"id":1, "text": "example"}
-        {"id":2, "text": "example2"}
+   .. code-block:: console
 
-2. Array types are not supported when auto-creating tables. Please pre-create
-   your table manually with the correct type for your array:
+       {
+         "id":1,
+         "text": "example
+       }
 
-    .. code-block:: console
+2. JSON Arrays. Will insert as a row per array item.
 
-        {"id":1, "text": "example", "things": ["thing1", "thing2"]}
+   .. code-block:: console
+
+      [
+        {
+          "id":1,
+          "text": "example"
+        },
+        {
+          "id":2,
+          "text": "example2"
+        }
+      ]
+
+3. JSON-Lines. Each line will insert as a row.
+
+   .. code-block:: console
+
+      {"id":1, "text": "example"}
+      {"id":2, "text": "example2"}
+
 
 .. _overview-cluster-backups:
 
