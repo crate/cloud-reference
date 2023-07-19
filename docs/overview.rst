@@ -71,7 +71,7 @@ the My Account page in the dropdown menu in the top-right.
 .. image:: _assets/img/organization-dashboard.png
    :alt: Cloud Console organization overview
 
-The Organization overview consists of seven tabs: *Clusters*, *Settings*, 
+The Organization overview consists of six tabs: *Clusters*, *Settings*, 
 *Billing*, *Payment Methods*, *Audit Logs*, and *Regions*. By default
 you are brought to the Clusters tab, which provides a quick overview of all
 your clusters.
@@ -267,29 +267,32 @@ Connecting to your cluster
 Here you can see a list of snippets for the available clients and libraries. 
 These include: CLI, Python, Ruby, Java, JavaScript, PHP.
 
-.. _overview-cluster-overview-access:
+.. _overview-import-tab:
 
-.. _overview-cluster-data:
+Import
+------
 
-Data
-----
+.. image:: _assets/img/cluster-import-tab.png
+   :alt: Cloud Console cluster import tab
 
-In the Data tab, users can conveniently import data from a URL, or from a 
-file.
+The first thing you see in the "Import" tab is the history of your imports. 
+You can see whether you imported from a URL or from a file, file name, table
+into which you imported, date, and status. By clicking "Show details" you can
+display the size and the number of records imported.
 
-.. _overview-cluster-data-url:
+Clicking the "Import new data" button will bring up a choice between URL 
+import and file import.
+
+.. image:: _assets/img/cluster-import-tab-choice.png
+   :alt: Cloud Console cluster upload choice
+
+If you don't have a dataset prepared, we also provide an example. It's the New
+York City taxi trip dataset for July of 2019 (about 6.3M records).
+
+.. _overview-cluster-import-url:
 
 Import from URL
 ~~~~~~~~~~~~~~~
-
-.. image:: _assets/img/cluster-data-tab.png
-   :alt: Cloud Console cluster data tab
-
-Here you can choose between the Import from URL and Import from file. To 
-import from a URL, click the Import from a URL button:
-
-.. image:: _assets/img/cluster-data-tab-url.png
-   :alt: Cloud Console cluster upload from url
 
 To import data, fill out the URL, name of the table which will be created and
 populated with your data, data format, and whether it is compressed.
@@ -306,7 +309,10 @@ The following data formats are supported:
 
 Gzip compressed files are also supported.
 
-.. _overview-cluster-data-file:
+.. image:: _assets/img/cluster-import-tab-url.png
+   :alt: Cloud Console cluster upload from URL
+
+.. _overview-cluster-import-file:
 
 Import from a file
 ~~~~~~~~~~~~~~~~~~
@@ -321,13 +327,13 @@ You may re-import the same file into multiple tables without having to
 re-upload it within those 3 days. Up to 5 files may be uploaded at the same
 time, with the oldest ones being automatically deleted if you upload more.
 
-.. image:: _assets/img/cluster-data-tab-file.png
+.. image:: _assets/img/cluster-import-tab-file.png
    :alt: Cloud Console cluster upload from file
 
 As with the URL import, CSV, JSON, and Parquet files are supported. There is 
 also a limit to file size, currently 1GB.
 
-.. _overview-cluster-data-limitations:
+.. _overview-cluster-import-limitations:
 
 Import Limitations
 ~~~~~~~~~~~~~~~~~~
@@ -380,7 +386,30 @@ The following formats are supported for JSON:
       {"id":1, "text": "example"}
       {"id":2, "text": "example2"}
 
+.. _overview-cluster-export:
 
+Export
+------
+
+The export tab allows users to download specific tables/views. When you first
+visit the Export tab, you can specify the name of a table/view, format (CSV,
+Parquet, JSON) and compression in which you'd like to export your data. 
+
+.. image:: _assets/img/cluster-export.png
+   :alt: Cloud Console cluster export tab
+
+History of your exports is also visible in the Export tab.
+
+.. image:: _assets/img/cluster-export-tab-history.png
+   :alt: Cloud Console cluster export tab history
+
+.. NOTE::
+
+    Export limitations:
+
+     - Size limit for exporting is 1 GiB
+     - Exports are held for 3 days, then automatically deleted
+     
 .. _overview-cluster-backups:
 
 Backups
@@ -417,6 +446,9 @@ automatically pre-filled.
 .. image:: _assets/img/cluster-backups-restore.png
    :alt: Cloud Console cluster backups restore page
 
+You have a choice between restoring the cluster fully, or only specific 
+tables. 
+
 .. _overview-cluster-cloning:
 
 Cluster Cloning
@@ -430,21 +462,18 @@ You can clone a cluster from the Backups page.
 .. image:: _assets/img/cluster-backups.png
    :alt: Cloud Console cluster backup snapshots
 
-Choose a snapshot and click the *Clone* button. A popup window will appear,
-where you can specify to which existing cluster the snapshot should be cloned.
-If you don't have a second cluster created, click the *Deploy a new cluster*
-button, and you will be brought to the cluster deployment screen. After you've
-selected a cluster, click the *Clone to selected cluster*. 
+Choose a snapshot and click the *Clone* button. As with restoring a backup, 
+you can choose between cloning the whole cluster, or only specific tables.
 
 .. image:: _assets/img/cluster-clone-popup.png
    :alt: Cloud Console cluster clone popup
 
 .. NOTE::
 
-    Keep in mind that cloning a cluster will rewrite all the existing users
-    from the target cluster. The tables already existing on the target cluster
-    are not affected. Cloning also doesn't distinguish between cluster plans,
-    meaning you can clone from CR2 to CR1 or any other variation.
+    Keep in mind that the full cluster clone will include users, views,
+    privileges and everything else. Cloning also doesn't distinguish between 
+    cluster plans, meaning you can clone from CR2 to CR1 or any other
+    variation.
 
 .. _overview-cluster-cloning-fail:
 
@@ -480,7 +509,7 @@ screen.
 Scale
 -----
 
-On the Scale tab, current configuration of your cluster is shown. You can see
+In the Scale tab, current configuration of your cluster is shown. You can see
 your current plan, resources of a single node, and overall resources of the
 cluster.
 
