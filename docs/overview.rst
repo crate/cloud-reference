@@ -393,7 +393,7 @@ Export
 
 The export tab allows users to download specific tables/views. When you first
 visit the Export tab, you can specify the name of a table/view, format (CSV,
-Parquet, JSON) and compression in which you'd like to export your data. 
+JSON) and compression with which you'd like to export your data. 
 
 .. image:: _assets/img/cluster-export.png
    :alt: Cloud Console cluster export tab
@@ -409,7 +409,7 @@ History of your exports is also visible in the Export tab.
 
      - Size limit for exporting is 1 GiB
      - Exports are held for 3 days, then automatically deleted
-     
+
 .. _overview-cluster-backups:
 
 Backups
