@@ -1,3 +1,9 @@
+**Contents of this repo are outdated and for archival purposes only. Updated version now lives in the cloud-docs repository: https://github.com/crate/cloud-docs**
+
+
+
+
+
 =======================
 CrateDB Cloud Reference
 =======================
@@ -32,6 +38,7 @@ Looking for more help?
 .. _developer docs: DEVELOP.rst
 .. _live docs: https://crate.io/docs/cloud/reference/en/latest/
 .. _support channels: https://crate.io/support/
+.. _cloud-docs: https://github.com/crate/cloud-docs
 
 
 .. |ci| image:: https://github.com/crate/cloud-reference/actions/workflows/docs.yml/badge.svg
